@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="assets/css/vendor.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.css">
+         <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 <body>
 
@@ -541,9 +543,94 @@
 <!-- footer start -->
 {% include 'includes/footer.html' %}
 <!-- footer end -->
-
+<style>
+    #mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
+      background: grey;
+    }
+    #caption{
+      padding: 20px;
+      max-width: 300px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+  <div id="mask" aria-hidden="true" tabindex="-1">
+  <div class="card" tabindex="-1">
+      <h1 tabindex="-1">Blindness empathy building exercise</h1>
+      <p tabindex="-1">Navigate the website using <kbd>Tab</kbd> and <kbd>Arrow Up</kbd> <kbd>Arrow Down</kbd> <kbd>Arrow Left</kbd> <kbd>Arrow Right</kbd> <kbd>Enter</kbd> <kbd>Space</kbd></p>
+      <form tabindex="-1">
+        <div class="form-group" tabindex="-1">
+          <label data-speech for="question1Answer">1. Question one ?</label>
+          <input data-speech type="email" class="form-control" id="question1Answer" aria-describedby="emailHelp" tabindex="-1">
+          <small data-speech id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group" tabindex="-1">
+          <label for="question2Answer">2. Question two ?</label>
+          <input type="text" class="form-control" id="question2Answer" tabindex="-1">
+        </div>
+        <div class="form-group" tabindex="-1">
+          <label for="question2Answer">3. Question three ?</label>
+          <input type="text" class="form-control" id="question3Answer" tabindex="-1">
+        </div>
+        <button type="submit" class="btn btn-primary" tabindex="-1">I'd better check with a friend, just in case.</button>
+      </form>
+  </div>
+  <div id="caption" class="card"></div>
+  </div>
+  
+  <button type="button" data-aria="button" data-speech class="btn btn-primary">Primary</button>
+  <button type="button" data-aria="button" data-speech class="btn btn-secondary">Secondary</button>
+  <button type="button" data-aria="button" data-speech class="btn btn-success">Success</button>
+  <button type="button" data-aria="button" data-speech class="btn btn-danger">Danger</button>
+  <button type="button" data-aria="button" data-speech class="btn btn-warning">Warning</button>
+  <button type="button" data-aria="button" data-speech class="btn btn-info">Info</button>
+  <button type="button" data-aria="button" data-speech class="btn btn-light">Light</button>
+  <button type="button" data-aria="button" data-speech class="btn btn-dark">Dark</button>
+  
+  <button type="button" class="btn btn-link">Link</button>
+  <div class="card quiz-container">
+    <div>
+      <h1>Heading</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices nunc nisl, a iaculis libero molestie a. Duis ullamcorper eu justo in hendrerit. Curabitur luctus ultrices augue non ornare. Nam quis tellus pellentesque, pulvinar quam id, pharetra velit. Vivamus sagittis sapien non est aliquet, quis lacinia est consectetur. Mauris a turpis a sem convallis tempus. Phasellus tincidunt erat in bibendum vestibulum. Duis eget sem id tortor congue mollis a eu tortor. Etiam tellus tortor, congue eget odio ac, egestas ornare leo. Pellentesque sit amet venenatis sapien. Sed id arcu non augue sodales imperdiet. Nullam euismod ipsum at lacinia pellentesque. Maecenas libero tellus, gravida in accumsan non, placerat sed sapien.</p>
+  
+      <p>Vivamus in urna maximus, dictum purus lacinia, dictum turpis. Fusce sit amet purus tincidunt, consectetur sem ut, condimentum quam. Pellentesque et nibh risus. Donec ornare libero a enim eleifend malesuada. Vestibulum ac velit a nulla feugiat vulputate. Donec sapien mauris, vulputate vitae vehicula sed, volutpat semper libero. Donec metus elit, venenatis in iaculis id, vestibulum ac nulla. Duis at nisi non tellus fermentum scelerisque ut aliquet libero. Vestibulum vitae massa mollis, congue turpis sit amet, dapibus elit. Ut vulputate ullamcorper urna, eget commodo orci rutrum nec. Curabitur lobortis varius efficitur.</p>
+  
+      <p>Praesent in purus tincidunt, convallis lacus eget, scelerisque justo. Nam quis nisl commodo, tincidunt ipsum a, congue urna. Pellentesque tristique feugiat magna, a dignissim nibh tincidunt at. Quisque lectus diam, efficitur id fermentum a, tincidunt pretium sem. Mauris ipsum mauris, interdum in mauris quis, ullamcorper luctus nunc. Integer fermentum ullamcorper odio, et ornare tortor. Sed tristique odio ut augue tincidunt congue ut at sem. Sed mattis nisl a velit suscipit, non convallis quam lacinia. In efficitur lectus magna, non ullamcorper justo convallis sed. Donec sagittis mauris non neque lacinia tincidunt.</p>
+  
+      <button data-aria="button" data-speech >Click me</button>
+    </div>
+  </div>
 <script src="assets/js/vendor.js"></script>
 <script src="assets/js/polyfills.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/ally.js/1.4.1/ally.min.js"></script>
 <script src="assets/js/app.js"></script>
+<script>
+    const caption = $("#caption");
+$(document).ready(function (){
+    $("[data-speech]").each(function(){
+        var aria = $(this).data("aria") ? $(this).data("aria") : "";
+        var text = $(this).text() ? $(this).text() : "";
+        var val = $(this).val() ? $(this).val() : "";
+        $(this).data("speech", aria + " " + text + " " + val);
+    });
+});
+
+$(document).on('keyup',function(e) {
+    var element = ally.get.activeElement();
+    var text = $(element).data("speech") ? $(element).data("speech") : "No information";
+    console.log(element);
+    console.log(caption);
+    caption.text(text);
+});
+
+
+</script>
 </body>
 </html>
