@@ -23,16 +23,15 @@
 
 {% if bottomNavbarItems == undefined %}
     {% set bottomNavbarItems = [
-        {text: 'Massage', href: 'therapist.html'},
-        {text: 'Lawyer', href: 'attorney.html'},
-        {text: 'Contractor', href: 'contractor.html'},
-        {text: 'Beauty', href: 'beauty.html'},
-        {text: 'Restaurant', href: 'restaurant.html'},
+        {text: 'About', href: '#about'},
+        {text: 'Schedule', href: '#schedule'},
+        {text: 'FAQ', href: '#faq'},
+        {text: 'Contact us', href: '#contact'},
     ] %}
 {% endif %}
 
 <section class="header {{ headerClasses }}">
-    <div class="header-top-line bg-primary">
+    <!-- <div class="header-top-line bg-primary">
         <div class="container">
             <div class="row">
                 <nav class="navbar navbar-expand navbar-dark navbar-short justify-content-between w-100">
@@ -66,12 +65,12 @@
                 </nav>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="header-main bg-white">
         <div class="container">
             <div class="row">
                 <nav class="navbar navbar-expand-lg navbar-light w-100" id="header-navbar">
-                    <a class="navbar-brand font-weight-bold" href="index.html">PROFI</a>
+                    <a class="navbar-brand font-weight-bold" href="index.html">IAF</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
