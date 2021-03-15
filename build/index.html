@@ -14,7 +14,7 @@
 <body>
 
 <div id="page-start-anchor"></div>
-
+<div id="content">
 <!-- header start -->
 
 
@@ -670,6 +670,7 @@
     </div>
 </section>
 <!-- footer end -->
+</div>
 <style>
     #overlay {
         position: fixed;
@@ -715,9 +716,25 @@
 <script src="assets/js/polyfills.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/ally.js/1.4.1/ally.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.1.3/axe.min.js"></script>
 <script src="assets/js/app.js"></script>
 
 
+<script>
+    var axeTree = axe.utils.getFlattenedTree(document.body);
+    document.querySelectorAll("#content *").forEach( e => {
+        e.addEventListener( 'focus', event => {
+            var activeElement = document.activeElement;
+            var text = axe.commons.aria.getRole(activeElement, axeTree)
+                + ": "
+                + axe.commons.text.accessibleText(activeElement, axeTree);
+            var caption = document.getElementById("caption");
+            console.log("activeElement ", activeElement);
+            console.log("text ", text);
+            caption.textContent = text;
+        })
+    });
+    </script>
 </script>
 </body>
 </html>
