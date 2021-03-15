@@ -1,0 +1,756 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>PROFI</title>
+
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.css">
+</head>
+<body data-spy="scroll" data-target="#header-navbar" data-offset="140">
+
+<div id="page-start-anchor"></div>
+
+<!-- header start -->
+{% set bottomNavbarItems = [
+    {text: 'About', href: '#about', smoothScroll: true},
+    {text: 'Services', href: '#services', smoothScroll: true},
+    {text: 'Team', href: '#team', smoothScroll: true},
+    {text: 'Case results', href: '#cases', smoothScroll: true},
+    {text: 'Testimonials', href: '#testimonials', smoothScroll: true},
+    {text: 'Contacts', href: '#contacts', smoothScroll: true},
+] %}
+{% include 'includes/header.html' with {
+    topNavbarText: true,
+    ctaButton: {text: 'Book now', href: '#contacts', smoothScroll: true},
+    headerClasses: 'header-fixed-xl'
+} %}
+<!-- header end -->
+
+<!-- main hero start -->
+<section class="hero hero-fullscreen jarallax" data-speed="0.2" style="min-height: calc(100vh - 140px)">
+    <div class="hero-background">
+        <img src="assets/images/image-1.jpg" alt="hero background" class="jarallax-img"/>
+    </div>
+    <div class="hero-foreground hero-foreground-gradient-black-left d-flex flex-column justify-content-center">
+        <div class="container text-white py-14 py-md-23 py-lg-25">
+            <div class="d-flex flex-column flex-lg-row text-center text-lg-left align-items-center align-items-lg-stretch justify-content-between">
+                <div class="mb-14 mb-lg-0 d-flex flex-column justify-content-between">
+                    <div>
+                        <small class="fs-2 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption">
+                            providing services since 1992
+                        </small>
+                        <h1 class="fs-10 fs-lg-11 font-weight-bold">
+                            Small<br/>Business<br/>Attorney
+                        </h1>
+                    </div>
+                    <div class="d-none d-lg-block">
+                        <a href="#" class="btn btn-outline-light btn-square" data-toggle="smooth-scroll"
+                           data-target="#hero-end-anchor"><i
+                                class="material-icons">arrow_downward</i></a>
+                    </div>
+                </div>
+
+                <div class="card border-0 text-left" style="max-width: 390px">
+                    <div class="card-body text-body p-19 p-md-20">
+                        <h2 class="fs-6 fs-lg-9">Get a Free Consultation</h2>
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="First name"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Mobile phone"/>
+                            </div>
+                            <div class="form-group form-check fs-2">
+                                <input type="checkbox" class="custom-checkbox" id="exampleCheck1" checked/>
+                                <label class="form-check-label" for="exampleCheck1">
+                                    I've read and agree with the <a href="#">Terms & Policy</a>
+                                </label>
+                            </div>
+                            <div class="form-group mb-0">
+                                <button class="btn btn-primary w-100">Get a consultation</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="hero-end-anchor"></div>
+<!-- main hero end -->
+
+<!-- "about" section start -->
+<section class="section" id="about">
+    <div class="section-content container">
+        <div class="row text-center text-lg-left">
+            <div class="col-12 col-lg-6 mb-12 mb-lg-0 d-flex align-items-center">
+                <div class="pr-0 pr-lg-10">
+                    <h1 class="mb-0">Welcome</h1>
+                    <div class="fs-5 text-muted">Attorney for Businesses, Professionals & Creative People</div>
+                    <p class="mt-8 mb-11">This is a great space to write long text about your company and your
+                        services. You can use this space to go into a little more detail about your company. Talk about
+                        your team and what services you provide. Tell your visitors the story of how you came up with
+                        the idea for your business and what makes you different from your competitors. Make your company
+                        stand out and show your visitors who you are.</p>
+                    <a href="#" class="btn btn-lg btn-primary">Get a free consultation</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <img src="assets/images/image-2.jpg" class="img-fluid w-100" alt="welcome image">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "about" section end -->
+
+<!-- "services" section start -->
+<section class="section bg-secondary" id="services">
+    <div class="section-content container">
+        <div class="d-flex justify-content-center justify-content-sm-between align-items-center">
+            <div class="text-center text-sm-left">
+                <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                    Areas of practices
+                </small>
+                <h1>Services</h1>
+            </div>
+            <div class="d-none d-sm-block">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-light btn-square" data-toggle="card-slider"
+                            data-target="#card-slider-1" data-action="prevSlide">
+                        <i class="material-icons">arrow_left</i>
+                    </button>
+                    <button type="button" class="btn btn-light btn-square" data-toggle="card-slider"
+                            data-target="#card-slider-1" data-action="nextSlide">
+                        <i class="material-icons">arrow_right</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-slider card-slider-viewport card-slider-services mt-15" id="card-slider-1">
+            <article class="card-slider-item">
+                <div class="card border-0" data-mh="card-slider-1">
+                    <div class="card-body p-19 p-md-20">
+                        <svg width="73" height="48" viewBox="0 0 73 48" xmlns="http://www.w3.org/2000/svg">
+                            <g fill-rule="nonzero" fill="none">
+                                <path d="M.146 24.855c.178.356.474.623.845.741l9.274 3.185c.163.06.31.074.474.074.607 0 1.185-.385 1.392-.992l7.274-21.23.37.134a7.523 7.523 0 0 0 5.779-.326l.903-.445c1.082-.518 2.341-.607 3.467-.207l16.919 5.837c-.178.652-.519 1.407-1.112 1.822-.681.474-1.733.474-3.11 0l-7.586-2.593a1.467 1.467 0 0 0-1.17.104 1.5 1.5 0 0 0-.726.919c-.015.044-1.082 3.955-4.37 5.718-2.075 1.111-4.667 1.14-7.704.104-.77-.267-1.6.148-1.867.918-.267.77.148 1.6.919 1.867 1.777.607 3.466.919 5.037.919 1.822 0 3.496-.415 5.022-1.23 2.963-1.6 4.533-4.356 5.26-6.06l6.221 2.134c2.311.785 4.237.667 5.734-.37 2.355-1.63 2.518-4.815 2.533-5.17a1.5 1.5 0 0 0-.993-1.438L30.857 3.033a7.513 7.513 0 0 0-5.718.356l-.904.444a4.589 4.589 0 0 1-3.511.208l-1.496-.534a.983.983 0 0 0-.282-.133L9.716.159c-.77-.267-1.6.148-1.866.919L.072 23.744c-.118.356-.089.756.074 1.111zM10.161 3.404l6.489 2.222-6.815 19.896L3.346 23.3l6.815-19.896z"
+                                      fill="#ADB9BF"/>
+                                <path d="M15.42 38.292c.726 1.482 2.178 2.341 3.719 2.4 0 .637.148 1.29.43 1.882a4.227 4.227 0 0 0 2.474 2.178c.459.163.933.237 1.392.237.652 0 1.289-.148 1.882-.445l.77-.385c.06.445.193.904.4 1.333a4.227 4.227 0 0 0 2.474 2.178c.46.163.933.237 1.393.237.651 0 1.289-.148 1.881-.444L49.08 39.21a43.37 43.37 0 0 0 10.31-7.037l3.764-3.452 8.607-4.207a1.459 1.459 0 0 0 .667-1.956L61.938 1.033a1.435 1.435 0 0 0-.844-.74 1.421 1.421 0 0 0-1.126.074l-8.8 4.31a1.459 1.459 0 0 0-.666 1.956l10.044 20.534-3.11 2.859a40.925 40.925 0 0 1-9.616 6.563L30.976 44.84a1.362 1.362 0 0 1-1.052.059 1.395 1.395 0 0 1-.785-.696 1.362 1.362 0 0 1-.06-1.052c.12-.341.37-.623.697-.785l9.422-4.608a1.459 1.459 0 0 0 .667-1.955 1.459 1.459 0 0 0-1.956-.667l-9.422 4.607-4.444 2.178a1.362 1.362 0 0 1-1.052.06 1.395 1.395 0 0 1-.786-.697 1.362 1.362 0 0 1-.059-1.052c.119-.34.37-.622.697-.785l13.51-6.607a1.459 1.459 0 0 0 .667-1.956 1.459 1.459 0 0 0-1.955-.667L19.88 37.641a1.392 1.392 0 0 1-1.837-.623 1.362 1.362 0 0 1-.06-1.051c.119-.341.37-.623.697-.786l5.985-2.933 7.778-3.807a1.459 1.459 0 0 0 .666-1.956 1.459 1.459 0 0 0-1.955-.667L19.05 31.744a1.392 1.392 0 0 1-1.837-.622 1.392 1.392 0 0 1 .622-1.837l6.43-3.14a1.459 1.459 0 0 0 .666-1.956 1.459 1.459 0 0 0-1.955-.667l-6.43 3.14a4.302 4.302 0 0 0-.755 7.26 4.235 4.235 0 0 0-.37 4.37zm38.356-31.63l6.163-3.021 9.244 18.888-6.163 3.023-9.244-18.89z"
+                                      fill="#3DB36B"/>
+                            </g>
+                        </svg>
+                        <h1 class="mt-10 fs-6 fs-lg-9">Business Law</h1>
+                        <p>Whether you’re in an early start-up phase or preparing to go public, Romano Law understands the
+                            needs of businesses and owners.</p>
+                        <a href="#" class="btn btn-link">Learn more</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card-slider-item">
+                <div class="card border-0" data-mh="card-slider-1">
+                    <div class="card-body p-19 p-md-20">
+                        <svg width="53" height="48" viewBox="0 0 53 48" xmlns="http://www.w3.org/2000/svg">
+                            <g fill-rule="nonzero" fill="none">
+                                <path d="M22.784 46.897c0-.592-.474-1.066-1.066-1.066H6.856a4.72 4.72 0 0 1-4.714-4.714V10.391h6.457v4.014c0 .592.474 1.066 1.066 1.066.592 0 1.065-.474 1.065-1.066v-4.014h12.84v4.014c0 .592.473 1.066 1.065 1.066s1.065-.474 1.065-1.066v-4.014h6.458v2.099c0 .592.473 1.065 1.065 1.065s1.066-.473 1.066-1.065V9.326c0-.592-.474-1.066-1.066-1.066H25.69C25.507 3.708 21.75.048 17.144.048S8.782 3.697 8.6 8.26H1.065C.474 8.26 0 8.734 0 9.326v31.791a6.848 6.848 0 0 0 6.845 6.845h14.863a1.07 1.07 0 0 0 1.076-1.065zm-5.64-44.718c3.423 0 6.232 2.702 6.415 6.081H10.73c.183-3.38 2.992-6.08 6.414-6.08z"
+                                      fill="#ADB9BF"/>
+                                <path d="M31.835 21.498v1.216H25.97c-.592 0-1.066.473-1.066 1.065v18.695a5.48 5.48 0 0 0 5.478 5.478h16.886a5.48 5.48 0 0 0 5.478-5.478V23.779c0-.592-.473-1.065-1.065-1.065h-5.866v-1.216c0-3.853-3.132-6.996-6.995-6.996-3.853.011-6.985 3.143-6.985 6.996zm12.915 7.06c.592 0 1.065-.474 1.065-1.066v-2.647h4.8v17.629a3.35 3.35 0 0 1-3.347 3.347H30.382a3.35 3.35 0 0 1-3.347-3.347v-17.63h4.8v2.648c0 .592.474 1.066 1.065 1.066.592 0 1.066-.474 1.066-1.066v-2.647h9.718v2.647c0 .592.474 1.066 1.066 1.066zm-1.066-7.06v1.216h-9.718v-1.216a4.873 4.873 0 0 1 4.864-4.865c2.67.01 4.854 2.185 4.854 4.865z"
+                                      fill="#3DB36B"/>
+                            </g>
+                        </svg>
+                        <h1 class="mt-10 fs-6 fs-lg-9">Entertainment Law</h1>
+                        <p>Whether you’re in an early start-up phase or preparing to go public, Romano Law understands the
+                            needs of businesses and owners.</p>
+                        <a href="#" class="btn btn-link">Learn more</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card-slider-item">
+                <div class="card border-0" data-mh="card-slider-1">
+                    <div class="card-body p-19 p-md-20">
+                        <svg width="55" height="48" viewBox="0 0 55 48" xmlns="http://www.w3.org/2000/svg">
+                            <g fill-rule="nonzero" fill="none">
+                                <path d="M17.486 16.877A3.01 3.01 0 0 0 16.39 19.2v2.71a1.09 1.09 0 0 0 1.095 1.095 1.09 1.09 0 0 0 1.095-1.095V19.2a.82.82 0 0 1 .298-.63c2.367-1.936 4.922-3.23 5.42-3.473a1.29 1.29 0 0 0 .719-1.14v-3.815c0-.365-.189-.708-.487-.907a.708.708 0 0 1-.31-.575V4.7a2.469 2.469 0 0 1 2.467-2.466h.851A2.469 2.469 0 0 1 30.006 4.7v3.96a.68.68 0 0 1-.31.575c-.31.2-.487.542-.487.907v3.816c0 .486.277.929.708 1.139.487.243 3.053 1.537 5.42 3.473a.82.82 0 0 1 .298.63v2.71a1.09 1.09 0 0 0 1.095 1.095 1.09 1.09 0 0 0 1.095-1.095V19.2c0-.907-.398-1.759-1.095-2.323-2.08-1.703-4.291-2.942-5.33-3.483V10.64c.508-.531.795-1.24.795-1.991V4.7A4.663 4.663 0 0 0 27.54.044h-.851A4.663 4.663 0 0 0 22.03 4.7v3.96c0 .752.288 1.46.797 1.99v2.744c-1.051.541-3.263 1.78-5.342 3.483zM53.12 47.978a1.09 1.09 0 0 0 1.096-1.095v-2.71c0-.907-.398-1.758-1.095-2.322-2.08-1.704-4.292-2.942-5.331-3.484v-2.754c.509-.531.796-1.239.796-1.99v-3.96a4.663 4.663 0 0 0-4.656-4.657h-.852a4.663 4.663 0 0 0-4.656 4.657v3.96c0 .751.288 1.459.796 1.99v2.754c-1.04.542-3.251 1.78-5.33 3.484a2.993 2.993 0 0 0-1.095 2.322v2.71a1.09 1.09 0 0 0 1.095 1.095 1.09 1.09 0 0 0 1.094-1.095v-2.71a.82.82 0 0 1 .3-.63c2.366-1.947 4.92-3.24 5.418-3.473.432-.21.708-.664.708-1.14v-3.815c0-.365-.188-.708-.486-.907a.708.708 0 0 1-.31-.575v-3.96a2.469 2.469 0 0 1 2.466-2.466h.852a2.469 2.469 0 0 1 2.466 2.467v3.96a.68.68 0 0 1-.31.574c-.309.2-.486.542-.486.907v3.816c0 .487.276.929.708 1.139.486.243 3.052 1.537 5.42 3.473a.82.82 0 0 1 .298.63v2.71c0 .608.498 1.095 1.095 1.095zM20.328 41.85c-2.08-1.703-4.291-2.941-5.33-3.483v-2.754c.508-.531.796-1.239.796-1.99v-3.96a4.663 4.663 0 0 0-4.657-4.657h-.851a4.663 4.663 0 0 0-4.657 4.657v3.96c0 .751.288 1.459.797 1.99v2.754c-1.04.542-3.252 1.78-5.331 3.484A2.993 2.993 0 0 0 0 44.173v2.71a1.09 1.09 0 0 0 1.095 1.095 1.09 1.09 0 0 0 1.095-1.095v-2.71a.82.82 0 0 1 .298-.63c2.367-1.947 4.922-3.24 5.42-3.473.431-.21.708-.664.708-1.14v-3.815c0-.365-.188-.708-.487-.907a.708.708 0 0 1-.31-.575v-3.96a2.469 2.469 0 0 1 2.467-2.466h.851a2.469 2.469 0 0 1 2.467 2.467v3.96a.68.68 0 0 1-.31.574c-.31.2-.487.542-.487.907v3.816c0 .487.277.929.708 1.139.487.243 3.053 1.526 5.42 3.473a.82.82 0 0 1 .298.63v2.71a1.09 1.09 0 0 0 1.095 1.095 1.09 1.09 0 0 0 1.095-1.095v-2.71c0-.907-.398-1.758-1.095-2.322z"
+                                      fill="#ADB9BF"/>
+                                <path d="M33.335 35.314a1.096 1.096 0 0 0 1.493-.41 1.098 1.098 0 0 0-.399-1.492l-6.138-3.54v-7.089a1.09 1.09 0 0 0-1.095-1.095 1.09 1.09 0 0 0-1.095 1.095v7.09l-6.138 3.55c-.52.299-.708.973-.398 1.493a1.096 1.096 0 0 0 1.493.41l6.138-3.55 6.139 3.538z"
+                                      fill="#3DB36B"/>
+                            </g>
+                        </svg>
+                        <h1 class="mt-10 fs-6 fs-lg-9">Disputes</h1>
+                        <p>Whether you’re in an early start-up phase or preparing to go public, Romano Law understands the
+                            needs of businesses and owners.</p>
+                        <a href="#" class="btn btn-link">Learn more</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card-slider-item">
+                <div class="card border-0" data-mh="card-slider-1">
+                    <div class="card-body p-19 p-md-20">
+                        <svg width="73" height="48" viewBox="0 0 73 48" xmlns="http://www.w3.org/2000/svg">
+                            <g fill-rule="nonzero" fill="none">
+                                <path d="M.146 24.855c.178.356.474.623.845.741l9.274 3.185c.163.06.31.074.474.074.607 0 1.185-.385 1.392-.992l7.274-21.23.37.134a7.523 7.523 0 0 0 5.779-.326l.903-.445c1.082-.518 2.341-.607 3.467-.207l16.919 5.837c-.178.652-.519 1.407-1.112 1.822-.681.474-1.733.474-3.11 0l-7.586-2.593a1.467 1.467 0 0 0-1.17.104 1.5 1.5 0 0 0-.726.919c-.015.044-1.082 3.955-4.37 5.718-2.075 1.111-4.667 1.14-7.704.104-.77-.267-1.6.148-1.867.918-.267.77.148 1.6.919 1.867 1.777.607 3.466.919 5.037.919 1.822 0 3.496-.415 5.022-1.23 2.963-1.6 4.533-4.356 5.26-6.06l6.221 2.134c2.311.785 4.237.667 5.734-.37 2.355-1.63 2.518-4.815 2.533-5.17a1.5 1.5 0 0 0-.993-1.438L30.857 3.033a7.513 7.513 0 0 0-5.718.356l-.904.444a4.589 4.589 0 0 1-3.511.208l-1.496-.534a.983.983 0 0 0-.282-.133L9.716.159c-.77-.267-1.6.148-1.866.919L.072 23.744c-.118.356-.089.756.074 1.111zM10.161 3.404l6.489 2.222-6.815 19.896L3.346 23.3l6.815-19.896z"
+                                      fill="#ADB9BF"/>
+                                <path d="M15.42 38.292c.726 1.482 2.178 2.341 3.719 2.4 0 .637.148 1.29.43 1.882a4.227 4.227 0 0 0 2.474 2.178c.459.163.933.237 1.392.237.652 0 1.289-.148 1.882-.445l.77-.385c.06.445.193.904.4 1.333a4.227 4.227 0 0 0 2.474 2.178c.46.163.933.237 1.393.237.651 0 1.289-.148 1.881-.444L49.08 39.21a43.37 43.37 0 0 0 10.31-7.037l3.764-3.452 8.607-4.207a1.459 1.459 0 0 0 .667-1.956L61.938 1.033a1.435 1.435 0 0 0-.844-.74 1.421 1.421 0 0 0-1.126.074l-8.8 4.31a1.459 1.459 0 0 0-.666 1.956l10.044 20.534-3.11 2.859a40.925 40.925 0 0 1-9.616 6.563L30.976 44.84a1.362 1.362 0 0 1-1.052.059 1.395 1.395 0 0 1-.785-.696 1.362 1.362 0 0 1-.06-1.052c.12-.341.37-.623.697-.785l9.422-4.608a1.459 1.459 0 0 0 .667-1.955 1.459 1.459 0 0 0-1.956-.667l-9.422 4.607-4.444 2.178a1.362 1.362 0 0 1-1.052.06 1.395 1.395 0 0 1-.786-.697 1.362 1.362 0 0 1-.059-1.052c.119-.34.37-.622.697-.785l13.51-6.607a1.459 1.459 0 0 0 .667-1.956 1.459 1.459 0 0 0-1.955-.667L19.88 37.641a1.392 1.392 0 0 1-1.837-.623 1.362 1.362 0 0 1-.06-1.051c.119-.341.37-.623.697-.786l5.985-2.933 7.778-3.807a1.459 1.459 0 0 0 .666-1.956 1.459 1.459 0 0 0-1.955-.667L19.05 31.744a1.392 1.392 0 0 1-1.837-.622 1.392 1.392 0 0 1 .622-1.837l6.43-3.14a1.459 1.459 0 0 0 .666-1.956 1.459 1.459 0 0 0-1.955-.667l-6.43 3.14a4.302 4.302 0 0 0-.755 7.26 4.235 4.235 0 0 0-.37 4.37zm38.356-31.63l6.163-3.021 9.244 18.888-6.163 3.023-9.244-18.89z"
+                                      fill="#3DB36B"/>
+                            </g>
+                        </svg>
+                        <h1 class="mt-10 fs-6 fs-lg-9">International Law</h1>
+                        <p>Whether you’re in an early start-up phase or preparing to go public, Romano Law understands the
+                            needs of businesses and owners.</p>
+                        <a href="#" class="btn btn-link">Learn more</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card-slider-item">
+                <div class="card border-0" data-mh="card-slider-1">
+                    <div class="card-body p-19 p-md-20">
+                        <svg width="53" height="48" viewBox="0 0 53 48" xmlns="http://www.w3.org/2000/svg">
+                            <g fill-rule="nonzero" fill="none">
+                                <path d="M22.784 46.897c0-.592-.474-1.066-1.066-1.066H6.856a4.72 4.72 0 0 1-4.714-4.714V10.391h6.457v4.014c0 .592.474 1.066 1.066 1.066.592 0 1.065-.474 1.065-1.066v-4.014h12.84v4.014c0 .592.473 1.066 1.065 1.066s1.065-.474 1.065-1.066v-4.014h6.458v2.099c0 .592.473 1.065 1.065 1.065s1.066-.473 1.066-1.065V9.326c0-.592-.474-1.066-1.066-1.066H25.69C25.507 3.708 21.75.048 17.144.048S8.782 3.697 8.6 8.26H1.065C.474 8.26 0 8.734 0 9.326v31.791a6.848 6.848 0 0 0 6.845 6.845h14.863a1.07 1.07 0 0 0 1.076-1.065zm-5.64-44.718c3.423 0 6.232 2.702 6.415 6.081H10.73c.183-3.38 2.992-6.08 6.414-6.08z"
+                                      fill="#ADB9BF"/>
+                                <path d="M31.835 21.498v1.216H25.97c-.592 0-1.066.473-1.066 1.065v18.695a5.48 5.48 0 0 0 5.478 5.478h16.886a5.48 5.48 0 0 0 5.478-5.478V23.779c0-.592-.473-1.065-1.065-1.065h-5.866v-1.216c0-3.853-3.132-6.996-6.995-6.996-3.853.011-6.985 3.143-6.985 6.996zm12.915 7.06c.592 0 1.065-.474 1.065-1.066v-2.647h4.8v17.629a3.35 3.35 0 0 1-3.347 3.347H30.382a3.35 3.35 0 0 1-3.347-3.347v-17.63h4.8v2.648c0 .592.474 1.066 1.065 1.066.592 0 1.066-.474 1.066-1.066v-2.647h9.718v2.647c0 .592.474 1.066 1.066 1.066zm-1.066-7.06v1.216h-9.718v-1.216a4.873 4.873 0 0 1 4.864-4.865c2.67.01 4.854 2.185 4.854 4.865z"
+                                      fill="#3DB36B"/>
+                            </g>
+                        </svg>
+                        <h1 class="mt-10 fs-6 fs-lg-9">Personal Attorney</h1>
+                        <p>Whether you’re in an early start-up phase or preparing to go public, Romano Law understands the
+                            needs of businesses and owners.</p>
+                        <a href="#" class="btn btn-link">Learn more</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+<!-- "services" section end -->
+
+<!-- "call to action" section start -->
+<section class="section jarallax text-white" data-jarallax data-speed="0.2">
+    <img class="section-background-image jarallax-img" src="assets/images/image-3.jpg" alt="background image"/>
+    <div class="section-content container">
+        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center">
+            <div class="d-flex flex-column align-items-center align-items-lg-start mb-14 mb-lg-0 mr-0 mr-lg-14">
+                <span class="badge badge-pill badge-ghost fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption">
+                    24/7 attorney line in nyc
+                </span>
+                <h1 class="mt-5 mb-0 fs-9 fs-md-10">Do you have an emergency?</h1>
+            </div>
+            <a href="#" class="btn btn-lg btn-primary">
+                <span class="fs-4 lh-5 d-flex flex-nowrap align-items-center">
+                    <i class="material-icons material-icons-size-auto text-white-50 mr-1">local_phone</i>
+                    <span class="text-white-50 mr-2">Call</span>
+                    123-456-7890
+                </span>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- "call to action" section end -->
+
+<!-- "team" section start -->
+<section class="section" id="team">
+    <div class="section-content container">
+        <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+            Professionals
+        </small>
+        <h1>Meet the Team</h1>
+
+        <div class="row mt-17 tour-tabs">
+            <div class="col-12 col-lg-4 pr-lg-0">
+                <div class="tour-tabs-nav tour-tabs-nav-left nav">
+                    <a href="#tour-tab-1" class="tour-tabs-nav-link" data-toggle="pill">
+                        <div>
+                            <img src="assets/images/avatar-1.jpg" alt="avatar 1" width="50" class="rounded-circle"/>
+                        </div>
+                        <div class="ml-9">
+                            <h2 class="fs-5 mb-1">Michel Kors</h2>
+                            <p class="mb-0 text-muted fs-3">Founder & Ceo</p>
+                        </div>
+                    </a>
+                    <a href="#tour-tab-2" class="tour-tabs-nav-link active" data-toggle="pill">
+                        <div>
+                            <img src="assets/images/avatar-2.jpg" alt="avatar 2" width="50" class="rounded-circle"/>
+                        </div>
+                        <div class="ml-9">
+                            <h2 class="fs-5 mb-1">Denny Peterson</h2>
+                            <p class="mb-0 text-muted fs-3">Founder & Ceo</p>
+                        </div>
+                    </a>
+                    <a href="#tour-tab-3" class="tour-tabs-nav-link" data-toggle="pill">
+                        <div>
+                            <img src="assets/images/avatar-3.jpg" alt="avatar 3" width="50" class="rounded-circle"/>
+                        </div>
+                        <div class="ml-9">
+                            <h2 class="fs-5 mb-1">Igor Kamelski</h2>
+                            <p class="mb-0 text-muted fs-3">Founder & Ceo</p>
+                        </div>
+                    </a>
+                    <a href="#tour-tab-4" class="tour-tabs-nav-link" data-toggle="pill">
+                        <div>
+                            <img src="assets/images/avatar-4.jpg" alt="avatar 4" width="50" class="rounded-circle"/>
+                        </div>
+                        <div class="ml-9">
+                            <h2 class="fs-5 mb-1">Rodrigo Palmster</h2>
+                            <p class="mb-0 text-muted fs-3">Founder & Ceo</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-8 pl-lg-0 mt-14 mt-lg-0 d-flex">
+                <div class="tour-tabs-content tour-tabs-content-right tab-content">
+                    <div class="tab-pane fade" id="tour-tab-1">
+                        <div class="row">
+                            <div class="col-12 col-sm-5">
+                                <img src="assets/images/image-5.jpg" alt="team member photo"
+                                     class="w-100 h-100 object-fit-cover"/>
+                            </div>
+                            <div class="col-12 col-sm-7 mt-14 mt-sm-0">
+                                <h2 class="fs-6 fs-lg-9">Michael Kors</h2>
+                                <div class="fs-5 text-muted">Founder & CEO</div>
+                                <p class="mt-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                    ea commodo consequat.</p>
+                                <div class="brand-icons-list mt-10">
+                                    <a href="#" class="brand-icon brand-icon-circle brand-icon-facebook">
+                                        <i class="fa fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="brand-icon brand-icon-circle brand-icon-instagram">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="brand-icon brand-icon-circle brand-icon-vimeo">
+                                        <i class="fa fa-vimeo-v"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade show active" id="tour-tab-2">
+                        <div class="row">
+                            <div class="col-12 col-sm-5">
+                                <img src="assets/images/image-4.jpg" alt="team member photo"
+                                     class="w-100 h-100 object-fit-cover"/>
+                            </div>
+                            <div class="col-12 col-sm-7 mt-14 mt-sm-0">
+                                <h2 class="fs-6 fs-lg-9">Denny Peterson</h2>
+                                <div class="fs-5 text-muted">Founder & CEO</div>
+                                <p class="mt-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                    ea commodo consequat.</p>
+                                <div class="brand-icons-list mt-10">
+                                    <a href="#" class="brand-icon brand-icon-circle brand-icon-facebook">
+                                        <i class="fa fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="brand-icon brand-icon-circle brand-icon-twitter">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="brand-icon brand-icon-circle brand-icon-instagram">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tour-tab-3">
+                        <div class="row">
+                            <div class="col-12 col-sm-5">
+                                <img src="assets/images/image-7.jpg" alt="team member photo"
+                                     class="w-100 h-100 object-fit-cover"/>
+                            </div>
+                            <div class="col-12 col-sm-7 mt-14 mt-sm-0">
+                                <h2 class="fs-6 fs-lg-9">Igor Kamelski</h2>
+                                <div class="fs-5 text-muted">Founder & CEO</div>
+                                <p class="mt-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                    ea commodo consequat.</p>
+                                <div class="brand-icons-list mt-10">
+                                    <a href="#" class="brand-icon brand-icon-circle brand-icon-tumblr">
+                                        <i class="fa fa-tumblr"></i>
+                                    </a>
+                                    <a href="#" class="brand-icon brand-icon-circle brand-icon-twitter">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="brand-icon brand-icon-circle brand-icon-instagram">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tour-tab-4">
+                        <div class="row">
+                            <div class="col-12 col-sm-5">
+                                <img src="assets/images/image-6.jpg" alt="team member photo"
+                                     class="w-100 h-100 object-fit-cover"/>
+                            </div>
+                            <div class="col-12 col-sm-7 mt-14 mt-sm-0">
+                                <h2 class="fs-6 fs-lg-9">Rodrigo Palmster</h2>
+                                <div class="fs-5 text-muted">Founder & CEO</div>
+                                <p class="mt-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                    ea commodo consequat.</p>
+                                <div class="brand-icons-list mt-10">
+                                    <a href="#" class="brand-icon brand-icon-circle brand-icon-facebook">
+                                        <i class="fa fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="brand-icon brand-icon-circle brand-icon-twitter">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="brand-icon brand-icon-circle brand-icon-pinterest">
+                                        <i class="fa fa-pinterest-p"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "team" section end -->
+
+<!-- "case results" section start -->
+<section class="section bg-secondary" id="cases">
+    <div class="section-content container text-center">
+        <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+            Cases that we win
+        </small>
+        <h1>Case Results</h1>
+    </div>
+
+    <div class="section-content container mt-17">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="card border-0">
+                    <div class="card-body p-19 p-md-20">
+                        <div class="price font-weight-bold">
+                            <div class="price-currency">$</div>
+                            <div class="price-value">476</div>
+                            <div class="price-description font-weight-normal">million</div>
+                        </div>
+                        <div class="ribbon ribbon-left ribbon-info ribbon-float-top-right mt-9 px-13">New</div>
+                        <hr class="my-11">
+                        <p>Profi has secured a landmark MTBE settlement against some
+                            of the country’s biggest oil companies, which have agreed to pay $476 million in a suit
+                            involving the contamination of 153 public water systems nationally.</p>
+                        <div class="mt-11">
+                            <a href="#" class="btn btn-link">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 mt-14 mt-lg-0">
+                <div class="card border-0">
+                    <div class="card-body p-19 p-md-20">
+                        <div class="price font-weight-bold">
+                            <div class="price-currency">$</div>
+                            <div class="price-value">476</div>
+                            <div class="price-description font-weight-normal">million</div>
+                        </div>
+                        <hr class="my-11">
+                        <p>Profi has secured a landmark MTBE settlement against some
+                            of the country’s biggest oil companies, which have agreed to pay $476 million in a suit
+                            involving the contamination of 153 public water systems nationally.</p>
+                        <div class="mt-11">
+                            <a href="#" class="btn btn-link">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "case results" section end -->
+
+<!-- "quote" section start -->
+<section class="section">
+    <div class="section-content container">
+        <div class="big-quote">
+            <div class="big-quote-icon mb-12 mb-md-15 mb-lg-19">
+                <i class="material-icons">format_quote</i>
+            </div>
+            <blockquote class="big-quote-contents">
+                <p class="mb-0 fs-6 fs-md-9">If there were no bad people, there would be no good lawyers.</p>
+                <footer class="big-quote-footer mt-11 mt-md-14 mt-lg-18">Charles Dickens</footer>
+            </blockquote>
+        </div>
+    </div>
+</section>
+<!-- "quote" section end -->
+
+<!-- "testimonials" section start -->
+<section class="section jarallax text-white" data-jarallax data-speed="0.2" id="testimonials">
+    <img class="section-background-image jarallax-img" src="assets/images/image-8.jpg" alt="background image"/>
+    <div class="section-background-color" style="background-color: rgba(0, 0, 0, 0.5)"></div>
+    <div class="section-content container text-center">
+        <h1>Testimonials</h1>
+    </div>
+    <div class="section-content container mt-10 mt-md-19 pt-2">
+        <div class="card-slider card-slider-testimonials" id="card-slider-2" data-slides-visible="2">
+            <article class="card-slider-item">
+                <div class="card card-ghost text-center">
+                    <div class="card-body p-19 p-md-20">
+                        <p class="mb-11">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="mt-auto">
+                            <img src="assets/images/avatar-1.jpg" alt="avatar 4" width="50"
+                                 class="rounded-circle"/>
+                            <h1 class="fs-5 lh-5 mb-2 mt-9">David</h1>
+                            <p class="fs-3 lh-4 text-muted">CEO at Company #1</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="card-slider-item">
+                <div class="card card-ghost text-center">
+                    <div class="card-body p-19 p-md-20">
+                        <p class="mb-11">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="mt-auto">
+                            <img src="assets/images/avatar-1.jpg" alt="avatar 4" width="50"
+                                 class="rounded-circle"/>
+                            <h1 class="fs-5 lh-5 mb-2 mt-9">John</h1>
+                            <p class="fs-3 lh-4 text-muted">CEO at Company #1</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="card-slider-item">
+                <div class="card card-ghost text-center">
+                    <div class="card-body p-19 p-md-20">
+                        <p class="mb-11">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="mt-auto">
+                            <img src="assets/images/avatar-1.jpg" alt="avatar 4" width="50"
+                                 class="rounded-circle"/>
+                            <h1 class="fs-5 lh-5 mb-2 mt-9">Nick</h1>
+                            <p class="fs-3 lh-4 text-muted">CEO at Company #1</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="card-slider-item">
+                <div class="card card-ghost text-center">
+                    <div class="card-body p-19 p-md-20">
+                        <p class="mb-11">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="mt-auto">
+                            <img src="assets/images/avatar-1.jpg" alt="avatar 4" width="50"
+                                 class="rounded-circle"/>
+                            <h1 class="fs-5 lh-5 mb-2 mt-9">Henry</h1>
+                            <p class="fs-3 lh-4 text-muted">CEO at Company #1</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="card-slider-item">
+                <div class="card card-ghost text-center">
+                    <div class="card-body p-19 p-md-20">
+                        <p class="mb-11">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="mt-auto">
+                            <img src="assets/images/avatar-1.jpg" alt="avatar 4" width="50"
+                                 class="rounded-circle"/>
+                            <h1 class="fs-5 lh-5 mb-2 mt-9">Jacob</h1>
+                            <p class="fs-3 lh-4 text-muted">CEO at Company #1</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+    <div class="section-content container mt-10 mt-md-19 pt-2 d-none d-sm-block">
+        <div class="d-flex justify-content-between align-items-center">
+            <button type="button" class="btn btn-ghost btn-square" data-toggle="card-slider"
+                    data-target="#card-slider-2" data-action="prevSlide">
+                <i class="material-icons">arrow_left</i>
+            </button>
+
+            <div data-control="card-slider-dots" data-target="#card-slider-2"></div>
+
+            <button type="button" class="btn btn-ghost btn-square" data-toggle="card-slider"
+                    data-target="#card-slider-2" data-action="nextSlide">
+                <i class="material-icons">arrow_right</i>
+            </button>
+        </div>
+    </div>
+</section>
+<!-- "testimonials" section end -->
+
+<!-- "contacts" section start -->
+<section class="section" id="contacts">
+    <div class="section-content container">
+        <div class="row">
+            <div class="col-12 col-lg-8 mb-14 mb-lg-0">
+                <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                    We answer within 24 hours
+                </small>
+                <h1>Contact Us</h1>
+                <form action="#" class="row mt-17">
+                    <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                            <label for="first_name" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="first_name"/>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                            <label for="last_name" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="last_name"/>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="text" class="form-control" id="phone"/>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="email"/>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="custom-checkbox" id="exampleCheck2" checked/>
+                            <label class="form-check-label" for="exampleCheck2">
+                                I've read and agree with the <a href="#">Terms & Policy</a>
+                            </label>
+                        </div>
+                        <div class="form-group mb-0">
+                            <button class="btn btn-primary btn-lg">Send message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card border-0 bg-secondary mb-4 ml-lg-9">
+                    <div class="card-body py-17 px-10 text-center">
+                        <div class="card-icon mb-6"><i class="material-icons">map</i></div>
+                        <div class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            Our address
+                        </div>
+                        <p class="mb-0 text-body">Brooklyn, NY 11204. 9359<br/>Hollow Lane. NY 11706.</p>
+                    </div>
+                </div>
+                <div class="card border-0 bg-secondary mb-4 ml-lg-9">
+                    <div class="card-body py-17 px-10 text-center">
+                        <div class="card-icon mb-6"><i class="material-icons">phone</i></div>
+                        <div class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            Mobile Phone
+                        </div>
+                        <p class="mb-0 text-body">(917) 494 - 4476</p>
+                    </div>
+                </div>
+                <div class="card border-0 bg-secondary ml-lg-9">
+                    <div class="card-body py-17 px-10 text-center">
+                        <div class="card-icon mb-6"><i class="material-icons">access_time</i></div>
+                        <div class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            Working Hours
+                        </div>
+                        <p class="mb-0 text-body">11:00 AM - 9:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "contacts" section end -->
+
+<!-- "map" section start -->
+<section class="gmap">
+    <div class="gmap-embed" data-parallax-speed="0">
+        <div class="gmap-embed-sizing-helper" style="padding-top: 650px"></div>
+        <div class="gmap-embed-inner"
+             data-options="{&quot;center&quot;:{&quot;lat&quot;:40.73774180898704,&quot;lng&quot;:-73.96465326476259},&quot;scrollwheel&quot;:false,&quot;zoom&quot;:14,&quot;disableDefaultUI&quot;:true,&quot;draggable&quot;:true}"></div>
+    </div>
+
+    <div class="gmap-infoboxes">
+        <div class="gmap-infobox" data-latlng="40.744978 -73.951145">
+            <div class="gmap-infobox-header">
+                <h1 class="gmap-infobox-label">Long Island Office</h1>
+            </div>
+
+            <div class="gmap-infobox-details">
+                <div class="gmap-infobox-details-item">
+                    47-02 11th St, Long Island City, NY 11101, USA
+                    <div>
+                        <a class="get-direction-link"
+                           href="https://maps.google.com?daddr=47-02+11th+St%2C+Long+Island+City%2C+NY+11101%2C+USA"
+                           target="_blank">Get directions</a></div>
+                </div>
+
+                <div class="gmap-infobox-details-item">
+                    Mon-Fri: 8:00 am - 5:00 pm<br/>
+                    Sat: 8:00 am - 3:00 pm <br/>
+                    Sun: Closed
+                </div>
+
+                <div class="gmap-infobox-details-item">
+                    646-846-8996 <sup>Appointments</sup><br/>
+                    212-355-2379 <sup>Fax</sup><br/>
+                    <a href="mailto:contact@mail.com">contact@mail.com</a></div>
+            </div>
+        </div>
+        <div class="gmap-infobox" data-latlng="40.7323995 -73.9897919">
+            <div class="gmap-infobox-header">
+                <h1 class="gmap-infobox-label">Manhattan Office</h1>
+            </div>
+
+            <div class="gmap-infobox-details">
+                <div class="gmap-infobox-details-item">
+                    100 E 12th St, New York, NY 10003
+                    <div>
+                        <a class="get-direction-link"
+                           href="https://maps.google.com?daddr=100+E+12th+St%2C+New+York%2C+NY+10003" target="_blank">Get
+                            directions</a></div>
+                </div>
+
+                <div class="gmap-infobox-details-item">
+                    Mon-Fri: 8:00 am - 5:00 pm<br/>
+                    Sat: 8:00 am - 3:00 pm <br/>
+                    Sun: Closed
+                </div>
+
+                <div class="gmap-infobox-details-item">
+                    646-846-8996 <sup>Appointments</sup><br/>
+                    212-355-2379 <sup>Fax</sup><br/>
+                    <a href="mailto:contact@mail.com">contact@mail.com</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "map" section end -->
+
+<!-- footer start -->
+{% include 'includes/footer.html' %}
+<!-- footer end -->
+
+<script src="assets/js/vendor.js"></script>
+<script src="assets/js/polyfills.js"></script>
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>

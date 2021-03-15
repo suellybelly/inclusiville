@@ -1,0 +1,70 @@
+//
+// Image slider
+//
+
+.image-slider {
+  position: relative;
+  overflow: hidden;
+
+  .flickity-viewport {
+    transition: height 0.5s;
+  }
+}
+
+.image-slider-contents {
+  position: relative;
+  z-index: 10;
+}
+
+.image-slider-item {
+  width: 100%;
+  height: auto;
+}
+
+.image-slider-prev, .image-slider-next {
+  position: absolute;
+  top: 50%;
+  margin-top: rem(-25);
+  z-index: 15;
+  background: $white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(55);
+  height: rem(50);
+  transition: $transition-base;
+
+  &, &:hover {
+    color: $black;
+  }
+
+  &.disabled {
+    color: $text-muted;
+  }
+}
+
+.image-slider-prev {
+  left: rem(-5);
+  padding-left: rem(5);
+
+  &:not(.disabled):hover {
+    transform: translateX(#{rem(5)});
+  }
+
+  @if $enable-rounded {
+    @include border-right-radius($border-radius);
+  }
+}
+
+.image-slider-next {
+  right: rem(-5);
+  padding-right: rem(5);
+
+  &:not(.disabled):hover {
+    transform: translateX(#{rem(-5)});
+  }
+
+  @if $enable-rounded {
+    @include border-left-radius($border-radius);
+  }
+}

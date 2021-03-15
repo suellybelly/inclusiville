@@ -1,0 +1,73 @@
+//
+// SDS Block
+//
+
+.sds-block {
+  display: flex;
+  position: relative;
+
+  @include media-breakpoint-up(xl) {
+    padding: map_get($spacers, 20) 0;
+  }
+}
+
+.sds-block-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 70%;
+  z-index: 5;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+
+  &.sds-block-background-left {
+    left: 0;
+  }
+
+  &.sds-block-background-right {
+    right: 0;
+  }
+}
+
+.sds-block-foreground {
+  position: relative;
+  z-index: 10;
+  background: $white;
+  width: 45%;
+  padding: map_get($spacers, 21) map_get($spacers, 16) map_get($spacers, 21) map_get($spacers, 22);
+
+  @if $enable-rounded {
+    @include border-radius($border-radius);
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 0 $grid-gutter-width/2;
+    width: map_get($container-max-widths, lg);
+    margin: 0 auto;
+  }
+
+  @include media-breakpoint-down(md) {
+    width: map_get($container-max-widths, md);
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: map_get($container-max-widths, sm);
+  }
+
+  @include media-breakpoint-down(xs) {
+    width: auto;
+  }
+
+  &.sds-block-foreground-left {
+    margin-right: auto;
+  }
+
+  &.sds-block-foreground-right {
+    margin-left: auto;
+  }
+}

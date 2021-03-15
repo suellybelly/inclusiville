@@ -1,0 +1,19 @@
+//
+// Spacing
+//
+
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+  margin-bottom: $paragraph-margin-bottom;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+p, blockquote, .alert, ul, ol {
+  margin-bottom: $paragraph-margin-bottom;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

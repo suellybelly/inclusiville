@@ -1,0 +1,180 @@
+//
+// Card
+//
+
+.card {
+  z-index: 0;
+}
+
+.card-ghost {
+  border-color: rgba($white, 0.25);
+  background: transparent;
+  color: $white;
+
+  p {
+    color: inherit;
+  }
+}
+
+.card-square {
+  &:before {
+    content: '';
+    display: inline-block;
+    padding-top: 100%;
+  }
+
+  .card-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.card-icon {
+  color: $gray-500;
+  line-height: 1;
+
+  .material-icons, i {
+    font-size: rem(36);
+  }
+}
+
+.card-accent-left:before,
+.card-accent-right:before {
+  content: '';
+  position: absolute;
+  top: $card-border-width * -1;
+  bottom: $card-border-width * -1;
+  width: rem(3);
+  background: $primary;
+}
+
+.card-accent-left:before {
+  left: $card-border-width * -1;
+}
+
+.card-accent-right:before {
+  right: $card-border-width * -1;
+}
+
+.card-text {
+  color: inherit;
+}
+
+.card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+
+  @if $enable-rounded {
+    border-radius: $card-border-radius;
+  }
+}
+
+.card {
+  .card-body-hover {
+    opacity: 0;
+    transform: scale(0.75);
+    transition: $transition-base;
+  }
+
+  .card-bg-hover {
+    opacity: 0;
+    transition: $transition-base;
+  }
+
+  &:hover .card-body-hover {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  &:hover .card-bg-hover {
+    opacity: 1;
+  }
+}
+
+.card-link-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: $zindex-fixed;
+}
+
+.card-vertical-group {
+  display: flex;
+  flex-flow: column;
+
+  > .card + .card {
+    margin-top: 0;
+    border-top: 0;
+  }
+
+  // Handle rounded corners
+  > .card {
+    @if $enable-rounded {
+      &:not(:last-child),
+      &:not(:last-child) .card-img-bottom,
+      &:not(:last-child) .card-header {
+        @include border-bottom-radius(0);
+      }
+
+      &:not(:first-child),
+      &:not(:first-child) .card-img-top,
+      &:not(:first-child) .card-footer {
+        @include border-top-radius(0);
+      }
+    }
+  }
+}
+
+.card.demo-card {
+  border: 0;
+
+  .card-body {
+    padding: 0;
+  }
+}
+
+.demo-card-placeholder {
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 152.7777778%;
+  }
+
+  .demo-card-placeholder-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.card.demo-card .card-body img,
+.demo-card-placeholder {
+  box-shadow: 0 0 30px 0 rgba(#000, 0.1);
+  transition: $transition-base;
+}
+
+.card.demo-card:hover .card-body img,
+.demo-card-placeholder:hover {
+  box-shadow: 0 0 45px 0 rgba(#000, 0.15);
+}

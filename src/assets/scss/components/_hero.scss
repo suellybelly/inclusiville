@@ -1,0 +1,96 @@
+//
+// Hero Block
+//
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-fullscreen {
+  min-height: 100vh;
+}
+
+.hero-bg-white {
+  background: $white;
+}
+
+.hero-bg-secondary {
+  background: $secondary;
+}
+
+.hero-background, .hero-foreground, .hero-background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.hero-foreground {
+  transition: all .75s ease-in-out;
+  transition-delay: .25s;
+
+  .hero:not(.hero-bg-ready) & {
+    opacity: 0;
+    transform: translate3d(0, -1rem, 0);
+  }
+}
+
+.hero-background {
+  z-index: 5;
+  visibility: hidden;
+
+  .hero.hero-bg-ready & {
+    animation: hero-bg-reveal 1s;
+    visibility: visible;
+  }
+
+  &.hero-background-stick-right {
+    right: 0;
+    left: auto;
+  }
+
+  &.hero-background-stick-left {
+    left: 0;
+    right: auto;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &.hero-background-70-percent {
+      width: 70%;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.hero-background-overlay {
+  z-index: 6;
+}
+
+// generate all combinations of colors and directions for hero foreground gradient
+@each $direction_name, $direction_angle in (bottom: 0deg, left: 90deg, right: -90deg, top: 180deg) {
+  @each $gradient_name, $gradient_color in (black: $black, white: $white, primary: $primary) {
+    .hero.hero-bg-ready .hero-foreground-gradient-#{$gradient_name}-#{$direction_name} {
+      background-image: linear-gradient($direction_angle, rgba($gradient_color, 0.5) 0%, rgba($gradient_color, 0) 100%);
+    }
+  }
+}
+
+@keyframes hero-bg-reveal {
+  0% {
+    opacity: 0;
+    //transform: scale(1.05);
+  }
+
+  100% {
+    opacity: 1;
+    //transform: scale(1);
+  }
+}

@@ -1,0 +1,13 @@
+//
+// Star rating
+//
+
+.star-rating {
+  color: $yellow;
+  display: inline-flex;
+  font-size: rem(20);
+
+  .material-icons {
+    font-size: inherit;
+  }
+}

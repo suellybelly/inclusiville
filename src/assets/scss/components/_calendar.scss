@@ -1,0 +1,129 @@
+//
+// Calendar
+//
+
+.calendar-month-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: map_get($spacers, 7);
+
+  > .current-month {
+    margin: 0 map_get($spacers, 8);
+  }
+}
+
+.calendar-weekdays-container {
+  display: flex;
+  flex-wrap: nowrap;
+  color: $gray-800;
+  margin-bottom: map_get($spacers, 7);
+
+  > .weekday {
+    flex: 0 0 (100% / 7);
+  }
+}
+
+.calendar-dates-container {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: rem(1) solid $input-border-color;
+  border-left: rem(1) solid $input-border-color;
+
+  > .calendar-date {
+    flex: 0 0 calc(#{100% / 7} - 1px);
+    box-sizing: content-box;
+  }
+}
+
+.calendar-date {
+  position: relative;
+  border-right: rem(1) solid $input-border-color;
+  border-bottom: rem(1) solid $input-border-color;
+  color: $black;
+  cursor: pointer;
+  transition: $transition-base;
+  transition-duration: 0.1s;
+  //font-weight: bold;
+
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 75%;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: rem(-1);
+    left: rem(-1);
+    bottom: rem(-1);
+    right: rem(-1);
+    border: rem(2) solid $primary;
+    z-index: 1;
+    opacity: 0;
+    transition: $transition-base;
+    transition-duration: 0.1s;
+  }
+
+  > .calendar-date-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  &.disabled {
+    cursor: default;
+    font-weight: normal;
+
+    > .calendar-date-content {
+      color: $gray-400;
+      pointer-events: none;
+    }
+  }
+
+  &.selected {
+    color: $primary;
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.calendar-date-content {
+  text-align: right;
+  padding: map_get($spacers, 7);
+
+  > .month-short, > .day {
+    display: inline-block;
+  }
+
+  > .month-short {
+    margin-right: rem(5);
+    display: none;
+  }
+}
+
+.calendar-date.prev-month:first-child .calendar-date-content > .month-short,
+.calendar-date.prev-month.last-date-of-month + .calendar-date .calendar-date-content > .month-short,
+.calendar-date.current-month.last-date-of-month + .calendar-date .calendar-date-content > .month-short {
+  display: inline-block;
+}
+
+@include media-breakpoint-up(md) {
+  .calendar-native-input {
+    position: absolute;
+    left: -9999px;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .calendar-dates-container, .calendar-weekdays-container, .calendar-month-selector {
+    display: none;
+  }
+}

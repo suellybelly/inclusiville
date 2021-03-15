@@ -1,0 +1,7 @@
+//
+// Navs
+//
+
+.tab-content > .tab-pane:not(.active) {
+  display: none !important;
+}

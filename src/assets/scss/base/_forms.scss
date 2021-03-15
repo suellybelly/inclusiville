@@ -1,0 +1,18 @@
+//
+// Forms
+//
+
+.form-check-label {
+  cursor: pointer;
+}
+
+.form-label {
+  font-family: $font-family-secondary;
+  letter-spacing: $letter-spacing;
+  text-transform: uppercase;
+  font-size: rem(nth($typography-sizings, 1));
+  color: $text-muted;
+  margin-bottom: map_get($spacers, 1);
+  line-height: 1.5;
+  vertical-align: middle;
+}

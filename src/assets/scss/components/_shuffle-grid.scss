@@ -1,0 +1,31 @@
+//
+// ShuffleJS grid integration
+//
+
+.shuffle-grid {
+  @include clearfix;
+}
+
+.shuffle-grid-item {
+  float: left;
+}
+
+@each $spacer, $value in $spacers {
+  .shuffle-grid-gap-#{$spacer} {
+    margin: (-1 * ($value / 2));
+
+    .shuffle-grid-item {
+      padding: ($value / 2);
+    }
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    @for $size from 1 through 4 {
+      .shuffle-grid-cols#{breakpoint-infix($breakpoint)}-#{$size} .shuffle-grid-item {
+        width: (100% / $size);
+      }
+    }
+  }
+}

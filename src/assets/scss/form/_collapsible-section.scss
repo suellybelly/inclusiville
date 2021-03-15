@@ -1,0 +1,46 @@
+//
+// Form section
+//
+
+.form-collapsible-section-body:before {
+  content: '';
+  display: block;
+  height: map_get($spacers, 14);
+}
+
+.form-collapsible-section-head {
+  background: $secondary;
+  font-size: rem(21);
+  line-height: rem(24);
+  cursor: pointer;
+  display: flex;
+  color: map_get($colors, black);
+  overflow: hidden;
+
+  @if $enable-rounded {
+    border-radius: $border-radius;
+  }
+}
+
+.form-collapsible-section-title,
+.form-collapsible-section-toggle,
+.form-collapsible-section-number {
+  display: flex;
+  align-items: center;
+  padding: map_get($spacers, 8);
+}
+
+.form-collapsible-section-number {
+  background: darken($secondary, 5%);
+  justify-content: center;
+  min-width: rem(60);
+}
+
+.form-collapsible-section-toggle {
+  transition: $transition-base;
+  margin-left: auto;
+}
+
+.form-collapsible-section[aria-expanded="true"] .form-collapsible-section-toggle {
+  transform: rotate(-180deg);
+}

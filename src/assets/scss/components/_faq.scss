@@ -1,0 +1,53 @@
+//
+// FAQ block
+//
+
+.faq {
+  padding: map_get($spacers, 10) 0;
+  border-bottom: rem(1) solid $gray-300;
+}
+
+.faq-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+
+  .faq-title {
+    font-weight: normal;
+    font-size: rem(20);
+    color: $paragraph-color;
+    margin: 0 map_get($spacers, 9) 0 0;
+  }
+
+  .faq-toggle {
+    line-height: 1;
+
+    .material-icons {
+      color: $text-muted;
+    }
+  }
+
+  .faq-title, .faq-toggle .material-icons {
+    transition: $transition-base;
+  }
+}
+
+.faq-body:before {
+  content: '';
+  display: block;
+  height: map_get($spacers, 8);
+}
+
+.faq-open, .faq-header:hover {
+  .faq-title, .faq-toggle .material-icons {
+    color: $primary;
+  }
+}
+
+.faq:not(.faq-open) .faq-toggle-open {
+  display: none;
+}
+
+.faq.faq-open .faq-toggle-closed {
+  display: none;
+}

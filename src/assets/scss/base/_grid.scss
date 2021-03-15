@@ -1,0 +1,35 @@
+//
+// Grids
+//
+
+.row[class*="vertical-divider-"] {
+  overflow-x: hidden; //quickfix to hide divider on left side
+  position: relative;
+
+  > [class*="col"]:nth-child(n+2):after {
+    content: '';
+    background-color: var(--vertical-divider-color);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    @media (max-width: map_get($container-max-widths, md)) {
+      width: 100%;
+      height: rem(1);
+      left: 0;
+      top: rem(-4); // quickfix to center line between columns
+    }
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      width: rem(1);
+      height: auto;
+      left: rem(-1); // quickfix to hide divider on left side
+    }
+  }
+}
+
+@each $color, $value in map-merge($colors, $theme-colors) {
+  .row.vertical-divider-#{$color} {
+    --vertical-divider-color: #{$value};
+  }
+}

@@ -1,0 +1,123 @@
+//
+// Custom form controls
+//
+
+.custom-checkbox-wrap, .custom-radio-wrap {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+// support for bootstrap .form-check
+.form-check > .custom-checkbox-wrap,
+.form-check > .custom-radio-wrap {
+  position: absolute;
+  margin-top: $form-check-input-margin-y;
+  margin-left: -$form-check-input-gutter;
+}
+
+// support for bootstrap .form-check-inline
+.form-check-inline > .custom-checkbox-wrap,
+.form-check-inline > .custom-radio-wrap {
+  position: static;
+  margin-top: 0;
+  margin-right: $form-check-inline-input-margin-x;
+  margin-left: 0;
+}
+
+// hide native input
+.custom-radio-wrap > .custom-radio,
+.custom-checkbox-wrap > .custom-checkbox {
+  position: absolute;
+  left: -9999px;
+}
+
+// fake input
+.custom-checkbox-presenter, .custom-radio-presenter {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+}
+
+// custom styles for checkbox fake input presenter
+.custom-checkbox-presenter {
+  &:before, &:after {
+    position: absolute;
+    text-align: center;
+    content: '';
+    display: inline-block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: $transition-base;
+  }
+
+  &:before {
+    border-radius: 2px;
+    background-color: $gray-300;
+  }
+
+  &:after {
+    text-align: center;
+    line-height: 1;
+    content: '✓';
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: 50% 50%;
+    color: $white;
+    font-family: Arial, sans-serif;
+  }
+
+  &:hover:before {
+    background-color: $gray-400;
+  }
+}
+
+.custom-checkbox-wrap.checked > .custom-checkbox-presenter {
+  &:before {
+    background-color: $primary;
+  }
+
+  &:after {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+}
+
+// custom styles for radio fake input presenter
+.custom-radio-presenter {
+  border-radius: 50%;
+  border: 2px solid $text-muted;
+  transition: $transition-base;
+
+  &:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: $transition-base;
+    background-color: $text-muted;
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  &:hover:before {
+    transform: scale(0.75);
+    opacity: 1;
+  }
+}
+
+.custom-radio-wrap.checked > .custom-radio-presenter {
+  border-color: $primary;
+
+  &:before {
+    background-color: $primary;
+    transform: scale(0.7);
+    opacity: 1;
+  }
+}

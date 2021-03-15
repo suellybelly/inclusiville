@@ -1,0 +1,38 @@
+//
+// Colors
+//
+
+// background
+@each $color, $value in $colors {
+  .bg-#{$color} {
+    background-color: $value !important;
+  }
+
+  @for $i from 1 through 9 {
+    .bg-#{$color}-#{$i * 10} {
+      background-color: rgba($value, $i / 10) !important;
+    }
+  }
+}
+
+// text
+@each $color, $value in $colors {
+  .text-#{$color} {
+    color: $value !important;
+  }
+
+  @for $i from 1 through 9 {
+    .text-#{$color}-#{$i * 10} {
+      color: rgba($value, $i / 10) !important;
+    }
+  }
+}
+
+// gradients
+@each $direction_name, $direction_angle in (bottom: 0deg, left: 90deg, right: -90deg, top: 180deg) {
+  @each $gradient_name, $gradient_color in (black: $black, dark: $black, white: $white, primary: $primary) {
+    .bg-gradient-#{$gradient_name}-#{$direction_name} {
+      background-image: linear-gradient($direction_angle, rgba($gradient_color, 1) 0%, rgba($gradient_color, 0) 100%);
+    }
+  }
+}

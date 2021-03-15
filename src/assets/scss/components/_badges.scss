@@ -1,0 +1,13 @@
+//
+// Badges
+//
+
+.badge-pill {
+  padding-right: $badge-pill-padding-x;
+  padding-left: $badge-pill-padding-x;
+  border-radius: $badge-pill-border-radius;
+}
+
+.badge-ghost {
+  background: rgba($white, 0.2);
+}

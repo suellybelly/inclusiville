@@ -1,0 +1,658 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>PROFI</title>
+
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.css">
+</head>
+<body data-spy="scroll" data-target="#header-navbar" data-offset="140">
+
+<div id="page-start-anchor"></div>
+
+<!-- header start -->
+{% set bottomNavbarItems = [
+    {text: 'About', href: '#about', smoothScroll: true},
+    {text: 'Services', href: '#services', smoothScroll: true},
+    {text: 'Testimonials', href: '#testimonials', smoothScroll: true},
+    {text: 'Our work', href: '#our-work', smoothScroll: true},
+    {text: 'FAQ', href: '#faq', smoothScroll: true},
+    {text: 'Vouchers', href: '#vouchers', smoothScroll: true},
+    {text: 'Contacts', href: '#contacts', smoothScroll: true},
+] %}
+{% include 'includes/header.html' with {
+    topNavbarText: true,
+    headerClasses: 'header-fixed-xl'
+} %}
+<!-- header end -->
+
+<!-- main hero start -->
+<section class="hero hero-fullscreen jarallax" data-video="mp4:assets/video/bg.mp4,webm:assets/video/bg.webm" data-speed="0.2" style="min-height: calc(100vh - 140px)">
+    <div class="hero-background">
+        <img src="assets/images/image-28.jpg" alt="hero background" class="jarallax-img"/>
+        <div class="hero-background-overlay" style="background-color: rgba(0,0,0,.5)"></div>
+    </div>
+    <div class="hero-foreground container d-flex flex-column justify-content-center">
+        <div class="py-14 py-md-23 py-lg-25 text-center text-lg-left">
+            <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                haircuts, color, makeup, nail
+            </small>
+            <h1 class="fs-10 fs-lg-11 mt-6 mb-16 font-weight-bold text-white">Beauty Salon<br/>Los Angeles</h1>
+            <a href="#" class="btn btn-lg btn-primary">Book online</a>
+        </div>
+    </div>
+</section>
+<!-- main hero end -->
+
+<!-- "about" section start -->
+<section class="section" id="about">
+    <div class="section-content container text-center">
+        <h1 class="mb-0">Welcome to PROFI Beauty</h1>
+        <div class="row no-gutters mt-6 mt-md-10 mt-lg-17">
+            <div class="col-12 col-lg-10 offset-0 offset-lg-1">
+                <p>This is a great space to write long text about your company and your services. You can use this space
+                    to go into a little more detail about your company. Talk about your team and what services you
+                    provide. Tell your visitors the story of how you came up with the idea for your business and what
+                    makes you different from your competitors. Make your company stand out and show.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section-content container mt-20">
+        <div class="image-slider">
+            <a href="#" class="image-slider-prev d-none d-md-flex">
+                <i class="material-icons">arrow_back</i>
+            </a>
+            <a href="#" class="image-slider-next d-none d-md-flex">
+                <i class="material-icons">arrow_forward</i>
+            </a>
+            <div class="image-slider-contents">
+                <div class="image-slider-item">
+                    <img src="assets/images/image-26.jpg" alt="image" class="object-fit-cover w-100" height="600"/>
+                </div>
+                <div class="image-slider-item">
+                    <img src="assets/images/image-27.jpg" alt="image" class="object-fit-cover w-100" height="600"/>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary p-19 p-lg-20 d-flex justify-content-between flex-column flex-lg-row">
+            <p class="mb-lg-0 text-white" style="max-width: 700px">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco.</p>
+            <a href="booking.html" class="btn btn-white-primary">Book online</a>
+        </div>
+    </div>
+    <div class="section-content container mt-20">
+        <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+            Products we use
+        </small>
+        <div class="d-flex align-items-center mt-8">
+            <div class="card-slider card-slider-brands mr-0 mr-lg-23 flex-grow-1" id="brands-slider"
+                 data-options='{"contain":false,"groupCells":false,"wrapAround":true}'>
+                <img src="assets/images/brand-6.jpg" class="card-slider-item" alt="brand 1" style="height: 30px"/>
+                <img src="assets/images/brand-7.jpg" class="card-slider-item" alt="brand 2" style="height: 30px"/>
+                <img src="assets/images/brand-8.jpg" class="card-slider-item" alt="brand 3" style="height: 30px"/>
+                <img src="assets/images/brand-9.jpg" class="card-slider-item" alt="brand 4" style="height: 30px"/>
+                <img src="assets/images/brand-7.jpg" class="card-slider-item" alt="brand 5" style="height: 30px"/>
+                <img src="assets/images/brand-6.jpg" class="card-slider-item" alt="brand 1" style="height: 30px"/>
+            </div>
+            <div class="flex-shrink-0 d-none d-lg-block">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-light btn-square" data-toggle="card-slider"
+                            data-target="#brands-slider" data-action="prevSlide">
+                        <i class="material-icons">arrow_left</i>
+                    </button>
+                    <button type="button" class="btn btn-light btn-square" data-toggle="card-slider"
+                            data-target="#brands-slider" data-action="nextSlide">
+                        <i class="material-icons">arrow_right</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "about" section end -->
+
+<!-- "services" section start -->
+<section class="section bg-secondary" id="services">
+    <div class="section-content container text-center">
+        <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+            What we do the best
+        </small>
+        <h1>Services</h1>
+        <div class="row mt-15">
+            <div class="col-12 col-md-4">
+                <div class="card border-0" data-mh="service-cards">
+                    <div class="card-body p-19 p-md-20">
+                        <svg width="37" height="48" viewBox="0 0 37 48" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="#000" fill-rule="nonzero">
+                                <path d="M22.17 26.29h1.594v1.594H22.17zM30.137 35.85c-1.757 0-3.186 1.788-3.186 3.984 0 2.196 1.429 3.983 3.186 3.983s3.187-1.787 3.187-3.983-1.43-3.983-3.187-3.983zm0 6.374c-.912 0-1.593-1.262-1.593-2.39 0-1.128.681-2.39 1.593-2.39.912 0 1.594 1.262 1.594 2.39 0 1.128-.682 2.39-1.594 2.39zM15.797 35.85c-1.757 0-3.187 1.788-3.187 3.984 0 2.196 1.43 3.983 3.187 3.983s3.187-1.787 3.187-3.983-1.43-3.983-3.187-3.983zm0 6.374c-.912 0-1.593-1.262-1.593-2.39 0-1.128.681-2.39 1.593-2.39.912 0 1.593 1.262 1.593 2.39 0 1.128-.681 2.39-1.593 2.39z"/>
+                                <path d="M35.947 43.914l-.36-.36a7.792 7.792 0 00.924-3.72c0-3.954-2.86-7.17-6.374-7.17-.41 0-.819.045-1.22.133L25.353.71A.797.797 0 0024.56 0h-3.186a.797.797 0 00-.792.706l-3.39 29.477v.017h-.001l-.242 2.583a5.697 5.697 0 00-1.152-.12c-3.515 0-6.374 3.217-6.374 7.171s2.86 7.17 6.374 7.17 6.373-3.216 6.373-7.17a7.84 7.84 0 00-.764-3.4l.671-5.363h1.78l.67 5.363a7.84 7.84 0 00-.763 3.4c0 3.954 2.859 7.17 6.373 7.17a5.7 5.7 0 001.837-.303l.593.593a2.39 2.39 0 103.38-3.38zm-20.15 1.497c-2.636 0-4.78-2.502-4.78-5.577s2.144-5.577 4.78-5.577 4.78 2.502 4.78 5.577-2.144 5.577-4.78 5.577zm4.246-10.918a6.39 6.39 0 00-1.545-1.151l.212-2.271h1.761l-.428 3.422zm-1.166-5.016l3.207-27.884h1.763l3.531 31.778c-.548.3-1.049.677-1.487 1.122l-.54-4.318a.797.797 0 00-.79-.698h-5.684zm15.944 16.69a.797.797 0 01-1.127 0l-.961-.961a.797.797 0 00-.889-.164 4.154 4.154 0 01-1.706.369c-2.636 0-4.78-2.502-4.78-5.577s2.144-5.577 4.78-5.577 4.78 2.502 4.78 5.577a6.132 6.132 0 01-.997 3.404.797.797 0 00.1 1.003l.8.8a.797.797 0 010 1.126z"/>
+                                <path d="M7.281 30.274h5.466a2.39 2.39 0 000-4.78H8.763a.797.797 0 110-1.594h3.984a2.39 2.39 0 000-4.78H8.763a.797.797 0 010-1.593h3.984a2.39 2.39 0 000-4.78H8.763a.797.797 0 110-1.593h3.984a2.39 2.39 0 000-4.78H8.763a.797.797 0 110-1.594h3.984a2.39 2.39 0 000-4.78H3.983A3.988 3.988 0 000 3.983v43.021c0 .44.357.797.797.797a5.364 5.364 0 005.359-5.608L5.69 31.94a1.593 1.593 0 011.591-1.666zm-2.304-.608a3.16 3.16 0 00-.88 2.346l.467 10.253a3.775 3.775 0 01-2.97 3.86V3.982a2.393 2.393 0 012.39-2.39h8.763a.797.797 0 110 1.594H8.763a2.39 2.39 0 000 4.78h3.984a.797.797 0 110 1.593H8.763a2.39 2.39 0 000 4.78h3.984a.797.797 0 110 1.594H8.763a2.39 2.39 0 100 4.78h3.984a.797.797 0 010 1.593H8.763a2.39 2.39 0 000 4.78h3.984a.797.797 0 110 1.593H7.28a3.159 3.159 0 00-2.304.986z"/>
+                            </g>
+                        </svg>
+                        <h1 class="mt-10 fs-6 fs-lg-9">Haircuts</h1>
+                        <p>Integer a quam himenaeos iaculis pretium ac nisl, magna fameles</p>
+                        <div class="d-flex justify-content-center align-items-start my-10">
+                            <div class="price fs-7 text-black">
+                                <div class="price-currency pr-0">$</div>
+                                <div class="price-value">100 +</div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-link">Book online</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card border-0" data-mh="service-cards">
+                    <div class="card-body p-19 p-md-20">
+                        <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="#000" fill-rule="nonzero">
+                                <path d="M19.872 12.936a6.485 6.485 0 00-1.23-1.226l1.23-2.131-1.386-.8-1.228 2.127a6.344 6.344 0 00-1.679-.454V8h-1.6v2.452a6.344 6.344 0 00-1.679.454l-1.228-2.127-1.386.8 1.23 2.13a6.482 6.482 0 00-1.23 1.227l-2.128-1.229-.8 1.386 2.124 1.226a6.297 6.297 0 00-.438 1.568l1.584.226a4.8 4.8 0 019.502 0l1.584-.226a6.301 6.301 0 00-.438-1.568l2.124-1.226-.8-1.386-2.128 1.229zM38.314 12.936a6.482 6.482 0 00-1.23-1.226l1.23-2.131-1.386-.8-1.228 2.127a6.344 6.344 0 00-1.68-.454V8h-1.6v2.452a6.344 6.344 0 00-1.678.454l-1.228-2.127-1.386.8 1.23 2.13a6.485 6.485 0 00-1.23 1.227L26 11.707l-.8 1.386 2.124 1.226a6.301 6.301 0 00-.438 1.568l1.584.226a4.8 4.8 0 019.502 0l1.584-.226a6.297 6.297 0 00-.438-1.568l2.124-1.226-.8-1.386-2.128 1.229zM19.872 24.136a6.485 6.485 0 00-1.23-1.226l1.23-2.131-1.386-.8-1.228 2.127a6.344 6.344 0 00-1.679-.454V19.2h-1.6v2.452a6.344 6.344 0 00-1.679.454l-1.228-2.127-1.386.8 1.23 2.13a6.482 6.482 0 00-1.23 1.227l-2.128-1.229-.8 1.386 2.124 1.226a6.297 6.297 0 00-.438 1.568l1.584.226a4.8 4.8 0 019.502 0l1.584-.226a6.301 6.301 0 00-.438-1.568l2.124-1.226-.8-1.386-2.128 1.229zM38.314 24.136a6.482 6.482 0 00-1.23-1.226l1.23-2.131-1.386-.8-1.228 2.127a6.344 6.344 0 00-1.68-.454V19.2h-1.6v2.452a6.344 6.344 0 00-1.678.454l-1.228-2.127-1.386.8 1.23 2.13a6.485 6.485 0 00-1.23 1.227L26 22.907l-.8 1.386 2.124 1.226a6.301 6.301 0 00-.438 1.568l1.584.226a4.8 4.8 0 019.502 0l1.584-.226a6.297 6.297 0 00-.438-1.568l2.124-1.226-.8-1.386-2.128 1.229zM22 34.107l-2.128 1.229a6.485 6.485 0 00-1.23-1.226l1.23-2.131-1.386-.8-1.228 2.127a6.344 6.344 0 00-1.679-.454V30.4h-1.6v2.452a6.344 6.344 0 00-1.679.454l-1.228-2.127-1.386.8 1.23 2.13a6.482 6.482 0 00-1.23 1.227l-2.128-1.229-.8 1.386 2.124 1.226a6.297 6.297 0 00-.438 1.568l1.584.226a4.8 4.8 0 019.502 0l1.584-.226a6.301 6.301 0 00-.438-1.568l2.124-1.226-.8-1.386zM40.442 34.107l-2.128 1.229a6.482 6.482 0 00-1.23-1.226l1.23-2.131-1.386-.8-1.228 2.127a6.344 6.344 0 00-1.68-.454V30.4h-1.6v2.452a6.344 6.344 0 00-1.678.454l-1.228-2.127-1.386.8 1.23 2.13a6.485 6.485 0 00-1.23 1.227L26 34.107l-.8 1.386 2.124 1.226a6.301 6.301 0 00-.438 1.568l1.584.226a4.8 4.8 0 019.502 0l1.584-.226a6.297 6.297 0 00-.438-1.568l2.124-1.226-.8-1.386z"/>
+                                <path d="M44.8 0H3.2A3.204 3.204 0 000 3.2v41.6A3.204 3.204 0 003.2 48h41.6a3.204 3.204 0 003.2-3.2V3.2A3.204 3.204 0 0044.8 0zM22.4 46.4a2.404 2.404 0 01-2.262-1.6h7.724a2.404 2.404 0 01-2.262 1.6h-3.2zM4.8 43.2V4.8h38.4v38.4H4.8zm41.6 1.6a1.602 1.602 0 01-1.6 1.6H28.798c.356-.473.603-1.02.722-1.6H44a.8.8 0 00.8-.8V4a.8.8 0 00-.8-.8H4a.8.8 0 00-.8.8v40a.8.8 0 00.8.8h14.48c.12.58.366 1.127.722 1.6H3.2a1.602 1.602 0 01-1.6-1.6V3.2a1.602 1.602 0 011.6-1.6h41.6a1.602 1.602 0 011.6 1.6v41.6z"/>
+                            </g>
+                        </svg>
+                        <h1 class="mt-10 fs-6 fs-lg-9">Lashes</h1>
+                        <p>Integer a quam himenaeos iaculis pretium ac nisl, magna fameles</p>
+                        <div class="d-flex justify-content-center align-items-start my-10">
+                            <div class="price fs-7 text-black">
+                                <div class="price-currency pr-0">$</div>
+                                <div class="price-value">80 +</div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-link">Book online</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card border-0" data-mh="service-cards">
+                    <div class="card-body p-19 p-md-20">
+                        <svg width="40" height="48" viewBox="0 0 40 48" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="#000" fill-rule="nonzero">
+                                <path d="M7.2 34.4h6.4V36H7.2zM5.6 37.6h9.6v1.6H5.6zM7.2 40.8h6.4v1.6H7.2z"/>
+                                <path d="M36.954 16.646a10.216 10.216 0 00-.379-.359 6.981 6.981 0 00-13.95.002 10.405 10.405 0 00-1.825 2.168V14.4a10.328 10.328 0 00-3.425-7.713 6.982 6.982 0 00-13.95.002A10.373 10.373 0 000 14.4V48h1.6V14.4a8.776 8.776 0 011.881-5.437l.327 9.468a6.596 6.596 0 0013.184 0l.327-9.467A8.73 8.73 0 0119.2 14.4V48h1.6V24a8.776 8.776 0 011.881-5.437l.326 9.468a6.596 6.596 0 0013.186 0l.326-9.466A8.73 8.73 0 0138.4 24v24H40V24a10.329 10.329 0 00-3.046-7.354zM10.4 23.2a4.98 4.98 0 01-3.668-1.594c1.018-.517 2.31-.806 3.668-.806s2.65.289 3.668.806A4.98 4.98 0 0110.4 23.2zm5.38-16.031l-.386 11.207a5.021 5.021 0 01-.438 1.89c-1.272-.683-2.883-1.066-4.556-1.066s-3.284.383-4.556 1.067a5.021 5.021 0 01-.438-1.891L5.02 7.169a5.383 5.383 0 1110.76 0zM29.6 32.8a4.98 4.98 0 01-3.668-1.594c1.018-.517 2.31-.806 3.668-.806s2.65.289 3.668.806A4.98 4.98 0 0129.6 32.8zm5.38-16.031l-.386 11.207a5.021 5.021 0 01-.438 1.89c-1.272-.683-2.883-1.066-4.556-1.066s-3.284.383-4.556 1.067a5.021 5.021 0 01-.438-1.891l-.386-11.207a5.383 5.383 0 1110.76 0z"/>
+                                <path d="M26.4 41.6h6.4v1.6h-6.4zM24.8 44.8h9.6v1.6h-9.6z"/>
+                            </g>
+                        </svg>
+                        <h1 class="mt-10 fs-6 fs-lg-9">Manicure</h1>
+                        <p>Integer a quam himenaeos iaculis pretium ac nisl, magna fameles</p>
+                        <div class="d-flex justify-content-center align-items-start my-10">
+                            <div class="price fs-7 text-black">
+                                <div class="price-currency pr-0">$</div>
+                                <div class="price-value">150 +</div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-link">Book online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "services" section end -->
+
+<!-- "testimonials" section start -->
+<section class="section" id="testimonials">
+    <div class="section-content container">
+        <div class="d-flex justify-content-center justify-content-sm-between align-items-center">
+            <div class="text-center text-sm-left">
+                <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                    #1 Rated Beauty service in NY
+                </small>
+                <h1>Testimonials</h1>
+            </div>
+            <div class="d-none d-sm-block">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-light btn-square" data-toggle="card-slider"
+                            data-target="#testimonials-slider" data-action="prevSlide">
+                        <i class="material-icons">arrow_left</i>
+                    </button>
+                    <button type="button" class="btn btn-light btn-square" data-toggle="card-slider"
+                            data-target="#testimonials-slider" data-action="nextSlide">
+                        <i class="material-icons">arrow_right</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-slider card-slider-viewport card-slider-services mt-15" id="testimonials-slider">
+            <article class="card-slider-item">
+                <div class="card border-light card-accent-left" data-mh="testimonials-slider">
+                    <div class="card-body p-19 p-md-20 d-flex flex-column">
+                        <div class="d-flex align-items-center">
+                            <img src="assets/images/avatar-5.jpg" alt="avatar" width="50" class="rounded-circle"/>
+                            <div class="ml-9">
+                                <div class="text-black font-weight-medium fs-5 lh-5 mb-4">Rebecca J.</div>
+                                <div class="text-muted fs-3 lh-4">Nails</div>
+                            </div>
+                        </div>
+                        <blockquote class="my-14">
+                            <p>“Feugiat condimentum lorem congue id dictum aenean nascetur varius tortor, euismod nec
+                                parturient ullamcorper inceptos bibendum pellentesque quisque, laoreet
+                                iaculis finibus velit fames lacinia mi etiam.”</p>
+                        </blockquote>
+                        <div class="star-rating">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star_half</i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="card-slider-item">
+                <div class="card border-light card-accent-left" data-mh="testimonials-slider">
+                    <div class="card-body p-19 p-md-20 d-flex flex-column">
+                        <div class="d-flex align-items-center">
+                            <img src="assets/images/avatar-6.jpg" alt="avatar" width="50" class="rounded-circle"/>
+                            <div class="ml-9">
+                                <div class="text-black font-weight-medium fs-5 lh-5 mb-4">Mary Jensen</div>
+                                <div class="text-muted fs-3 lh-4">Lashes</div>
+                            </div>
+                        </div>
+                        <blockquote class="my-14">
+                            <p>“Amazing massage thank you. Incredibly knowledgeable and aware of our individual body
+                                issues
+                                and needs for today’s treatments.”</p>
+                        </blockquote>
+                        <div class="star-rating mt-auto">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star_border</i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="card-slider-item">
+                <div class="card border-light card-accent-left" data-mh="testimonials-slider">
+                    <div class="card-body p-19 p-md-20 d-flex flex-column">
+                        <div class="d-flex align-items-center">
+                            <img src="assets/images/avatar-7.jpg" alt="avatar" width="50" class="rounded-circle"/>
+                            <div class="ml-9">
+                                <div class="text-black font-weight-medium fs-5 lh-5 mb-4">Sandra Bryan</div>
+                                <div class="text-muted fs-3 lh-4">Manicure</div>
+                            </div>
+                        </div>
+                        <blockquote class="my-14">
+                            <p>“Vel volutpat elit est dignissim diam viverra quis id, placerat et maecenas nulla nec
+                                nullam
+                                iaculis adipiscing felis, ac vivamus eleifend ridiculus massa auctor convallis.”</p>
+                        </blockquote>
+                        <div class="star-rating mt-auto">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="card-slider-item">
+                <div class="card border-light card-accent-left" data-mh="testimonials-slider">
+                    <div class="card-body p-19 p-md-20 d-flex flex-column">
+                        <div class="d-flex align-items-center">
+                            <img src="assets/images/avatar-8.jpg" alt="avatar" width="50" class="rounded-circle"/>
+                            <div class="ml-9">
+                                <div class="text-black font-weight-medium fs-5 lh-5 mb-4">Zoe Hartman</div>
+                                <div class="text-muted fs-3 lh-4">Lashes</div>
+                            </div>
+                        </div>
+                        <blockquote class="my-14">
+                            <p>“Parturient hendrerit pharetra ridiculus eleifend dictumst aenean facilisi, varius etiam
+                                consequat tempor vivamus lorem suspendisse laoreet, ullamcorper sem volutpat orci tellus
+                                erat.”</p>
+                        </blockquote>
+                        <div class="star-rating mt-auto">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star_half</i>
+                            <i class="material-icons">star_border</i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+<!-- "testimonials" section end -->
+
+<!-- "call to action" section start -->
+<section class="section jarallax text-white" data-jarallax data-speed="0.2">
+    <img class="section-background-image jarallax-img" src="assets/images/image-27.jpg" alt="background image"/>
+    <div class="section-background-color" style="background-color: rgba(0, 0, 0, 0.2)"></div>
+    <div class="section-content container text-center d-flex flex-column align-items-center">
+        <span class="badge badge-pill badge-ghost fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption">
+            Easy 3 steps online booking
+        </span>
+        <h1 class="mt-5 mb-15 fs-9 fs-md-10">Ready to get new look?</h1>
+        <a href="#" class="btn btn-lg btn-primary">Book now</a>
+    </div>
+</section>
+<!-- "call to action" section end -->
+
+<!-- "our work" section start -->
+<section class="section bg-secondary" id="our-work">
+    <div class="section-content text-center container">
+        <div class="d-flex justify-content-center justify-content-md-between align-items-end">
+            <div class="text-center text-md-left">
+                <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                    Our lovely clients
+                </small>
+                <h1>Our Work</h1>
+            </div>
+            <div class="d-none d-md-block">
+                <div class="btn-group">
+                    <div class="radio-buttons-group border-0" data-toggle="shuffle-grid" data-target="#projects-grid">
+                        <button class="btn btn-light selected" data-value="all">All</button>
+                        <button class="btn btn-light" data-value="haircut">Haircuts</button>
+                        <button class="btn btn-light" data-value="makeup">Makeup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shuffle-grid shuffle-grid-gap-14 shuffle-grid-cols-1 shuffle-grid-cols-md-2 shuffle-grid-cols-xl-4 mt-14" id="projects-grid">
+            <div class="shuffle-grid-item" data-groups="makeup">
+                <div class="card card-square bg-transparent border-0">
+                    <div class="card-bg" style="background-image: url(assets/images/image-55.jpg)"></div>
+                    <div class="card-bg card-bg-hover" style="background-color: rgba(0,0,0,.6)"></div>
+                    <div class="card-body card-body-hover text-white d-flex align-items-center justify-content-center">
+                        <i class="material-icons fs-8">zoom_in</i>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="haircut">
+                <div class="card card-square bg-transparent border-0">
+                    <div class="card-bg" style="background-image: url(assets/images/image-56.jpg)"></div>
+                    <div class="card-bg card-bg-hover" style="background-color: rgba(0,0,0,.6)"></div>
+                    <div class="card-body card-body-hover text-white d-flex align-items-center justify-content-center">
+                        <i class="material-icons fs-8">zoom_in</i>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="makeup">
+                <div class="card card-square bg-transparent border-0">
+                    <div class="card-bg" style="background-image: url(assets/images/image-57.jpg)"></div>
+                    <div class="card-bg card-bg-hover" style="background-color: rgba(0,0,0,.6)"></div>
+                    <div class="card-body card-body-hover text-white d-flex align-items-center justify-content-center">
+                        <i class="material-icons fs-8">zoom_in</i>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="haircut,makeup">
+                <div class="card card-square bg-transparent border-0">
+                    <div class="card-bg" style="background-image: url(assets/images/image-58.jpg)"></div>
+                    <div class="card-bg card-bg-hover" style="background-color: rgba(0,0,0,.6)"></div>
+                    <div class="card-body card-body-hover text-white d-flex align-items-center justify-content-center">
+                        <i class="material-icons fs-8">zoom_in</i>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="haircut,makeup">
+                <div class="card card-square bg-transparent border-0">
+                    <div class="card-bg" style="background-image: url(assets/images/image-59.jpg)"></div>
+                    <div class="card-bg card-bg-hover" style="background-color: rgba(0,0,0,.6)"></div>
+                    <div class="card-body card-body-hover text-white d-flex align-items-center justify-content-center">
+                        <i class="material-icons fs-8">zoom_in</i>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="makeup">
+                <div class="card card-square bg-transparent border-0">
+                    <div class="card-bg" style="background-image: url(assets/images/image-60.jpg)"></div>
+                    <div class="card-bg card-bg-hover" style="background-color: rgba(0,0,0,.6)"></div>
+                    <div class="card-body card-body-hover text-white d-flex align-items-center justify-content-center">
+                        <i class="material-icons fs-8">zoom_in</i>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="haircut">
+                <div class="card card-square bg-transparent border-0">
+                    <div class="card-bg" style="background-image: url(assets/images/image-61.jpg)"></div>
+                    <div class="card-bg card-bg-hover" style="background-color: rgba(0,0,0,.6)"></div>
+                    <div class="card-body card-body-hover text-white d-flex align-items-center justify-content-center">
+                        <i class="material-icons fs-8">zoom_in</i>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="makeup">
+                <div class="card card-square bg-transparent border-0">
+                    <div class="card-bg" style="background-image: url(assets/images/image-62.jpg)"></div>
+                    <div class="card-bg card-bg-hover" style="background-color: rgba(0,0,0,.6)"></div>
+                    <div class="card-body card-body-hover text-white d-flex align-items-center justify-content-center">
+                        <i class="material-icons fs-8">zoom_in</i>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "our work" section end -->
+
+<!-- "frequently asked questions" section start -->
+<section class="section" id="faq">
+    <div class="section-content container">
+        <h1 class="mb-17 text-center">FAQ</h1>
+        <article class="faq faq-open">
+            <header class="faq-header" data-toggle="collapse" data-target="#faq-item-1" aria-expanded="true">
+                <h1 class="faq-title">What is Swedish massage?</h1>
+                <div class="faq-toggle">
+                    <i class="material-icons faq-toggle-closed">add</i>
+                    <i class="material-icons faq-toggle-open">remove</i>
+                </div>
+            </header>
+            <div class="faq-body collapse show" id="faq-item-1">
+                <p>Dictumst placerat suscipit dui suspendisse lacus ridiculus dis facilisis massa commodo,
+                    feugiat sagittis eleifend arcu erat tempor integer sollicitudin metus, mollis bibendum
+                    vestibulum diam nec tellus felis tristique pretium.</p>
+            </div>
+        </article>
+        <article class="faq">
+            <header class="faq-header" data-toggle="collapse" data-target="#faq-item-2" aria-expanded="false">
+                <h1 class="faq-title">What types of services does Blys offer?</h1>
+                <div class="faq-toggle">
+                    <i class="material-icons faq-toggle-closed">add</i>
+                    <i class="material-icons faq-toggle-open">remove</i>
+                </div>
+            </header>
+            <div class="faq-body collapse" id="faq-item-2">
+                <p>Accumsan nibh facilisis efficitur netus dapibus facilisi proin lacinia, finibus phasellus
+                    quis placerat ante per lorem senectus nisl, gravida vestibulum eros aenean sed convallis
+                    purus.</p>
+            </div>
+        </article>
+        <article class="faq">
+            <header class="faq-header" data-toggle="collapse" data-target="#faq-item-3" aria-expanded="false">
+                <h1 class="faq-title">Can I pick my therapist?</h1>
+                <div class="faq-toggle">
+                    <i class="material-icons faq-toggle-closed">add</i>
+                    <i class="material-icons faq-toggle-open">remove</i>
+                </div>
+            </header>
+            <div class="faq-body collapse" id="faq-item-3">
+                <p>Fames pulvinar fringilla ut lorem sem auctor nunc, aptent cursus convallis nisi penatibus nam
+                    gravida, commodo tortor facilisi diam posuere class.</p>
+            </div>
+        </article>
+        <article class="faq">
+            <header class="faq-header" data-toggle="collapse" data-target="#faq-item-4" aria-expanded="false">
+                <h1 class="faq-title">Can I re-book with the same therapists?</h1>
+                <div class="faq-toggle">
+                    <i class="material-icons faq-toggle-closed">add</i>
+                    <i class="material-icons faq-toggle-open">remove</i>
+                </div>
+            </header>
+            <div class="faq-body collapse" id="faq-item-4">
+                <p>Nostra ipsum tortor habitasse ante lacinia class, conubia elit taciti pulvinar rhoncus
+                    gravida, metus mollis id ut suspendisse.</p>
+            </div>
+        </article>
+    </div>
+</section>
+<!-- "frequently asked questions" section end -->
+
+<!-- "vouchers" section start -->
+<section class="section jarallax" data-jarallax data-speed="0.2" id="vouchers">
+    <img class="section-background-image jarallax-img" src="assets/images/image-14.jpg" alt="background image"/>
+    <div class="section-background-color" style="background-color: rgba(0, 0, 0, 0.25)"></div>
+    <div class="section-content container">
+        <div class="text-center text-white mb-17">
+            <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption">
+                SPA QUALITY MASSAGES
+            </small>
+            <h1 class="mb-0">Gift Vouchers</h1>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-4 mb-14 mb-lg-0">
+                <div class="card border-0">
+                    <div class="card-body d-flex flex-column p-19 p-md-20" data-mh="gift-vouchers">
+                        <h1 class="fs-6 fs-md-8 fs-xl-9 mb-12">Single Massage</h1>
+                        <p class="mb-12">A single session of 60, 90 or 120min in-home massage.</p>
+                        <div class="price fs-7 text-black mb-12">
+                            <div class="price-currency pr-0">$</div>
+                            <div class="price-value">110</div>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary d-block">Get voucher</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 mb-14 mb-lg-0">
+                <div class="card border-0">
+                    <div class="card-body d-flex flex-column p-19 p-md-20" data-mh="gift-vouchers">
+                        <div class="ribbon ribbon-left ribbon-danger ribbon-float-top-right mt-9 px-10">Popular</div>
+                        <h1 class="fs-6 fs-md-8 fs-xl-9 mb-12">Ultimate Package</h1>
+                        <p class="mb-12">A special package of 5 or 10 massages of ultimate bliss.</p>
+                        <div class="price fs-7 text-black mb-12">
+                            <div class="price-currency pr-0">$</div>
+                            <div class="price-value">190</div>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary d-block">Get voucher</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card border-0 bg-primary text-white">
+                    <div class="card-body d-flex flex-column p-19 p-md-20" data-mh="gift-vouchers">
+                        <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-white-50">
+                            Redeem Gift
+                        </small>
+                        <h1 class="fs-6 fs-md-8 fs-xl-9 mb-12">Book your massage</h1>
+                        <p class="mb-12 text-white">Received a gift voucher? Book your massage here.</p>
+                        <a href="#" class="btn btn-outline-light d-block mt-auto">Get voucher</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "vouchers" section end -->
+
+<!-- "contacts" section start -->
+<section class="section" id="contacts">
+    <div class="section-content container">
+        <div class="row">
+            <div class="col-12 col-lg-8 mb-14 mb-lg-0">
+                <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                    We answer within 24 hours
+                </small>
+                <h1>Contact Us</h1>
+                <form action="#" class="row mt-17">
+                    <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                            <label for="first_name" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="first_name"/>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                            <label for="last_name" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="last_name"/>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="text" class="form-control" id="phone"/>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="email"/>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="custom-checkbox" id="exampleCheck2" checked/>
+                            <label class="form-check-label" for="exampleCheck2">
+                                I've read and agree with the <a href="#">Terms & Policy</a>
+                            </label>
+                        </div>
+                        <div class="form-group mb-0">
+                            <button class="btn btn-primary btn-lg">Send message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card border-0 bg-secondary mb-4 ml-lg-9">
+                    <div class="card-body py-17 px-10 text-center">
+                        <div class="card-icon mb-6"><i class="material-icons">map</i></div>
+                        <div class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            Our address
+                        </div>
+                        <p class="mb-0 text-body">Brooklyn, NY 11204. 9359<br/>Hollow Lane. NY 11706.</p>
+                    </div>
+                </div>
+                <div class="card border-0 bg-secondary mb-4 ml-lg-9">
+                    <div class="card-body py-17 px-10 text-center">
+                        <div class="card-icon mb-6"><i class="material-icons">phone</i></div>
+                        <div class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            Mobile Phone
+                        </div>
+                        <p class="mb-0 text-body">(917) 494 - 4476</p>
+                    </div>
+                </div>
+                <div class="card border-0 bg-secondary ml-lg-9">
+                    <div class="card-body py-17 px-10 text-center">
+                        <div class="card-icon mb-6"><i class="material-icons">access_time</i></div>
+                        <div class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            Working Hours
+                        </div>
+                        <p class="mb-0 text-body">11:00 AM - 9:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "contacts" section end -->
+
+<!-- footer start -->
+{% include 'includes/footer.html' %}
+<!-- footer end -->
+
+<script src="assets/js/vendor.js"></script>
+<script src="assets/js/polyfills.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

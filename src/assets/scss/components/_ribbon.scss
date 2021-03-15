@@ -1,0 +1,77 @@
+//
+// Ribbon
+//
+
+@each $color, $value in $theme-colors {
+  .ribbon-#{$color} {
+    background: theme-color-level($color, -11.5);
+    color: $value;
+
+    &:before, &:after {
+      border-color: theme-color-level($color, -11.5);
+    }
+  }
+}
+
+
+.ribbon {
+  position: relative;
+  font-family: $font-family-secondary;
+  letter-spacing: $letter-spacing;
+  font-size: rem(nth($typography-sizings, 1));
+  line-height: $ribbon-line-height;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0 map_get($spacers, 8);
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    border-width: (.5em * $ribbon-line-height);
+    border-style: solid;
+    display: none;
+  }
+
+  &:before {
+    left: 0;
+    margin-left: -.5em * $ribbon-line-height;
+    border-right-width: (.5em * $ribbon-line-height);
+    border-left-color: transparent;
+  }
+
+  &:after {
+    right: 0;
+    margin-right: -.5em * $ribbon-line-height;
+    border-left-width: (.5em * $ribbon-line-height);
+    border-right-color: transparent;
+  }
+}
+
+// visibility for the ribbon sides
+.ribbon-right {
+  margin-right: 1em * $ribbon-line-height;
+
+  &:after {
+    display: block;
+  }
+}
+
+.ribbon-left {
+  margin-left: 1em * $ribbon-line-height;
+
+  &:before {
+    display: block;
+  }
+}
+
+// absolutely positioned ribbon
+@each $y_prop in (top, bottom) {
+  @each $x_prop in (left, right) {
+    .ribbon-float-#{$y_prop}-#{$x_prop} {
+      position: absolute;
+      #{$y_prop}: 0;
+      #{$x_prop}: 0;
+    }
+  }
+}

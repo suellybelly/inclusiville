@@ -1,0 +1,46 @@
+//
+// Big quote block
+//
+
+.big-quote {
+  text-align: center;
+  max-width: rem(575);
+  margin: 0 auto;
+}
+
+.big-quote-icon {
+  display: inline-flex;
+  position: relative;
+  font-size: rem(36);
+  align-items: center;
+  justify-content: center;
+  padding: rem(12);
+  background: $primary;
+  border-radius: 50%;
+  color: $white;
+  margin-bottom: map_get($spacers, 19);
+
+  > i {
+    font-size: inherit;
+  }
+}
+
+.big-quote-contents {
+  font-size: rem(nth($typography-sizings, 9));
+  line-height: 1.25;
+  font-weight: 300;
+  font-style: italic;
+
+  p {
+    color: $black;
+  }
+}
+
+.big-quote-footer {
+  margin-top: map_get($spacers, 19);
+  color: $text-muted;
+  font-size: rem(nth($typography-sizings, 5));
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+}

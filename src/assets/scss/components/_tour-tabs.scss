@@ -1,0 +1,55 @@
+//
+// Tour Tabs
+//
+
+.tour-tabs-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-tabs-nav-link {
+  display: flex;
+  align-items: center;
+  padding: map_get($spacers, 14);
+  opacity: 0.25;
+  transition: $transition-base;
+  background: transparent;
+
+  &, &:hover, &:focus, &:active {
+    color: $body-color;
+    text-decoration: none;
+  }
+
+  &.active {
+    opacity: 1;
+    background: $secondary;
+  }
+}
+
+.tour-tabs-content {
+  background: $secondary;
+  padding: map_get($spacers, 14);
+  flex: 1;
+
+  @include media-breakpoint-up(lg) {
+    padding: map_get($spacers, 20);
+  }
+}
+
+@if $enable-rounded {
+  .tour-tabs-nav-left .tour-tabs-nav-link {
+    @include border-left-radius($border-radius);
+  }
+
+  .tour-tabs-nav-right .tour-tabs-nav-link {
+    @include border-right-radius($border-radius);
+  }
+
+  .tour-tabs-content-left {
+    @include border-left-radius($border-radius);
+  }
+
+  .tour-tabs-content-right {
+    @include border-right-radius($border-radius);
+  }
+}

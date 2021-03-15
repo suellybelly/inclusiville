@@ -1,0 +1,35 @@
+//
+// Time slots
+//
+
+.time-slot {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: transparent;
+  line-height: 1.375;
+  border: rem(1) solid $input-border-color;
+  padding: .5rem;
+  transition: $transition-base;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: rem(1) solid transparent;
+    z-index: -1;
+    transition: $transition-base;
+  }
+
+  &.selected {
+    border-color: $primary;
+    color: $primary;
+
+    &:after {
+      border-color: $primary;
+    }
+  }
+}

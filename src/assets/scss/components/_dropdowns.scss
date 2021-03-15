@@ -1,0 +1,71 @@
+//
+// Dropdown
+//
+
+.dropdown .dropdown-menu .dropdown-item {
+  //@include transition;
+  font-family: $font-family-base;
+  letter-spacing: 0;
+}
+
+// navbar dropdown - animation
+.navbar .dropdown-menu.show {
+  animation: dropdown .2s ease forwards;
+}
+
+// flat style for dropdown
+.dropdown.dropdown-flat .dropdown-menu {
+  box-shadow: none;
+
+  &.show {
+    animation: dropdown-reverse .2s ease forwards;
+  }
+}
+
+.navbar .dropdown.dropdown-flat .dropdown-menu {
+  margin-left: -1 * $dropdown-item-padding-x;
+  margin-right: -1 * $dropdown-item-padding-x;
+  padding-top: $spacer/2;
+  padding-bottom: $spacer/2;
+}
+
+@each $color, $value in $theme-colors {
+  .dropdown-flat.dropdown-flat-#{$color} .dropdown-menu {
+    background-color: $value;
+
+    .dropdown-divider {
+      border-color: lighten($value, 10%);
+    }
+
+    .dropdown-item {
+      color: color-yiq($value);
+
+      @include hover-focus-active() {
+        color: color-yiq($value);
+        background: lighten($value, 10%);
+      }
+    }
+  }
+}
+
+@keyframes dropdown {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dropdown-reverse {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

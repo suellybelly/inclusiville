@@ -1,0 +1,116 @@
+//
+// Buttons
+//
+
+.btn {
+  letter-spacing: $letter-spacing;
+  text-transform: uppercase;
+}
+
+// square modifications
+.btn-square {
+  padding: 0;
+  line-height: rem(50 - $btn-border-width * 2);
+  height: rem(50);
+  width: rem(50);
+}
+
+.btn-lg.btn-square {
+  padding: 0;
+  line-height: rem(60 - $btn-border-width * 2);
+  height: rem(60);
+  width: rem(60);
+}
+
+.btn-sm.btn-square {
+  padding: 0;
+  line-height: rem(40 - $btn-border-width * 2);
+  height: rem(40);
+  width: rem(40);
+}
+
+// color scheme - white primary
+.btn-white-primary {
+  background: $white;
+  color: $primary;
+  border-color: $white;
+
+  &:disabled, &.disabled {
+    background: $white;
+    opacity: 1;
+    color: rgba($primary, 0.2);
+  }
+
+  &:not(:disabled):not(.disabled) {
+    &:hover, &:active, &:focus {
+      background: transparent;
+      border-color: $white;
+      color: $white;
+    }
+  }
+}
+
+// color scheme - light
+.btn-light {
+  background: transparent;
+  border-color: $light;
+  color: $black;
+
+  &:disabled, &.disabled {
+    background: transparent;
+    opacity: 1;
+    color: rgba($black, 0.2);
+  }
+
+  &:not(:disabled):not(.disabled) {
+    &:hover, &:active, &:focus {
+      background: transparent;
+      border-color: darken($light, 15%);
+    }
+  }
+}
+
+// color scheme - ghost
+.btn-ghost {
+  border-color: $white;
+  color: $white;
+
+  &:disabled, &.disabled {
+    opacity: 1;
+    color: rgba($white, 0.2);
+    border-color: rgba($white, 0.25);
+  }
+
+  &:not(:disabled):not(.disabled) {
+    &:hover, &:active, &:focus {
+      color: rgba($white, 0.65);
+      border-color: rgba($white, 0.65);
+    }
+  }
+}
+
+// modification - link
+.btn-link {
+  position: relative;
+  font-size: rem(nth($typography-sizings, 2));
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: $letter-spacing;
+  padding: 0 0 rem(8);
+
+  &, &:hover, &:active, &:focus {
+    background: transparent;
+    border: 0;
+    text-decoration: none;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: currentColor;
+  }
+}

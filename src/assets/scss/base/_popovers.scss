@@ -1,0 +1,77 @@
+//
+// Popovers
+//
+
+@supports (-webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%)) or (clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%)) or (filter: drop-shadow($popover-box-shadow)) {
+  .popover {
+    background: transparent;
+    box-shadow: none;
+    filter: drop-shadow($popover-box-shadow);
+
+    > .arrow {
+      display: none;
+    }
+
+    > .popover-header {
+      display: none;
+    }
+
+    > .popover-body {
+      background: $popover-bg;
+    }
+  }
+
+  .bs-popover-top {
+    margin-bottom: $popover-arrow-size;
+
+    > .popover-body {
+      clip-path: polygon(100% 0, 100% calc(100% - #{$popover-arrow-size}), 50% 100%, 0% calc(100% - #{$popover-arrow-size}), 0 0);
+      padding-bottom: $popover-arrow-size + $popover-header-padding-y;
+    }
+  }
+
+  .bs-popover-bottom {
+    margin-top: $popover-arrow-size;
+
+    > .popover-body {
+      clip-path: polygon(50% 0%, 100% #{$popover-arrow-size}, 100% 100%, 0 100%, 0% #{$popover-arrow-size});
+      padding-top: $popover-arrow-size + $popover-header-padding-y;
+    }
+  }
+
+  .bs-popover-left {
+    margin-right: $popover-arrow-size;
+
+    > .popover-body {
+      clip-path: polygon(0% 0%, calc(100% - #{$popover-arrow-size}) 0, 100% 50%, calc(100% - #{$popover-arrow-size}) 100%, 0% 100%);
+      padding-right: $popover-arrow-size + $popover-header-padding-x;
+    }
+  }
+
+  .bs-popover-right {
+    margin-left: $popover-arrow-size;
+
+    > .popover-body {
+      clip-path: polygon(#{$popover-arrow-size} 0, 100% 0, 100% 100%, #{$popover-arrow-size} 100%, 0% 50%);
+      padding-left: $popover-arrow-size + $popover-header-padding-x;
+    }
+  }
+
+  .bs-popover-auto {
+    &[x-placement^="top"] {
+      @extend .bs-popover-top;
+    }
+
+    &[x-placement^="right"] {
+      @extend .bs-popover-right;
+    }
+
+    &[x-placement^="bottom"] {
+      @extend .bs-popover-bottom;
+    }
+
+    &[x-placement^="left"] {
+      @extend .bs-popover-left;
+    }
+  }
+}

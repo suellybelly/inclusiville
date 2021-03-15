@@ -1,0 +1,290 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>PROFI</title>
+
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.css">
+</head>
+<body>
+
+<div id="page-start-anchor"></div>
+
+<!-- header start -->
+{% set bottomNavbarItems = [
+    {text: 'About', href: 'restaurant.html#about'},
+    {text: 'Our menu', href: 'restaurant.html#our-menu'},
+    {text: 'Gallery', href: 'restaurant.html#gallery'},
+    {text: 'News', href: 'restaurant.html#news'},
+    {text: 'Contacts', href: 'restaurant.html#contacts'},
+] %}
+{% include 'includes/header.html' with {topNavbarText: true} %}
+<!-- header end -->
+
+<!-- page title start -->
+<section class="jumbotron jumbotron-fluid mb-0">
+    <div class="container">
+        <h1 class="jumbotron-title mb-0">Shopping Cart</h1>
+    </div>
+</section>
+<!-- page title end -->
+
+<!-- page content start -->
+<section class="section py-21">
+    <div class="section-content container">
+        <div class="row">
+            <div class="col-12 col-lg-8 mb-20 mb-lg-0">
+                <div class="form-collapsible-section mb-4" role="article" aria-expanded="true">
+                    <div class="form-collapsible-section-head">
+                        <span class="form-collapsible-section-number">1</span>
+                        <span class="form-collapsible-section-title">My order</span>
+                        <span class="form-collapsible-section-toggle">
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </span>
+                    </div>
+                    <div class="form-collapsible-section-body">
+                        <div class="card-vertical-group">
+                            <div class="card border-light">
+                                <div class="card-body p-14">
+                                    <div class="d-flex align-items-center">
+                                        <img src="assets/images/image-44.jpg" alt="photo" width="75" class="d-none d-xl-block mr-9">
+                                        <div class="align-self-start flex-grow-1 mr-10 mr-md-21">
+                                            <strong class="d-block mb-3 fs-5 lh-5">Multi-Greens Salad</strong>
+                                            <p class="mb-0 lh-6 text-muted">This is an item on your menu.<br/>Give your item a brief description</p>
+                                        </div>
+                                        <div class="d-flex align-items-end align-items-md-center flex-column flex-md-row">
+                                            <div class="input-group flex-nowrap mb-8 mb-md-0" style="min-width: 150px; max-width: 150px">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-light btn-square" type="button">
+                                                        <i class="material-icons">remove</i>
+                                                    </button>
+                                                </div>
+                                                <input type="text" class="form-control border-light text-center" value="2">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-light btn-square" type="button">
+                                                        <i class="material-icons">add</i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="price fs-7 text-black ml-0 ml-md-21">
+                                                <div class="price-currency pr-0">$</div>
+                                                <div class="price-value">21</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card border-light">
+                                <div class="card-body p-14">
+                                    <div class="d-flex align-items-center">
+                                        <div class="align-self-start flex-grow-1 mr-10 mr-md-21">
+                                            <strong class="d-block mb-3 fs-5 lh-5">Multi-Greens Salad</strong>
+                                            <p class="mb-0 lh-6 text-muted">This is an item on your menu.<br/>Give your item a brief description</p>
+                                        </div>
+                                        <div class="d-flex align-items-end align-items-md-center flex-column flex-md-row">
+                                            <div class="input-group flex-nowrap mb-8 mb-md-0" style="min-width: 150px; max-width: 150px">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-light btn-square" type="button">
+                                                        <i class="material-icons">remove</i>
+                                                    </button>
+                                                </div>
+                                                <input type="text" class="form-control border-light text-center" value="2">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-light btn-square" type="button">
+                                                        <i class="material-icons">add</i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="price fs-7 text-black ml-0 ml-md-21">
+                                                <div class="price-currency pr-0">$</div>
+                                                <div class="price-value">21</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pb-19"></div>
+                    </div>
+                </div>
+                <div class="form-collapsible-section mb-4" role="article" aria-expanded="true">
+                    <div class="form-collapsible-section-head">
+                        <span class="form-collapsible-section-number">2</span>
+                        <span class="form-collapsible-section-title">Address</span>
+                        <span class="form-collapsible-section-toggle">
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </span>
+                    </div>
+                    <div class="form-collapsible-section-body">
+                        <div class="form-group">
+                            <div class="form-label mb-6">Location</div>
+                            <div class="form-check form-check-inline">
+                                <input class="custom-radio" type="radio" id="location-checkbox-1" name="location"
+                                       value="option1" checked>
+                                <label class="form-check-label" for="location-checkbox-1">Delivery</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="custom-radio" type="radio" id="location-checkbox-2" name="location"
+                                       value="option2">
+                                <label class="form-check-label" for="location-checkbox-2">Pick up</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group mb-5">
+                                    <label for="full_name" class="form-label">Full name</label>
+                                    <input type="text" class="form-control" id="full_name"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group mb-5">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="text" class="form-control" id="email"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group mb-5">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input type="text" class="form-control" id="phone"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group mb-5">
+                                    <label for="address" class="form-label">Location address</label>
+                                    <input type="text" class="form-control" id="address"/>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group mb-0">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea id="message" class="form-control" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pb-19"></div>
+                    </div>
+                </div>
+                <div class="form-collapsible-section" role="article" aria-expanded="true">
+                    <div class="form-collapsible-section-head">
+                        <span class="form-collapsible-section-number">3</span>
+                        <span class="form-collapsible-section-title">Payment</span>
+                        <span class="form-collapsible-section-toggle">
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </span>
+                    </div>
+                    <div class="form-collapsible-section-body">
+                        <div class="form-group">
+                            <div class="form-label mb-6">Choose payment method</div>
+                            <div class="form-check form-check-inline">
+                                <input class="custom-radio" type="radio" id="payment-radio-1" name="payment"
+                                       value="option1" checked>
+                                <label class="form-check-label" for="payment-radio-1">Cash at location</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="custom-radio" type="radio" id="payment-radio-2" name="payment"
+                                       value="option2">
+                                <label class="form-check-label" for="payment-radio-2">Credit card</label>
+                            </div>
+                        </div>
+                        <div class="card border-primary border-bold">
+                            <div class="card-body py-14 px-15">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group mb-5">
+                                            <label for="card_number" class="form-label">Card number</label>
+                                            <input type="text" class="form-control" id="card_number"/>
+                                        </div>
+                                        <div class="form-group mb-5">
+                                            <label for="card_holder_name" class="form-label">Name on card</label>
+                                            <input type="text" class="form-control" id="card_holder_name"/>
+                                        </div>
+                                        <div class="form-group mb-5">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <label for="card_expiry_date" class="form-label">Expiry date</label>
+                                                    <input type="text" class="form-control" id="card_expiry_date"
+                                                           placeholder="MM / YY"/>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="d-inline-flex w-100 justify-content-between align-items-start">
+                                                        <label for="card_cvc" class="form-label">CVC</label>
+                                                        <i class="material-icons fs-5 text-muted cursor-pointer"
+                                                           tabindex="0" data-toggle="popover" data-trigger="focus"
+                                                           data-placement="right"
+                                                           data-content="CVV number is printed on the signature panel on the back of the card immediately after the card's account number.">help</i>
+                                                    </div>
+                                                    <input type="password" class="form-control" id="card_cvc"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-none d-md-block position-absolute position-top-14 position-right-15">
+                                    <div class="d-flex align-items-center">
+                                        <i class="material-icons mr-1 text-primary">lock</i>
+                                        <span class="fs-3 lh-3">Secure Payment</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="sticky-sidebar">
+                    <article class="card border-0 bg-secondary">
+                        <div class="card-body d-flex flex-column p-19 p-md-20" data-mh="gift-vouchers">
+                            <h1 class="fs-5 mb-12">My order</h1>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="text-dark">1 <span class="text-muted">&times;</span> Creeme Soup</span>
+                                <div class="price fs-6 text-black">
+                                    <div class="price-currency pr-0">$</div>
+                                    <div class="price-value">9</div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <span class="text-dark">2 <span class="text-muted">&times;</span> Multi-greens Salad</span>
+                                <div class="price fs-6 text-black">
+                                    <div class="price-currency pr-0">$</div>
+                                    <div class="price-value">22</div>
+                                </div>
+                            </div>
+                            <div class="border-lighter border-top my-9"></div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="text-dark">Delivery</span>
+                                <div class="price fs-6 text-black">
+                                    <div class="price-currency pr-0">$</div>
+                                    <div class="price-value">3</div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <span class="text-dark"><strong>TOTAL</strong></span>
+                                <div class="price fs-6 text-black">
+                                    <div class="price-currency pr-0">$</div>
+                                    <div class="price-value">34</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary d-block mt-10">Place order now</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- page content end -->
+
+<!-- footer start -->
+{% include 'includes/footer.html' %}
+<!-- footer end -->
+
+<script src="assets/js/vendor.js"></script>
+<script src="assets/js/polyfills.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

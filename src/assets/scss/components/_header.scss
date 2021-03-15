@@ -1,0 +1,36 @@
+//
+// Header
+//
+
+.header-spacing-helper {
+  display: none;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    .header-fixed#{breakpoint-infix($breakpoint)} {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: $zindex-fixed;
+      transition: $transition-base;
+    }
+
+    body.page-scrolled .header-fixed#{breakpoint-infix($breakpoint)} {
+      box-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.10);
+    }
+
+    .header-fixed#{breakpoint-infix($breakpoint)} + .header-spacing-helper {
+      display: block;
+    }
+  }
+}
+
+.header-absolute {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: $zindex-fixed;
+}

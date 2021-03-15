@@ -1,0 +1,776 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>PROFI</title>
+
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.css">
+</head>
+<body data-spy="scroll" data-target="#header-navbar" data-offset="140">
+
+<div id="page-start-anchor"></div>
+
+<!-- header start -->
+{% set bottomNavbarItems = [
+    {text: 'About', href: '#about', smoothScroll: true},
+    {text: 'Services', href: '#services', smoothScroll: true},
+    {text: 'Why choose us', href: '#why-choose-us', smoothScroll: true},
+    {text: 'Our work', href: '#our-work', smoothScroll: true},
+    {text: 'Testimonials', href: '#testimonials', smoothScroll: true},
+    {text: 'Contacts', href: '#contacts', smoothScroll: true},
+] %}
+{% include 'includes/header.html' with {
+    topNavbarText: true,
+    headerClasses: 'header-fixed-xl'
+} %}
+<!-- header end -->
+
+<!-- main hero start -->
+<section class="hero hero-fullscreen jarallax" data-speed="0.2" style="min-height: calc(100vh - 140px)">
+    <div class="hero-background">
+        <img src="assets/images/image-17.jpg" alt="hero background" class="jarallax-img"/>
+        <div class="hero-background-overlay" style="background-color: rgba(0,0,0,.5)"></div>
+    </div>
+    <div class="hero-foreground container d-flex flex-column justify-content-center">
+        <div class="py-14 py-md-23 py-lg-25">
+            <div class="d-flex flex-column justify-content-center align-items-center text-center">
+                <h1 class="fs-10 fs-lg-11 mb-0 font-weight-bold text-white">Contractors in New York</h1>
+                <p class="mt-7 mb-10 text-white fs-5" style="max-width: 530px">Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat.</p>
+                <a href="#" class="btn btn-lg btn-primary">Get a free estimate</a>
+            </div>
+            <div class="row align-items-center mt-14 mt-md-23 mt-lg-25">
+                <div class="col-12 col-md-4">
+                    <div class="card border-0 bg-transparent mb-10 mb-md-0">
+                        <div class="card-body p-0 text-center">
+                            <div class="card-icon text-white mb-6"><i class="material-icons">location_on</i></div>
+                            <div class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-white-75">
+                                Our location
+                            </div>
+                            <p class="mb-0 text-white">New York State</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card border-0 bg-transparent mb-10 mb-md-0">
+                        <div class="card-body p-0 text-center">
+                            <div class="card-icon text-white mb-6"><i class="material-icons">phone</i></div>
+                            <div class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-white-75">
+                                Contact phone
+                            </div>
+                            <p class="mb-0 text-white">123-456-7890</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body p-0 text-center">
+                            <div class="card-icon text-white mb-6"><i class="material-icons">verified_user</i></div>
+                            <div class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-white-75">
+                                License number
+                            </div>
+                            <p class="mb-0 text-white"># 706109</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- main hero end -->
+
+<!-- "about" section start -->
+<section class="section" id="about">
+    <div class="section-content container text-center">
+        <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+            general contractors in new york
+        </small>
+        <h1 class="mb-0">PROFI Contractors</h1>
+        <div class="row no-gutters mt-6 mt-md-10 mt-lg-17">
+            <div class="col-12 col-lg-10 offset-0 offset-lg-1">
+                <p>This is a great space to write long text about your company and your services. You can use this space
+                    to go
+                    into a little more detail about your company. Talk about your team and what services you provide.
+                    Tell your
+                    visitors the story of how you came up with the idea for your business and what makes you different
+                    from your
+                    competitors. Make your company stand out and show.</p>
+            </div>
+        </div>
+        <div class="row mt-6 mt-md-10 mt-lg-17 vertical-divider-light">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card border-0">
+                    <div class="card-body py-17 px-10 d-flex flex-column align-items-center">
+                        <div class="card-icon mb-6">
+                            <img src="assets/images/yelp.svg" alt="yelp icon" width="45">
+                        </div>
+                        <div class="fs-1 lh-1 mb-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            4.5 stars on Yelp
+                        </div>
+                        <div class="star-rating">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star_half</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card border-0">
+                    <div class="card-body py-17 px-10 d-flex flex-column align-items-center">
+                        <div class="card-icon mb-6">
+                            <img src="assets/images/g.svg" alt="google icon" width="45">
+                        </div>
+                        <div class="fs-1 lh-1 mb-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            5 stars on Yelp
+                        </div>
+                        <div class="star-rating">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card border-0">
+                    <div class="card-body py-17 px-10 d-flex flex-column align-items-center">
+                        <div class="card-icon mb-6">
+                            <img src="assets/images/houzz.svg" alt="houzz icon" width="45">
+                        </div>
+                        <div class="fs-1 lh-1 mb-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            5 stars on Houzz
+                        </div>
+                        <div class="star-rating">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card border-0">
+                    <div class="card-body py-17 px-10 d-flex flex-column align-items-center">
+                        <div class="card-icon mb-6">
+                            <img src="assets/images/fb.svg" alt="facebook icon" width="45">
+                        </div>
+                        <div class="fs-1 lh-1 mb-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            4.7 stars on Facebook
+                        </div>
+                        <div class="star-rating">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star_half</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "about" section end -->
+
+<!-- "services" section start -->
+<section class="section bg-secondary" id="services">
+    <div class="section-content container">
+        <div class="d-flex justify-content-center justify-content-md-between align-items-end">
+            <div class="text-center text-md-left">
+                <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                    What we do the best
+                </small>
+                <h1>Services</h1>
+            </div>
+            <div class="d-none d-md-block">
+                <div class="btn-group">
+                    <div class="radio-buttons-group border-0" data-toggle="shuffle-grid" data-target="#services-grid">
+                        <button class="btn btn-light selected" data-value="all">All</button>
+                        <button class="btn btn-light" data-value="construction">Construction</button>
+                        <button class="btn btn-light" data-value="design">Design</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shuffle-grid shuffle-grid-gap-14 shuffle-grid-cols-1 shuffle-grid-cols-lg-2 mt-14" id="services-grid">
+            <div class="shuffle-grid-item" data-groups="design">
+                <div class="card border-0">
+                    <div class="row no-gutters">
+                        <div class="col-sm-4 position-relative">
+                            <img src="assets/images/image-18.jpg" class="img-overlay" alt="photo">
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-body py-11 px-14">
+                                <h2 class="fs-5 fs-md-6 fs-lg-7">Kitchen Remodeling</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="design">
+                <div class="card border-0">
+                    <div class="row no-gutters">
+                        <div class="col-sm-4 position-relative">
+                            <img src="assets/images/image-19.jpg" class="img-overlay" alt="photo">
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-body py-11 px-14">
+                                <h2 class="fs-5 fs-md-6 fs-lg-7">Bathroom Remodeling</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="design">
+                <div class="card border-0">
+                    <div class="row no-gutters">
+                        <div class="col-sm-4 position-relative">
+                            <img src="assets/images/image-20.jpg" class="img-overlay" alt="photo">
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-body py-11 px-14">
+                                <h2 class="fs-5 fs-md-6 fs-lg-7">Flooring</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="construction,design">
+                <div class="card border-0">
+                    <div class="row no-gutters">
+                        <div class="col-sm-4 position-relative">
+                            <img src="assets/images/image-21.jpg" class="img-overlay" alt="photo">
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-body py-11 px-14">
+                                <h2 class="fs-5 fs-md-6 fs-lg-7">Roofing</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="construction">
+                <div class="card border-0">
+                    <div class="row no-gutters">
+                        <div class="col-sm-4 position-relative">
+                            <img src="assets/images/image-22.jpg" class="img-overlay" alt="photo">
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-body py-11 px-14">
+                                <h2 class="fs-5 fs-md-6 fs-lg-7">Windows & Doors</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="construction">
+                <div class="card border-0">
+                    <div class="row no-gutters">
+                        <div class="col-sm-4 position-relative">
+                            <img src="assets/images/image-23.jpg" class="img-overlay" alt="photo">
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-body py-11 px-14">
+                                <h2 class="fs-5 fs-md-6 fs-lg-7">Painting</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-19 mt-lg-20 text-center">
+            <a href="#" class="btn btn-lg btn-primary">Get a free estimate</a>
+        </div>
+    </div>
+</section>
+<!-- "services" section end -->
+
+<!-- "why choose us" section start -->
+<section class="section" id="why-choose-us">
+    <div class="section-content text-center container">
+        <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+            general contractors in new york
+        </small>
+        <h1>Why Choose Us</h1>
+    </div>
+    <div class="sds-block mt-14 mt-xl-20">
+        <div class="sds-block-background sds-block-background-right" style="background-image: url('assets/images/image-24.jpg')"></div>
+        <div class="sds-block-foreground sds-block-foreground-left text-center text-xl-left">
+            <ul class="list-unstyled mb-12">
+                <li class="mb-6 d-flex align-items-center justify-content-center justify-content-xl-start">
+                    <i class="material-icons text-primary mr-1 d-none d-sm-inline-block">check_circle</i>&nbsp;10 years of finishing projects on
+                    time and on budget
+                </li>
+                <li class="mb-6 d-flex align-items-center justify-content-center justify-content-xl-start">
+                    <i class="material-icons text-primary mr-1 d-none d-sm-inline-block">check_circle</i>&nbsp;Easy to understand contracts
+                </li>
+                <li class="mb-6 d-flex align-items-center justify-content-center justify-content-xl-start">
+                    <i class="material-icons text-primary mr-1 d-none d-sm-inline-block">check_circle</i>&nbsp;Knowledgeable project managers who
+                    help along the way
+                </li>
+                <li class="mb-6 d-flex align-items-center justify-content-center justify-content-xl-start">
+                    <i class="material-icons text-primary mr-1 d-none d-sm-inline-block">check_circle</i>&nbsp;Modern design trends using
+                    high-quality materials
+                </li>
+                <li class="d-flex align-items-center justify-content-center justify-content-xl-start">
+                    <i class="material-icons text-primary mr-1 d-none d-sm-inline-block">check_circle</i>&nbsp;Long list of satisfied New York
+                    State clients
+                </li>
+            </ul>
+            <a href="#" class="btn btn-lg btn-primary">Get a free estimate</a>
+        </div>
+    </div>
+</section>
+<!-- "why choose us" section end -->
+
+<!-- "our work" section start -->
+<section class="section bg-secondary" id="our-work">
+    <div class="section-content text-center container">
+        <div class="d-flex justify-content-center justify-content-md-between align-items-end">
+            <div class="text-center text-md-left">
+                <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                    Latest projects gallery
+                </small>
+                <h1>Our Work</h1>
+            </div>
+            <div class="d-none d-md-block">
+                <div class="btn-group">
+                    <div class="radio-buttons-group border-0" data-toggle="shuffle-grid" data-target="#projects-grid">
+                        <button class="btn btn-light selected" data-value="all">All</button>
+                        <button class="btn btn-light" data-value="construction">Construction</button>
+                        <button class="btn btn-light" data-value="design">Design</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shuffle-grid shuffle-grid-gap-14 shuffle-grid-cols-1 shuffle-grid-cols-md-2 shuffle-grid-cols-xl-4 mt-14" id="projects-grid">
+            <div class="shuffle-grid-item" data-groups="design">
+                <div class="card card-square bg-transparent border-0">
+                    <div class="card-bg" style="background-image: url(assets/images/image-47.jpg)"></div>
+                    <div class="card-bg card-bg-hover" style="background-color: rgba(0,0,0,.6)"></div>
+                    <div class="card-body card-body-hover text-white d-flex align-items-center justify-content-center">
+                        <i class="material-icons fs-8">zoom_in</i>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="construction">
+                <div class="card card-square bg-transparent border-0">
+                    <div class="card-bg" style="background-image: url(assets/images/image-48.jpg)"></div>
+                    <div class="card-bg card-bg-hover" style="background-color: rgba(0,0,0,.6)"></div>
+                    <div class="card-body card-body-hover text-white d-flex align-items-center justify-content-center">
+                        <i class="material-icons fs-8">zoom_in</i>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="design">
+                <div class="card card-square bg-transparent border-0">
+                    <div class="card-bg" style="background-image: url(assets/images/image-49.jpg)"></div>
+                    <div class="card-bg card-bg-hover" style="background-color: rgba(0,0,0,.6)"></div>
+                    <div class="card-body card-body-hover text-white d-flex align-items-center justify-content-center">
+                        <i class="material-icons fs-8">zoom_in</i>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="construction,design">
+                <div class="card card-square bg-transparent border-0">
+                    <div class="card-bg" style="background-image: url(assets/images/image-50.jpg)"></div>
+                    <div class="card-bg card-bg-hover" style="background-color: rgba(0,0,0,.6)"></div>
+                    <div class="card-body card-body-hover text-white d-flex align-items-center justify-content-center">
+                        <i class="material-icons fs-8">zoom_in</i>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="construction,design">
+                <div class="card card-square bg-transparent border-0">
+                    <div class="card-bg" style="background-image: url(assets/images/image-51.jpg)"></div>
+                    <div class="card-bg card-bg-hover" style="background-color: rgba(0,0,0,.6)"></div>
+                    <div class="card-body card-body-hover text-white d-flex align-items-center justify-content-center">
+                        <i class="material-icons fs-8">zoom_in</i>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="design">
+                <div class="card card-square bg-transparent border-0">
+                    <div class="card-bg" style="background-image: url(assets/images/image-52.jpg)"></div>
+                    <div class="card-bg card-bg-hover" style="background-color: rgba(0,0,0,.6)"></div>
+                    <div class="card-body card-body-hover text-white d-flex align-items-center justify-content-center">
+                        <i class="material-icons fs-8">zoom_in</i>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="construction">
+                <div class="card card-square bg-transparent border-0">
+                    <div class="card-bg" style="background-image: url(assets/images/image-53.jpg)"></div>
+                    <div class="card-bg card-bg-hover" style="background-color: rgba(0,0,0,.6)"></div>
+                    <div class="card-body card-body-hover text-white d-flex align-items-center justify-content-center">
+                        <i class="material-icons fs-8">zoom_in</i>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="design">
+                <div class="card card-square bg-transparent border-0">
+                    <div class="card-bg" style="background-image: url(assets/images/image-54.jpg)"></div>
+                    <div class="card-bg card-bg-hover" style="background-color: rgba(0,0,0,.6)"></div>
+                    <div class="card-body card-body-hover text-white d-flex align-items-center justify-content-center">
+                        <i class="material-icons fs-8">zoom_in</i>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "our work" section end -->
+
+<!-- "testimonials" section start -->
+<section class="section" id="testimonials">
+    <div class="section-content container">
+        <div class="d-flex justify-content-center justify-content-sm-between align-items-center">
+            <div class="text-center text-sm-left">
+                <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                    Some reviews from our clients
+                </small>
+                <h1>Testimonials</h1>
+            </div>
+            <div class="d-none d-sm-block">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-light btn-square" data-toggle="card-slider"
+                            data-target="#testimonials-slider" data-action="prevSlide">
+                        <i class="material-icons">arrow_left</i>
+                    </button>
+                    <button type="button" class="btn btn-light btn-square" data-toggle="card-slider"
+                            data-target="#testimonials-slider" data-action="nextSlide">
+                        <i class="material-icons">arrow_right</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-slider card-slider-viewport card-slider-services mt-15" id="testimonials-slider">
+            <article class="card-slider-item">
+                <div class="card border-light card-accent-left" data-mh="testimonials-slider">
+                    <div class="card-body p-19 p-md-20 d-flex flex-column">
+                        <div class="d-flex align-items-center">
+                            <img src="assets/images/yelp.svg" alt="yelp icon" width="45" class="rounded-circle"/>
+                            <div class="ml-9">
+                                <div class="text-black font-weight-medium fs-5 lh-5 mb-4">Pamela P.</div>
+                                <div class="text-muted fs-3 lh-4">Bathroom remodeling</div>
+                            </div>
+                        </div>
+                        <blockquote class="my-14">
+                            <p>“Rhoncus netus et tincidunt nunc pharetra rutrum natoque, libero justo enim magnis sapien
+                                finibus quisque dis, habitant quam ipsum luctus nisi posuere.”</p>
+                        </blockquote>
+                        <div class="star-rating">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star_half</i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="card-slider-item">
+                <div class="card border-light card-accent-left" data-mh="testimonials-slider">
+                    <div class="card-body p-19 p-md-20 d-flex flex-column">
+                        <div class="d-flex align-items-center">
+                            <img src="assets/images/houzz.svg" alt="houzz icon" width="45" class="rounded-circle"/>
+                            <div class="ml-9">
+                                <div class="text-black font-weight-medium fs-5 lh-5 mb-4">Tammara</div>
+                                <div class="text-muted fs-3 lh-4">Kitchen remodeling</div>
+                            </div>
+                        </div>
+                        <blockquote class="my-14">
+                            <p>“Feugiat condimentum lorem congue id dictum aenean nascetur varius tortor, euismod nec
+                                parturient ullamcorper inceptos bibendum pellentesque quisque.”</p>
+                        </blockquote>
+                        <div class="star-rating mt-auto">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star_border</i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="card-slider-item">
+                <div class="card border-light card-accent-left" data-mh="testimonials-slider">
+                    <div class="card-body p-19 p-md-20 d-flex flex-column">
+                        <div class="d-flex align-items-center">
+                            <img src="assets/images/fb.svg" alt="facebook icon" width="45" class="rounded-circle"/>
+                            <div class="ml-9">
+                                <div class="text-black font-weight-medium fs-5 lh-5 mb-4">David J.</div>
+                                <div class="text-muted fs-3 lh-4">Roofing</div>
+                            </div>
+                        </div>
+                        <blockquote class="my-14">
+                            <p>“Vel volutpat elit est dignissim diam viverra quis id, placerat et maecenas nulla nec
+                                nullam
+                                iaculis adipiscing felis, ac vivamus eleifend ridiculus massa auctor convallis.”</p>
+                        </blockquote>
+                        <div class="star-rating mt-auto">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="card-slider-item">
+                <div class="card border-light card-accent-left" data-mh="testimonials-slider">
+                    <div class="card-body p-19 p-md-20 d-flex flex-column">
+                        <div class="d-flex align-items-center">
+                            <img src="assets/images/g.svg" alt="google icon" width="45" class="rounded-circle"/>
+                            <div class="ml-9">
+                                <div class="text-black font-weight-medium fs-5 lh-5 mb-4">James B.</div>
+                                <div class="text-muted fs-3 lh-4">Painting</div>
+                            </div>
+                        </div>
+                        <blockquote class="my-14">
+                            <p>“Parturient hendrerit pharetra ridiculus eleifend dictumst aenean facilisi, varius etiam
+                                consequat tempor vivamus lorem suspendisse laoreet, ullamcorper sem volutpat orci tellus
+                                erat.”</p>
+                        </blockquote>
+                        <div class="star-rating mt-auto">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star_half</i>
+                            <i class="material-icons">star_border</i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+<!-- "testimonials" section end -->
+
+<!-- "contacts" section start -->
+<section id="contacts">
+    <div class="section bg-secondary">
+        <div class="section-content container">
+            <div class="text-center">
+                <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                    We answer within 24 hours
+                </small>
+                <h1>Contact Us</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <form action="#" class="row mt-17">
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="first_name" class="form-label">First name</label>
+                                <input type="text" class="form-control" id="first_name"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="last_name" class="form-label">Last name</label>
+                                <input type="text" class="form-control" id="last_name"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="text" class="form-control" id="phone"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="email"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="service" class="form-label">Select the service</label>
+                                <select class="custom-select" id="service">
+                                    <option value="1">Kitchen Remodeling</option>
+                                    <option value="2">Bathroom Remodeling</option>
+                                    <option value="3">Roofing</option>
+                                    <option value="4">Windows & Doors</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="zip-code" class="form-label">Your zip code</label>
+                                <input type="text" class="form-control" id="zip-code"/>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-between align-items-center flex-column flex-md-row">
+                            <div class="form-group form-check mb-9 mb-md-0">
+                                <input type="checkbox" class="custom-checkbox" id="exampleCheck2" checked/>
+                                <label class="form-check-label" for="exampleCheck2">
+                                    I've read and agree with the <a href="#">Terms & Policy</a>
+                                </label>
+                            </div>
+                            <div class="form-group mb-0">
+                                <button class="btn btn-primary btn-lg">Send message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-19 py-lg-20">
+        <div class="row vertical-divider-light">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card border-0">
+                    <div class="card-body py-17 px-10 text-center">
+                        <div class="card-icon mb-6"><i class="material-icons">location_on</i></div>
+                        <div class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            By appointment only
+                        </div>
+                        <p class="mb-0 text-body">Müllerstrasse 57, 8004<br/>Zürich, Switzerland</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card border-0">
+                    <div class="card-body py-17 px-10 text-center">
+                        <div class="card-icon mb-6"><i class="material-icons">phone</i></div>
+                        <div class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            Mobile phone
+                        </div>
+                        <p class="mb-0 text-body">+41 79 123 45 67</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card border-0">
+                    <div class="card-body py-17 px-10 text-center">
+                        <div class="card-icon mb-6"><i class="material-icons">access_time</i></div>
+                        <div class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            Working hours
+                        </div>
+                        <p class="mb-0 text-body">11:00 AM - 9:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card border-0">
+                    <div class="card-body py-17 px-10 text-center">
+                        <div class="card-icon mb-6"><i class="material-icons">alternate_email</i></div>
+                        <div class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            Email
+                        </div>
+                        <p class="mb-0 text-body">profi@mail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gmap">
+        <div class="gmap-embed" data-parallax-speed="0">
+            <div class="gmap-embed-sizing-helper" style="padding-top: 500px"></div>
+            <div class="gmap-embed-inner"
+                 data-options="{&quot;center&quot;:{&quot;lat&quot;:40.73774180898704,&quot;lng&quot;:-73.96465326476259},&quot;scrollwheel&quot;:false,&quot;zoom&quot;:14,&quot;disableDefaultUI&quot;:true,&quot;draggable&quot;:true}"></div>
+        </div>
+
+        <div class="gmap-infoboxes">
+            <div class="gmap-infobox" data-latlng="40.744978 -73.951145">
+                <div class="gmap-infobox-header">
+                    <h1 class="gmap-infobox-label">Long Island Office</h1>
+                </div>
+
+                <div class="gmap-infobox-details">
+                    <div class="gmap-infobox-details-item">
+                        47-02 11th St, Long Island City, NY 11101, USA
+                        <div>
+                            <a class="get-direction-link"
+                               href="https://maps.google.com?daddr=47-02+11th+St%2C+Long+Island+City%2C+NY+11101%2C+USA"
+                               target="_blank">Get directions</a></div>
+                    </div>
+
+                    <div class="gmap-infobox-details-item">
+                        Mon-Fri: 8:00 am - 5:00 pm<br/>
+                        Sat: 8:00 am - 3:00 pm <br/>
+                        Sun: Closed
+                    </div>
+
+                    <div class="gmap-infobox-details-item">
+                        646-846-8996 <sup>Appointments</sup><br/>
+                        212-355-2379 <sup>Fax</sup><br/>
+                        <a href="mailto:contact@mail.com">contact@mail.com</a></div>
+                </div>
+            </div>
+            <div class="gmap-infobox" data-latlng="40.7323995 -73.9897919">
+                <div class="gmap-infobox-header">
+                    <h1 class="gmap-infobox-label">Manhattan Office</h1>
+                </div>
+
+                <div class="gmap-infobox-details">
+                    <div class="gmap-infobox-details-item">
+                        100 E 12th St, New York, NY 10003
+                        <div>
+                            <a class="get-direction-link"
+                               href="https://maps.google.com?daddr=100+E+12th+St%2C+New+York%2C+NY+10003"
+                               target="_blank">Get
+                                directions</a></div>
+                    </div>
+
+                    <div class="gmap-infobox-details-item">
+                        Mon-Fri: 8:00 am - 5:00 pm<br/>
+                        Sat: 8:00 am - 3:00 pm <br/>
+                        Sun: Closed
+                    </div>
+
+                    <div class="gmap-infobox-details-item">
+                        646-846-8996 <sup>Appointments</sup><br/>
+                        212-355-2379 <sup>Fax</sup><br/>
+                        <a href="mailto:contact@mail.com">contact@mail.com</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "contacts" section end -->
+
+<!-- footer start -->
+{% include 'includes/footer.html' %}
+<!-- footer end -->
+
+<script src="assets/js/vendor.js"></script>
+<script src="assets/js/polyfills.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

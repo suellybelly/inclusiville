@@ -1,0 +1,61 @@
+//
+// Footer
+//
+
+.footer {
+  overflow: hidden;
+}
+
+a.footer-icon {
+  color: $gray-500;
+  line-height: 1;
+  text-decoration: none;
+  transition: $transition-base;
+
+  > .material-icons, i {
+    font-size: rem(24);
+  }
+
+  &:hover {
+    color: darken($gray-500, 15%);
+  }
+}
+
+a.footer-brand {
+  font-family: $font-family-base;
+  font-size: rem(30);
+  font-weight: bold;
+  color: $body-color;
+  text-decoration: none;
+  line-height: 1;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.footer-menu {
+  list-style: none;
+  margin: 0 (map_get($spacers, 20) / 2 * -1);
+  padding: 0;
+  font-size: 0;
+  line-height: 1.5;
+
+  li {
+    display: inline;
+  }
+
+  a {
+    display: inline-block;
+    font-family: $font-family-secondary;
+    text-transform: uppercase;
+    font-size: rem(nth($typography-sizings, 1));
+    letter-spacing: $letter-spacing;
+    font-weight: bold;
+    margin: 0 (map_get($spacers, 20) / 2);
+    color: $paragraph-color;
+    transition: $transition-base;
+
+    &:hover {
+      color: darken($paragraph-color, 25%)
+    }
+  }
+}

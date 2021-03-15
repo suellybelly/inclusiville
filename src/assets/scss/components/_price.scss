@@ -1,0 +1,28 @@
+//
+// Price block
+//
+
+.price {
+  display: flex;
+  font-size: rem(nth($typography-sizings, 9));
+  line-height: 1;
+  margin: 0 (-1 * map_get($spacers, 1));
+}
+
+.price-currency, .price-value {
+  font-family: $font-family-secondary;
+}
+
+.price-currency, .price-value, .price-description {
+  padding: 0 map_get($spacers, 1);
+}
+
+.price-currency {
+  font-size: 60%;
+  align-self: flex-start;
+}
+
+.price-description {
+  align-self: flex-end;
+  font-size: 45%;
+}

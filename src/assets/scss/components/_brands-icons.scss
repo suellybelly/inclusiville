@@ -1,0 +1,46 @@
+//
+// Brands Icons
+//
+
+.brand-icon {
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  font-size: rem(24);
+  align-items: center;
+  justify-content: center;
+  transition: $transition-base;
+
+  > i {
+    font-size: 62.5%;
+  }
+}
+
+.brand-icon-circle {
+  border-radius: 50%;
+  color: $white;
+}
+
+@each $brand, $color in $brand-colors {
+  .brand-icon-#{$brand} {
+    background: $color;
+
+    &, &:hover, &:focus, &:active {
+      color: color-yiq($color);
+    }
+
+    &:hover, &:focus, &:active {
+      background: darken($color, 15%);
+    }
+  }
+}
+
+.brand-icons-list {
+  display: flex;
+  margin: -1 * map_get($spacers, 9) / 2;
+
+  .brand-icon {
+    margin: map_get($spacers, 9) / 2;
+  }
+}

@@ -1,0 +1,29 @@
+//
+// Jumbotron
+//
+
+.jumbotron {
+  padding: map_get($spacers, 20) (map_get($spacers, 20) / 2);
+
+  @include media-breakpoint-down(md) {
+    padding: map_get($spacers, 17) (map_get($spacers, 17) / 2);
+  }
+}
+
+.jumbotron-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.jumbotron-title {
+  font-size: rem(nth($typography-sizings, 7));
+  line-height: 1;
+
+  @include media-breakpoint-up(md) {
+    font-size: rem(nth($typography-sizings, 8));
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: rem(nth($typography-sizings, 10));
+  }
+}

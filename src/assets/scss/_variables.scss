@@ -1,0 +1,187 @@
+//
+// Custom Variables & Variable overrides
+//
+
+// Globals
+$enable-rounded: false;
+$enable-shadows: false;
+
+// Typography
+$typography-sizings: (12, 13, 14, 16, 18, 24, 30, 36, 40, 50, 70, 80, 100);
+$h1-font-size: rem(50);
+$h2-font-size: rem(40);
+$h3-font-size: rem(24);
+$h4-font-size: rem(18);
+$h5-font-size: rem(16);
+$h6-font-size: rem(14);
+$letter-spacing: .125rem;
+$line-height-base: 1.625;
+$font-family-base: 'Roboto', sans-serif;
+$font-family-secondary: 'Arimo', sans-serif;
+
+// Spacers
+$spacer: 1rem;
+$spacers: (
+        0: 0,
+        1: rem(4),
+        2: rem(6),
+        3: rem(8),
+        4: rem(10),
+        5: rem(12),
+        6: rem(14),
+        7: rem(16),
+        8: rem(18),
+        9: rem(20),
+        10: rem(22),
+        11: rem(24),
+        12: rem(26),
+        13: rem(28),
+        14: rem(30),
+        15: rem(32),
+        16: rem(34),
+        17: rem(36),
+        18: rem(38),
+        19: rem(40),
+        20: rem(50),
+        21: rem(60),
+        22: rem(70),
+        23: rem(80),
+        24: rem(90),
+        25: rem(100)
+);
+
+// Colors
+$emphasized-link-hover-darken-percentage: 0;
+$primary: #3DB36B;
+$info: #4184F3;
+$secondary: #f9f9f9;
+$text-muted: #9B9B9B;
+$light: #EFEFEF;
+$yellow: #FDB813;
+$paragraph-color: #4A4A4A;
+$brand-colors: (
+        facebook: #3b5998,
+        twitter: #1da1f2,
+        linkedin: #0077b5,
+        youtube: #ff0000,
+        behance: #1769ff,
+        instagram: #f56040,
+        pinterest: #bd081c,
+        tumblr: #35465c,
+        vimeo: #1ab7ea
+);
+$colors: (
+        black: #000
+);
+
+// Navbar
+$navbar-padding-y: 2.25rem;
+$short-navbar-padding-y: 1rem;
+$navbar-brand-font-size: 1.875rem;
+$navbar-nav-link-padding-x: 2.5rem;
+$navbar-light-color: #000;
+$navbar-light-hover-color: $primary;
+$navbar-light-active-color: $primary;
+$navbar-dark-color: #fff;
+$navbar-dark-hover-color: $primary;
+$navbar-dark-active-color: $primary;
+$navbar-dark-disabled-color: rgba(#fff, .25);
+$navbar-dark-toggler-border-color: rgba(#fff, .5);
+$navbar-light-brand-color: $navbar-light-color;
+$navbar-light-brand-hover-color: $navbar-light-color;
+$navbar-dark-brand-color: $navbar-dark-color;
+$navbar-dark-brand-hover-color: $navbar-dark-color;
+
+// Popover
+$popover-font-size: rem(nth($typography-sizings, 1));
+$popover-border-width: 0;
+$popover-box-shadow: 0 0 rem(10) rgba(0,0,0,0.10);
+$popover-body-padding-x: map_get($spacers, 9);
+$popover-body-padding-y: map_get($spacers, 6);
+$popover-body-color: $paragraph-color;
+$popover-arrow-size: rem(10);
+
+// Dropdown
+$dropdown-padding-y: 0;
+$dropdown-spacer: 0;
+$dropdown-bg: #fff;
+$dropdown-border-width: 0;
+$dropdown-box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.2);
+$dropdown-link-hover-color: #fff;
+$dropdown-link-hover-bg: $primary;
+$dropdown-item-padding-y: .5rem;
+$dropdown-item-padding-x: 1rem;
+
+// Jumbotron
+$jumbotron-bg: $secondary;
+$jumbotron-color: #000;
+
+// Badges
+$badge-font-size: 75%;
+$badge-padding-y: rem(8);
+$badge-padding-x: rem(8);
+$badge-pill-padding-x: rem(18);
+
+// Forms
+$form-group-margin-bottom: rem(20);
+$custom-select-box-shadow: none;
+$custom-file-padding-y: 0.75rem;
+$custom-file-height-inner: 48px;
+
+// General Button Styles
+$input-btn-font-family: $font-family-secondary;
+$input-btn-focus-width: 0;
+$input-btn-focus-color: transparent;
+$input-btn-focus-box-shadow: none;
+$btn-font-weight: 700;
+$btn-box-shadow: none;
+$btn-active-box-shadow: none;
+
+// Regular Buttons
+$input-btn-font-size: .75rem;
+$input-btn-padding-y: .9375rem;
+$input-btn-padding-x: 1.625rem;
+$input-btn-line-height: 1.5;
+
+// Small Buttons
+$input-btn-font-size-sm: .75rem;
+$input-btn-padding-y-sm: .5rem;
+$input-btn-padding-x-sm: .5rem;
+$input-btn-line-height-sm: 1.375rem;
+
+// Large Buttons
+$input-btn-font-size-lg: .75rem;
+$input-btn-padding-y-lg: 1.25rem;
+$input-btn-padding-x-lg: 2.65rem;
+$input-btn-line-height-lg: 1.5;
+
+// General Input Styles
+$input-font-family: $font-family-base;
+$input-box-shadow: none;
+$input-focus-box-shadow: none;
+$input-border-color: #D3D3D3;
+
+// Regular Inputs
+$input-font-size: 1rem;
+$input-padding-x: 1rem;
+$input-padding-y: .5rem;
+$input-height: 50px;
+
+// Large Inputs
+$input-font-size-lg: 1rem;
+$input-padding-x-lg: 1rem;
+$input-padding-y-lg: .5rem;
+$input-height-lg: 60px;
+
+// Small Inputs
+$input-font-size-sm: 1rem;
+$input-height-sm: 40px;
+
+// Ribbons
+$ribbon-line-height: 2.5;
+
+// Modals
+$modal-backdrop-opacity: .8;
+$modal-sm: 390px;
+$modal-content-box-shadow-xs: none;
+$modal-content-box-shadow-sm-up: none;

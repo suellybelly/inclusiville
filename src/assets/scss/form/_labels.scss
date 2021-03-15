@@ -1,0 +1,66 @@
+//
+// Form label
+//
+
+.form-label {
+  font-family: $font-family-secondary;
+  letter-spacing: $letter-spacing;
+  text-transform: uppercase;
+  font-size: rem(nth($typography-sizings, 1));
+  color: $text-muted;
+}
+
+.form-check-label {
+  cursor: pointer;
+}
+
+.form-selectable-label {
+  cursor: pointer;
+  position: relative;
+  border: rem(1) solid $input-border-color;
+  z-index: 1;
+  transition: $transition-base;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: rem(-1);
+    left: rem(-1);
+    right: rem(-1);
+    bottom: rem(-1);
+    z-index: -1;
+    border: rem(2) solid transparent;
+    transition: $transition-base;
+  }
+
+  @if $enable-rounded {
+    &:not(.border-0),
+    &:not(.border-0):before {
+      @include border-radius($border-radius-sm);
+    }
+  }
+
+  &.selected {
+    z-index: 2;
+
+    &:before {
+      border-color: $primary;
+    }
+  }
+
+  label {
+    cursor: pointer;
+  }
+}
+
+.form-selectable-label.collapse-top {
+  margin-top: rem(-1);
+  border-top: 0;
+  @include border-top-radius(0);
+}
+
+.form-selectable-label.collapse-bottom {
+  margin-bottom: rem(-1);
+  border-bottom: 0;
+  @include border-bottom-radius(0);
+}

@@ -1,0 +1,589 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>PROFI</title>
+
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.css">
+</head>
+<body data-spy="scroll" data-target="#header-navbar" data-offset="140">
+
+<div id="page-start-anchor"></div>
+
+<!-- header start -->
+{% set bottomNavbarItems = [
+    {text: 'About', href: '#about', smoothScroll: true},
+    {text: 'Our menu', href: '#our-menu', smoothScroll: true},
+    {text: 'Gallery', href: '#gallery', smoothScroll: true},
+    {text: 'News', href: '#news', smoothScroll: true},
+    {text: 'Contacts', href: '#contacts', smoothScroll: true},
+] %}
+{% include 'includes/header.html' with {
+    topNavbarText: true,
+    ctaButton: {text: 'Order online', href: 'order.html', target: '_self'},
+    headerClasses: 'header-fixed-xl'
+} %}
+<!-- header end -->
+
+<!-- main hero start -->
+<section class="hero hero-fullscreen jarallax" data-speed="0.2" style="min-height: calc(100vh - 140px)">
+    <div class="hero-background">
+        <img src="assets/images/image-29.jpg" alt="hero background" class="jarallax-img"/>
+        <div class="hero-background-overlay" style="background-color: rgba(0,0,0,.25)"></div>
+    </div>
+    <div class="hero-foreground hero-foreground-gradient-black-left d-flex flex-column justify-content-center justify-content-md-end">
+        <div class="container text-white py-14 py-md-23 py-lg-25 text-center text-md-left">
+            <small class="fs-2 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption">
+                Sea food, italian, mediterranean
+            </small>
+            <h1 class="fs-10 fs-lg-11 font-weight-bold mt-10 mb-16">
+                Restaurant in<br/>New York City
+            </h1>
+            <div class="d-flex flex-wrap justify-content-center justify-content-md-start">
+                <a href="#" class="btn btn-primary btn-lg">Order online</a>
+                <a href="#" class="btn btn-ghost btn-lg border-0">Reservation</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="hero-end-anchor"></div>
+<!-- main hero end -->
+
+<!-- "about" section start -->
+<section class="section" id="about">
+    <div class="section-content container">
+        <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+            As seen in
+        </small>
+        <div class="d-flex align-items-start align-items-lg-center flex-column flex-lg-row mt-8">
+            <div class="card-slider card-slider-brands mr-0 mr-lg-23 flex-grow-1 w-100" id="brands-slider" data-options='{"contain":false,"groupCells":false,"wrapAround":true}'>
+                <img src="assets/images/brand-1.jpg" class="card-slider-item" alt="brand 1" style="height: 36px"/>
+                <img src="assets/images/brand-2.jpg" class="card-slider-item" alt="brand 2" style="height: 36px"/>
+                <img src="assets/images/brand-3.jpg" class="card-slider-item" alt="brand 3" style="height: 36px"/>
+                <img src="assets/images/brand-4.jpg" class="card-slider-item" alt="brand 4" style="height: 36px"/>
+                <img src="assets/images/brand-5.jpg" class="card-slider-item" alt="brand 5" style="height: 36px"/>
+                <img src="assets/images/brand-1.jpg" class="card-slider-item" alt="brand 1" style="height: 36px"/>
+                <img src="assets/images/brand-2.jpg" class="card-slider-item" alt="brand 2" style="height: 36px"/>
+                <img src="assets/images/brand-3.jpg" class="card-slider-item" alt="brand 3" style="height: 36px"/>
+            </div>
+            <div class="flex-shrink-0 mt-8 mt-lg-0">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-light btn-square" data-toggle="card-slider"
+                            data-target="#brands-slider" data-action="prevSlide">
+                        <i class="material-icons">arrow_left</i>
+                    </button>
+                    <button type="button" class="btn btn-light btn-square" data-toggle="card-slider"
+                            data-target="#brands-slider" data-action="nextSlide">
+                        <i class="material-icons">arrow_right</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center text-lg-left mt-15 mt-lg-20 align-items-center">
+            <div class="col-12 col-lg-6 mb-15 mb-lg-0">
+                <div class="image-slider mr-0 mr-xl-7">
+                    <a href="#" class="image-slider-prev d-none d-md-flex">
+                        <i class="material-icons">arrow_back</i>
+                    </a>
+                    <a href="#" class="image-slider-next d-none d-md-flex">
+                        <i class="material-icons">arrow_forward</i>
+                    </a>
+                    <div class="image-slider-contents">
+                        <img src="assets/images/image-30.jpg" alt="image" class="image-slider-item"/>
+                        <img src="assets/images/image-31.jpg" alt="image" class="image-slider-item"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 d-flex align-items-center">
+                <div class="pl-0 pl-xl-7 pr-0 pr-xl-16">
+                    <h1 class="mb-0">PROFI Restaurant</h1>
+                    <p class="mt-8 mb-0">This is a great space to write long text about your company and your
+                        services. You can use this space to go into a little more detail about your company. Talk about
+                        your team and what services you provide. Tell your visitors the story of how you came up with
+                        the idea for your business and what makes you different from your competitors. Make your company
+                        stand out and show your visitors who you are.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "about" section end -->
+
+<!-- "our menu" section start -->
+<section class="section bg-secondary" id="our-menu">
+    <div class="section-content container">
+        <h1 class="mb-17 text-center">Our menu</h1>
+        <div class="d-flex justify-content-center">
+            <div class="radio-buttons-group border-0" data-toggle="shuffle-grid" data-target="#our-menu-grid">
+                <button class="btn btn-light selected" data-value="all">All</button>
+                <button class="btn btn-light" data-value="breakfast">Breakfast</button>
+                <button class="btn btn-light" data-value="lunch">Lunch</button>
+                <button class="btn btn-light" data-value="dinner">Dinner</button>
+            </div>
+        </div>
+        <div class="shuffle-grid shuffle-grid-gap-14 shuffle-grid-cols-1 shuffle-grid-cols-md-2 mt-12" id="our-menu-grid">
+            <div class="shuffle-grid-item" data-groups="breakfast,lunch,dinner">
+                <div class="card border-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-4 position-relative">
+                            <img src="assets/images/image-37.jpg" class="img-overlay" alt="photo">
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="card-body py-11 px-14">
+                                <div class="d-flex justify-content-between">
+                                    <h2 class="fs-5 fs-md-6 fs-lg-7">Spiced almonds</h2>
+                                    <div class="price fs-5 fs-md-6 fs-lg-7 ml-9 text-black">
+                                        <div class="price-currency pr-0">$</div>
+                                        <div class="price-value">4</div>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+                                <a href="#" class="btn btn-link">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="breakfast">
+                <div class="card border-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-4 position-relative">
+                            <img src="assets/images/image-36.jpg" class="img-overlay" alt="photo">
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="card-body py-11 px-14">
+                                <div class="d-flex justify-content-between">
+                                    <h2 class="fs-5 fs-md-6 fs-lg-7">Olives</h2>
+                                    <div class="price fs-5 fs-md-6 fs-lg-7 ml-9 text-black">
+                                        <div class="price-currency pr-0">$</div>
+                                        <div class="price-value">9</div>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+                                <a href="#" class="btn btn-link">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="lunch">
+                <div class="card border-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-4 position-relative">
+                            <img src="assets/images/image-32.jpg" class="img-overlay" alt="photo">
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="card-body py-11 px-14">
+                                <div class="d-flex justify-content-between">
+                                    <h2 class="fs-5 fs-md-6 fs-lg-7">Grilled beef</h2>
+                                    <div class="price fs-5 fs-md-6 fs-lg-7 ml-9 text-black">
+                                        <div class="price-currency pr-0">$</div>
+                                        <div class="price-value">21</div>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+                                <a href="#" class="btn btn-link">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="dinner,breakfast">
+                <div class="card border-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-4 position-relative">
+                            <img src="assets/images/image-33.jpg" class="img-overlay" alt="photo">
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="card-body py-11 px-14">
+                                <div class="d-flex justify-content-between">
+                                    <h2 class="fs-5 fs-md-6 fs-lg-7">Lamb ribs</h2>
+                                    <div class="price fs-5 fs-md-6 fs-lg-7 ml-9 text-black">
+                                        <div class="price-currency pr-0">$</div>
+                                        <div class="price-value">29</div>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+                                <a href="#" class="btn btn-link">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="dinner,lunch">
+                <div class="card border-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-4 position-relative">
+                            <img src="assets/images/image-34.jpg" class="img-overlay" alt="photo">
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="card-body py-11 px-14">
+                                <div class="d-flex justify-content-between">
+                                    <h2 class="fs-5 fs-md-6 fs-lg-7">Oysters</h2>
+                                    <div class="price fs-5 fs-md-6 fs-lg-7 ml-9 text-black">
+                                        <div class="price-currency pr-0">$</div>
+                                        <div class="price-value">35</div>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+                                <a href="#" class="btn btn-link">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shuffle-grid-item" data-groups="dinner,lunch">
+                <div class="card border-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-4 position-relative">
+                            <img src="assets/images/image-35.jpg" class="img-overlay" alt="photo">
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="card-body py-11 px-14">
+                                <div class="d-flex justify-content-between">
+                                    <h2 class="fs-5 fs-md-6 fs-lg-7">Ribeye steak</h2>
+                                    <div class="price fs-5 fs-md-6 fs-lg-7 ml-9 text-black">
+                                        <div class="price-currency pr-0">$</div>
+                                        <div class="price-value">59</div>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+                                <a href="#" class="btn btn-link">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-19 mt-lg-20 text-center">
+            <a href="#" class="btn btn-lg btn-primary">Reservation</a>
+        </div>
+    </div>
+</section>
+<!-- "our menu" section end -->
+
+<!-- "gallery" section start -->
+<section class="section" id="gallery">
+    <div class="section-content container">
+        <h1 class="mb-17 text-center">Gallery</h1>
+        <div class="image-slider">
+            <a href="#" class="image-slider-prev d-none d-md-flex">
+                <i class="material-icons">arrow_back</i>
+            </a>
+            <a href="#" class="image-slider-next d-none d-md-flex">
+                <i class="material-icons">arrow_forward</i>
+            </a>
+            <div class="image-slider-contents">
+                <img src="assets/images/image-38.jpg" alt="image" class="image-slider-item" height="600" />
+                <img src="assets/images/image-39.jpg" alt="image" class="image-slider-item" height="600"/>
+                <img src="assets/images/image-40.jpg" alt="image" class="image-slider-item" height="600"/>
+                <img src="assets/images/image-41.jpg" alt="image" class="image-slider-item" height="600"/>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "gallery" section end -->
+
+<!-- "quote" section start -->
+<section class="section bg-secondary">
+    <div class="section-content container">
+        <div class="big-quote">
+            <div class="big-quote-icon mb-12 mb-md-15 mb-lg-19">
+                <i class="material-icons">format_quote</i>
+            </div>
+            <blockquote class="big-quote-contents">
+                <p class="mb-0 fs-6 fs-md-9">There is no love sincerer
+                    than the love of food.</p>
+                <footer class="big-quote-footer mt-11 mt-md-14 mt-lg-18">George Bernard Shaw</footer>
+            </blockquote>
+        </div>
+    </div>
+</section>
+<!-- "quote" section end -->
+
+<!-- "news" section start -->
+<section class="section" id="news">
+    <div class="section-content container">
+        <div class="d-flex justify-content-between align-items-center align-items-lg-end flex-column flex-lg-row">
+            <div class="text-center text-lg-left">
+                <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                    Our latest updates
+                </small>
+                <h1>News & Events</h1>
+            </div>
+            <a href="#" class="btn btn-light border-0 d-inline-flex align-items-center text-primary p-0" data-toggle="modal" data-target="#subscribe-modal">
+                <i class="material-icons">email</i>
+                <span class="ml-4">Subscribe</span>
+            </a>
+        </div>
+        <div class="row mt-17">
+            <div class="col-12 col-md-6">
+                <div class="card text-white mb-14 mb-md-0">
+                    <img src="assets/images/image-43.jpg" class="card-img object-fit-cover" alt="photo" height="380">
+                    <div class="card-img-overlay bg-gradient-black-bottom d-flex flex-column justify-content-end p-15 p-md-20">
+                        <h2 class="card-title fs-6 fs-md-7 fs-lg-9">Greece month</h2>
+                        <p class="card-text">April 28, 2020</p>
+                        <div>
+                            <a href="#" class="btn btn-link">Learn more</a>
+                        </div>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="card text-white">
+                    <div class="ribbon ribbon-right ribbon-info ribbon-float-top-right mt-9 px-10">Event</div>
+                    <img src="assets/images/image-42.jpg" class="card-img object-fit-cover" alt="photo" height="380">
+                    <div class="card-img-overlay bg-gradient-black-bottom d-flex flex-column justify-content-end p-15 p-md-20">
+                        <h2 class="card-title fs-6 fs-md-7 fs-lg-9">Rock Live Concert</h2>
+                        <p class="card-text">April 10, 2020</p>
+                        <div>
+                            <a href="#" class="btn btn-link">Learn more</a>
+                        </div>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-19 mt-lg-20 text-center">
+            <a href="#" class="btn btn-lg btn-outline-primary">News archive</a>
+        </div>
+    </div>
+</section>
+<!-- "news" section end -->
+
+<!-- "contacts" section start -->
+<section id="contacts">
+    <div class="section bg-secondary">
+        <div class="section-content container">
+            <div class="text-center">
+                <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                    We will answer you soon
+                </small>
+                <h1>Reserve a Table</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <form action="#" class="row mt-17">
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="first_name" class="form-label">First name</label>
+                                <input type="text" class="form-control" id="first_name"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="last_name" class="form-label">Last name</label>
+                                <input type="text" class="form-control" id="last_name"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="text" class="form-control" id="phone"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="email"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="persons" class="form-label">Number of persons</label>
+                                <select class="custom-select" id="persons">
+                                    <option value="1">1-2 people</option>
+                                    <option value="2">3-4 people</option>
+                                    <option value="3">4+ people</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="date-time" class="form-label">Date and time</label>
+                                <input type="text" class="form-control" id="date-time" placeholder="month/day/year/time"/>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-between align-items-center flex-column flex-md-row">
+                            <div class="form-group form-check mb-9 mb-md-0">
+                                <input type="checkbox" class="custom-checkbox" id="exampleCheck2" checked/>
+                                <label class="form-check-label" for="exampleCheck2">
+                                    I've read and agree with the <a href="#">Terms & Policy</a>
+                                </label>
+                            </div>
+                            <div class="form-group mb-0">
+                                <button class="btn btn-primary btn-lg">Send request</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-19 py-lg-20">
+        <div class="row vertical-divider-light">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card border-0">
+                    <div class="card-body py-17 px-10 text-center">
+                        <div class="card-icon mb-6"><i class="material-icons">location_on</i></div>
+                        <div class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            By appointment only
+                        </div>
+                        <p class="mb-0 text-body">Müllerstrasse 57, 8004<br/>Zürich, Switzerland</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card border-0">
+                    <div class="card-body py-17 px-10 text-center">
+                        <div class="card-icon mb-6"><i class="material-icons">phone</i></div>
+                        <div class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            Mobile phone
+                        </div>
+                        <p class="mb-0 text-body">+41 79 123 45 67</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card border-0">
+                    <div class="card-body py-17 px-10 text-center">
+                        <div class="card-icon mb-6"><i class="material-icons">access_time</i></div>
+                        <div class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            Working hours
+                        </div>
+                        <p class="mb-0 text-body">11:00 AM - 9:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card border-0">
+                    <div class="card-body py-17 px-10 text-center">
+                        <div class="card-icon mb-6"><i class="material-icons">alternate_email</i></div>
+                        <div class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                            Email
+                        </div>
+                        <p class="mb-0 text-body">profi@mail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gmap">
+        <div class="gmap-embed" data-parallax-speed="0">
+            <div class="gmap-embed-sizing-helper" style="padding-top: 500px"></div>
+            <div class="gmap-embed-inner"
+                 data-options="{&quot;center&quot;:{&quot;lat&quot;:40.73774180898704,&quot;lng&quot;:-73.96465326476259},&quot;scrollwheel&quot;:false,&quot;zoom&quot;:14,&quot;disableDefaultUI&quot;:true,&quot;draggable&quot;:true}"></div>
+        </div>
+
+        <div class="gmap-infoboxes">
+            <div class="gmap-infobox" data-latlng="40.744978 -73.951145">
+                <div class="gmap-infobox-header">
+                    <h1 class="gmap-infobox-label">Long Island Office</h1>
+                </div>
+
+                <div class="gmap-infobox-details">
+                    <div class="gmap-infobox-details-item">
+                        47-02 11th St, Long Island City, NY 11101, USA
+                        <div>
+                            <a class="get-direction-link"
+                               href="https://maps.google.com?daddr=47-02+11th+St%2C+Long+Island+City%2C+NY+11101%2C+USA"
+                               target="_blank">Get directions</a></div>
+                    </div>
+
+                    <div class="gmap-infobox-details-item">
+                        Mon-Fri: 8:00 am - 5:00 pm<br/>
+                        Sat: 8:00 am - 3:00 pm <br/>
+                        Sun: Closed
+                    </div>
+
+                    <div class="gmap-infobox-details-item">
+                        646-846-8996 <sup>Appointments</sup><br/>
+                        212-355-2379 <sup>Fax</sup><br/>
+                        <a href="mailto:contact@mail.com">contact@mail.com</a></div>
+                </div>
+            </div>
+            <div class="gmap-infobox" data-latlng="40.7323995 -73.9897919">
+                <div class="gmap-infobox-header">
+                    <h1 class="gmap-infobox-label">Manhattan Office</h1>
+                </div>
+
+                <div class="gmap-infobox-details">
+                    <div class="gmap-infobox-details-item">
+                        100 E 12th St, New York, NY 10003
+                        <div>
+                            <a class="get-direction-link"
+                               href="https://maps.google.com?daddr=100+E+12th+St%2C+New+York%2C+NY+10003"
+                               target="_blank">Get
+                                directions</a></div>
+                    </div>
+
+                    <div class="gmap-infobox-details-item">
+                        Mon-Fri: 8:00 am - 5:00 pm<br/>
+                        Sat: 8:00 am - 3:00 pm <br/>
+                        Sun: Closed
+                    </div>
+
+                    <div class="gmap-infobox-details-item">
+                        646-846-8996 <sup>Appointments</sup><br/>
+                        212-355-2379 <sup>Fax</sup><br/>
+                        <a href="mailto:contact@mail.com">contact@mail.com</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "contacts" section end -->
+
+<!-- "subscribe" modal start -->
+<div class="modal fade" id="subscribe-modal" tabindex="-1">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body px-20 py-19">
+                <h2 class="fs-6 fs-md-7 fs-lg-9 text-center mb-12">Subscribe</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="First name"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Email"/>
+                    </div>
+                    <div class="form-group form-check fs-2">
+                        <input type="checkbox" class="custom-checkbox" id="exampleCheck1" checked/>
+                        <label class="form-check-label" for="exampleCheck1">
+                            I've read and agree with the <a href="#">Terms & Policy</a>
+                        </label>
+                    </div>
+                    <div class="form-group mb-0">
+                        <button class="btn btn-primary w-100">Subscribe to newsletter</button>
+                    </div>
+                </form>
+            </div>
+            <button type="button" class="close position-absolute position-top-9 position-right-9" data-dismiss="modal" aria-label="Close">
+                <i class="material-icons">close</i>
+            </button>
+        </div>
+    </div>
+</div>
+<!-- "subscribe" modal end -->
+
+<!-- footer start -->
+{% include 'includes/footer.html' %}
+<!-- footer end -->
+
+<script src="assets/js/vendor.js"></script>
+<script src="assets/js/polyfills.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

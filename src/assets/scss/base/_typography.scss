@@ -1,0 +1,59 @@
+//
+// Typography
+//
+
+p {
+  color: $paragraph-color;
+}
+
+strong, b {
+  font-weight: $font-weight-bold;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    @for $size from 1 through length($typography-sizings) {
+      $value: nth($typography-sizings, $size);
+
+      .fs#{breakpoint-infix($breakpoint)}-#{$size} {
+        font-size: rem($value) !important;
+      }
+
+      .lh#{breakpoint-infix($breakpoint)}-#{$size} {
+        line-height: rem($value) !important;
+      }
+    }
+  }
+}
+
+.letter-spacing-caption {
+  letter-spacing: $letter-spacing;
+}
+
+.letter-spacing-normal {
+  letter-spacing: normal;
+}
+
+.font-weight-medium {
+  font-weight: 500;
+}
+
+.font-weight-semibold {
+  font-weight: 600;
+}
+
+.font-family-base {
+  font-family: $font-family-base;
+}
+
+.font-family-secondary {
+  font-family: $font-family-secondary;
+}
+
+.text-black {
+  color: $black !important;
+}
+
+.text-white-75 {
+  color: rgba($white, .75);
+}

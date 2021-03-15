@@ -1,0 +1,31 @@
+//
+// Mixins & Functions
+//
+
+// Rem Calculator
+@function rem($size) {
+  @if type-of($size) == 'number' and not unitless($size) {
+    @return (($size / ($size * 0 + 1)) / 16) * 1rem;
+  } @else {
+    @return ($size / 16) * 1rem;
+  }
+}
+
+// Placeholder shorthand
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content
+  }
+
+  &:-moz-placeholder {
+    @content
+  }
+
+  &::-moz-placeholder {
+    @content
+  }
+
+  &:-ms-input-placeholder {
+    @content
+  }
+}
