@@ -553,7 +553,6 @@
         right: 0;
         bottom: 0;
         z-index: 100;
-        display: none;
     }
     #overlay:before {
         content: "";
@@ -642,7 +641,15 @@
 .card {
     border-radius: 20px;
 }
+#toggle-overlay-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1060; /* greater than .modal */
+}
+
   </style>
+<button id="toggle-overlay-button" class="btn btn-dark">Toggle View</button>
   <div id="overlay" aria-hidden="true" tabindex="-1">
     <div class="ui-wrapper">
         <div class="step-1">
@@ -796,6 +803,8 @@
         const step2NextBtn = $(".step-2 .next");
         const step3NextBtn = $(".step-3 .next");
         const resetBtn = $(".reset");
+        const toggleBtn = $("#toggle-overlay-button");
+        const overlay = $("#overlay");
         step1NextBtn.on("click", function () {
             $("[class^=step-]").fadeOut("fast");
             $(".step-2").fadeIn("fast");
@@ -811,6 +820,10 @@
         resetBtn.on("click", function () {
             $("[class^=step-]").fadeOut("fast");
             $(".step-1").fadeIn("fast");
+        });
+        toggleBtn.on("click", function () {
+            console.log("test");
+            overlay.fadeToggle("fast");
         });
     });
 </script>
