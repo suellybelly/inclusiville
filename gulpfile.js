@@ -35,7 +35,10 @@ const stylePaths = [
     {
         dest: 'assets/css/vendor.css',
         src: [
-            'node_modules/flickity/dist/flickity.css'
+            'node_modules/flickity/dist/flickity.css',
+            'assets/css/base.css',
+            'assets/css/core.css',
+            'assets/css/menubarLinks.css',
         ]
     }
 ];
@@ -52,7 +55,8 @@ const jsPaths = [
             dest: 'assets/js/app.js',
             src: [
                 'src/assets/js/app.js',
-                'src/assets/js/components/**/*.js'
+                'src/assets/js/components/**/*.js',
+                'src/assets/js/keyboard/**/*.js',
             ]
         },
         {
