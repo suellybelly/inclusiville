@@ -698,37 +698,17 @@
 <script src="assets/js/app.js"></script>
 <script>
     $(document).ready(function(){
+        var correctAnswers = false;
+
         const step1NextBtn = $(".step-1 .next");
         const step2NextBtn = $(".step-2 .next");
-        const step3NextBtn = $(".step-3 .next");
+        const step2PrevBtn = $(".step-2 .prev");
+        const step3PrevBtn = $(".step-3 .prev");
         const resetBtn = $(".reset");
         const toggleBtn = $("#toggle-overlay-button");
         const overlay = $("#overlay");
-        step1NextBtn.on("click", function () {
-            $("[class^=step-]").fadeOut("fast");
-            $(".step-2").fadeIn("fast");
-        });
-        step2NextBtn.on("click", function () {
-            $("[class^=step-]").fadeOut("fast");
-            $(".step-3").fadeIn("fast");
-        });
-        step3NextBtn.on("click", function () {
-            $("[class^=step-]").fadeOut("fast");
-            $(".step-4").fadeIn("fast");
-        });
-        resetBtn.on("click", function () {
-            $("[class^=step-]").fadeOut("fast");
-            $(".step-1").fadeIn("fast");
-        });
-        toggleBtn.on("click", function () {
-            console.log("test");
-            overlay.fadeToggle("fast");
-        });
-    });
-</script>
-<script>
+       
     var axeTree = axe.utils.getFlattenedTree(document.body);
-    console.log("axeTree", axeTree);
     document.querySelectorAll("#content *").forEach( e => {
         e.addEventListener( 'focus', event => {
             var activeElement = document.activeElement;
@@ -739,11 +719,77 @@
             caption.textContent = text;
         })
     });
-    </script>
-     <script type="text/javascript">
-        var keyboardNavRoot = new Menubar(document.getElementById('content'));
-        keyboardNavRoot.init();
-      </script>
+        //var keyboardNavRoot = new Menubar(document.getElementById('content'));
+        //keyboardNavRoot.init();
+        
+            var quizForm = document.getElementById('quiz-form');
+            var inputs = quizForm.getElementsByClassName('form-control');
+
+            var quizValidation = Array.prototype.filter.call(quizForm, function(form) {
+                quizForm.addEventListener('submit', function(event) {
+                    quizForm.classList.add('was-validated');
+                Array.from(inputs).forEach((input) => {
+                    var value = input.value?.toLowerCase();
+                    var answer = input.getAttribute("answer")?.toLowerCase();
+                    event.stopPropagation();
+                    event.preventDefault();
+                    if (value != answer) {
+
+                        correctAnswers = false;
+                        return false;
+                    }
+                    correctAnswers = true;
+                    input.parentNode.parentNode.classList.add("active");
+                    
+
+                })
+              }, false);
+            });
+            var registrationCheck = document.getElementById('registered');
+
+            var regForm = document.getElementById('registration-form');
+            // Loop over them and prevent submission
+            var regValidation = Array.prototype.filter.call(regForm, function(form) {
+                regForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                event.stopPropagation();
+                if (regForm.checkValidity() === false) {
+
+                } else {
+                    registrationCheck.parentNode.classList.add('active');
+                }
+                regForm.classList.add('was-validated');
+            }, false);
+            });
+            step1NextBtn.on("click", function () {
+            $("[class^=step-]").stop().fadeOut("fast");
+            $(".step-2").fadeIn("fast");
+        });
+        step2NextBtn.on("click", function () {
+            console.log(correctAnswers);
+            if (correctAnswers) {
+                $("[class^=step-]").stop().fadeOut("fast");
+                $(".step-3").fadeIn("fast");
+            }
+        });
+        step2PrevBtn.on("click", function () {
+            $("[class^=step-]").fadeOut("fast");
+            $(".step-1").fadeIn("fast");
+        });
+        step3PrevBtn.on("click", function () {
+            $("[class^=step-]").stop().fadeOut("fast");
+            $(".step-2").fadeIn("fast");
+        });
+        resetBtn.on("click", function () {
+            $("[class^=step-]").stop().fadeOut("fast");
+            $(".step-1").fadeIn("fast");
+        });
+        toggleBtn.on("click", function () {
+            overlay.stop().fadeToggle("fast");
+        });
+    });
+        
+        </script>
 </body>
 </html>
 
