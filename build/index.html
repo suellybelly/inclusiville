@@ -76,7 +76,7 @@
 <!-- header end -->
 <section class="hero hero-fullscreen jarallax" data-speed="0.2" style="min-height: calc(100vh - 140px)">
     <div tabindex="0" class="hero-background">
-        <img src="assets/images/image-45.jpg" alt="hero background" class="jarallax-img"/>
+        <img src="assets/images/pexels-thanos-ayers-3835453.jpg" alt="Cobblestone ally way with colourful umbrellas hanging overhead" class="jarallax-img"/>
     </div>
     <div class="hero-foreground d-flex flex-column justify-content-center">
         <div class="d-flex align-items-center justify-content-center py-14 py-md-23 py-lg-25">
@@ -383,22 +383,19 @@
         <div class="row align-items-center">
             <div class="col-12 col-md-6 col-lg-5 mb-14 mb-md-0">
                 <div class="d-flex align-items-center justify-content-center justify-content-md-start">
-                    <a href="index.html" class="footer-brand">IAF</a>
+                    <a href="index.html" class="footer-brand" aria-hidden="true">IAF</a>
                     <div class="brand-icons-list ml-10 ml-sm-20">
-                        <a href="https://facebook.com" target="_blank" class="brand-icon brand-icon-circle brand-icon-facebook">
+                        <a href="https://facebook.com" target="_blank" class="brand-icon brand-icon-circle brand-icon-facebook" title="Facebook page">
                             <i class="fa fa-facebook-f"></i>
                         </a>
-                        <a href="https://www.twitter.com" target="_blank" class="brand-icon brand-icon-circle brand-icon-twitter">
+                        <a href="https://www.twitter.com" target="_blank" class="brand-icon brand-icon-circle brand-icon-twitter" title="Twitter feed">
                             <i class="fa fa-twitter"></i>
-                        </a>
-                        <a href="https://www.pinterest.com" target="_blank" class="brand-icon brand-icon-circle brand-icon-pinterest">
-                            <i class="fa fa-pinterest-p"></i>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-lg-2 text-center d-none d-lg-block">
-                <a href="#" class="footer-icon" data-toggle="smooth-scroll" data-target="#page-start-anchor"><i
+                <a href="#" class="footer-icon" data-toggle="smooth-scroll" data-target="#page-start-anchor" aria-hidden="true"><i
                         class="material-icons">arrow_upward</i></a>
             </div>
             <div class="col-12 col-md-6 col-lg-5 text-center text-md-right">
@@ -591,7 +588,7 @@
                             </div>
                         </div>
                         <div class="modal-footer justify-content-between">
-                            <button type="button" class="next btn btn-primary">Next<i class="material-icons ml-2">trending_flat</i></button>
+                            <button type="button" class="next btn btn-primary" tabindex="-1">Next<i class="material-icons ml-2">trending_flat</i></button>
                         </div>
                     </div>
                 </div>
@@ -601,7 +598,7 @@
             <div class="modal" tabindex="-1" role="dialog">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content p-12">
-                        <form id="quiz-form" class="needs-validation" novalidate>
+                        <form id="quiz-form" class="needs-validation" novalidate tabindex="-1">
                             <div class="modal-body">
                                 <div class="row">
                                     <div class="col-12">
@@ -609,28 +606,28 @@
                                         <ul class="list-group">
                                             <li class="list-group-item p-0">
                                                 <div class="alert alert-light" role="alert">
-                                                    <p tabindex="-1">Use the following keys to navigate:<br />
-                                                    <kbd>Tab</kbd><kbd>&uparrow</kbd><kbd>Arrow Down</kbd><kbd>Arrow Left</kbd><kbd>Arrow Right</kbd><kbd>Enter</kbd></p>
+                                                    <p>Use the following keys to navigate: 
+                                                    <kbd>Tab</kbd><kbd>&uparrow;</kbd><kbd>&rightarrow;</kbd><kbd>&downarrow;</kbd><kbd>&leftarrow;</kbd><kbd>&crarr;</kbd></p>
                                                 </div>
                                             </li>
                                             <li class="list-group-item">
                                                 <span class="material-icons">done</span>
-                                                <div class="form-group" tabindex="-1">
-                                                    <label data-speech for="task1">Check that you are on the correct website</label>
+                                                <div class="form-group">
+                                                    <label data-speech for="task1" tabindex="-1">Check that you are on the correct website</label>
                                                     <input data-speech type="text" class="form-control" id="task1" tabindex="-1" placeholder="What is the name of the website?" required answer="IAF">
                                                 </div>
                                             </li>
                                             <li class="list-group-item">
                                                 <span class="material-icons">done</span>
-                                                <div class="form-group" tabindex="-1">
-                                                    <label data-speech for="task2">Find out the location of the event</label>
+                                                <div class="form-group">
+                                                    <label data-speech for="task2" tabindex="-1">Find out the location of the event</label>
                                                     <input data-speech type="text" class="form-control" id="task2" tabindex="-1" placeholder="Where is the event held?" required answer="Inclusiville Showgrounds">
                                                 </div>
                                             </li>
                                             <li class="list-group-item">
                                                 <span class="material-icons">done</span>
-                                                <div class="form-group" tabindex="-1">
-                                                    <label data-speech for="task3">What time is your local favourite, The Empaths, playing?</label>
+                                                <div class="form-group">
+                                                    <label data-speech for="task3" tabindex="-1">What time is your local favourite, The Empaths, playing?</label>
                                                     <input data-speech type="text" class="form-control" id="task3" tabindex="-1" placeholder="Check the event schedule" required answer="2pm">
                                                 </div>
                                             </li>
@@ -641,8 +638,8 @@
                                 </div>
                             </div>
                             <div class="modal-footer justify-content-between">
-                                <button type="button" class="prev btn btn-light"><i class="material-icons mr-2 rotate-180">trending_flat</i>Back</button>
-                                <button type="submit" class="next btn btn-primary">Next<i class="material-icons ml-2">trending_flat</i></button>
+                                <button type="button" class="prev btn btn-light" tabindex="-1"><i class="material-icons mr-2 rotate-180">trending_flat</i>Back</button>
+                                <button type="submit" class="next btn btn-primary" tabindex="-1">Next<i class="material-icons ml-2">trending_flat</i></button>
                             </div>
                         </form>
                     </div>
@@ -678,8 +675,8 @@
                             </div>
                         </div>
                         <div class="modal-footer justify-content-between">
-                            <button type="button" class="prev btn btn-light"><i class="material-icons mr-2 rotate-180">trending_flat</i>Back</button>
-                            <button type="button" class="reset btn btn-primary">Start again  <i class="material-icons">refresh</i></button>
+                            <button type="button" class="prev btn btn-light" tabindex="-1"><i class="material-icons mr-2 rotate-180">trending_flat</i>Back</button>
+                            <button type="button" class="reset btn btn-primary" tabindex="-1">Start again  <i class="material-icons">refresh</i></button>
                             <!-- <button type="button" class="share btn btn-primary">Share <i class="material-icons">share</i></button> -->
                         </div>
                     </div>
@@ -740,7 +737,7 @@
                     }
                     correctAnswers = true;
                     input.parentNode.parentNode.classList.add("active");
-                    
+                    input.disabled = true;
 
                 })
               }, false);
@@ -757,6 +754,7 @@
 
                 } else {
                     registrationCheck.parentNode.classList.add('active');
+                    registrationCheck.setAttribute("answer");
                 }
                 regForm.classList.add('was-validated');
             }, false);
