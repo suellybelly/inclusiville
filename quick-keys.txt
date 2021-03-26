@@ -1,13 +1,8 @@
-Element(Quick key): CSS Selector(s)
-
-Headings (h): h1, h2, h3, h4, h5, h6; may be easier to use class="heading" for all headings: .heading 
-Graphics/Images(g): id's for all images/graphics/logos, or class="graphics" for all graphics: .graphics
-Main Region(q): id for <main id="main" class="region">: #main
-Regions(r): class="region" for <nav>, <main>, <footer>, .region
-Form controls(f): input
-Paragraph(p): p
+Element (Quick key): CSS Selectors
+      
+Headings (h): h1, h2, h3, h4, h5, h6, [role="heading"] 
 Links (k): a 
-Buttons(b): class="button" assigned to all buttons: .buttons
-Lists (l): ul
-List Items (i): li
-
+Regions (r): header, nav, main, footer, [role="region"], [role="banner"], [role="navigation"], [role="main"], [role="contentinfo"], [role="search"] 
+Form controls (f): input, [role="form"], [role="textbox"], [role="checkbox"], [role="button"]
+Buttons (b): button, input[type="button"], [role="button"]
+Lists  (l): ul, [role="list"]
