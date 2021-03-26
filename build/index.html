@@ -311,17 +311,17 @@
                     We answer within 24 hours
                 </small>
                 <h1 tabindex="0">Register</h1>
-                <form action="#" class="row mt-17">
+                <form id="registration-form" action="#" class="row mt-17 needs-validation" novalidate>
                     <div class="col-12 col-sm-6">
                         <div class="form-group">
                             <label for="first_name" class="form-label">First name</label>
-                            <input type="text" class="form-control" id="first_name"/>
+                            <input type="text" class="form-control" id="first_name" required />
                         </div>
                     </div>
                     <div class="col-12 col-sm-6">
                         <div class="form-group">
                             <label for="last_name" class="form-label">Last name</label>
-                            <input type="text" class="form-control" id="last_name"/>
+                            <input type="text" class="form-control" id="last_name" required />
                         </div>
                     </div>
                     <div class="col-12 col-sm-6">
@@ -333,24 +333,15 @@
                     <div class="col-12 col-sm-6">
                         <div class="form-group">
                             <label for="email" class="form-label">Email</label>
-                            <input type="text" class="form-control" id="email"/>
+                            <input type="text" class="form-control" id="email" required />
                         </div>
                     </div>
-                    <div class="col-12">
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea id="message" class="form-control" rows="3"></textarea>
-                        </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="custom-checkbox" id="exampleCheck2" checked/>
-                            <label class="form-check-label" for="exampleCheck2">
-                                I've read and agree with the <a href="#">Terms & Policy</a>
-                            </label>
-                        </div>
+                    <div class="col-12 col-sm-6">
                         <div class="form-group mb-0">
                             <button class="btn btn-primary btn-lg">Send message</button>
                         </div>
                     </div>
+                    
                 </form>
             </div>
             <div role="document" class="col-12 col-lg-4">
@@ -386,70 +377,6 @@
     </div>
 </section>
 <!-- "contacts" section end -->
-<!-- "map" section start -->
-<section class="gmap" id="contact">
-    <div class="gmap-embed" data-parallax-speed="0">
-        <div class="gmap-embed-sizing-helper" style="padding-top: 650px"></div>
-        <div class="gmap-embed-inner"
-             data-options="{&quot;center&quot;:{&quot;lat&quot;:40.73774180898704,&quot;lng&quot;:-73.96465326476259},&quot;scrollwheel&quot;:false,&quot;zoom&quot;:14,&quot;disableDefaultUI&quot;:true,&quot;draggable&quot;:true}"></div>
-    </div>
-
-    <div class="gmap-infoboxes">
-        <div class="gmap-infobox" data-latlng="40.744978 -73.951145">
-            <div class="gmap-infobox-header">
-                <h1 role="document" tabindex="0" class="gmap-infobox-label">Long Island Office</h1>
-            </div>
-
-            <div class="gmap-infobox-details">
-                <div role="document" tabindex="0" class="gmap-infobox-details-item">
-                    47-02 11th St, Long Island City, NY 11101, USA
-                    <div>
-                        <a class="get-direction-link"
-                           href="https://maps.google.com?daddr=47-02+11th+St%2C+Long+Island+City%2C+NY+11101%2C+USA"
-                           target="_blank">Get directions</a></div>
-                </div>
-
-                <div role="document" tabindex="0" class="gmap-infobox-details-item">
-                    Mon-Fri: 8:00 am - 5:00 pm<br/>
-                    Sat: 8:00 am - 3:00 pm <br/>
-                    Sun: Closed
-                </div>
-
-                <div role="document" tabindex="0" class="gmap-infobox-details-item">
-                    646-846-8996 <sup>Appointments</sup><br/>
-                    212-355-2379 <sup>Fax</sup><br/>
-                    <a href="mailto:contact@mail.com">contact@mail.com</a></div>
-            </div>
-        </div>
-        <div class="gmap-infobox" data-latlng="40.7323995 -73.9897919">
-            <div class="gmap-infobox-header">
-                <h1 role="document" tabindex="0" class="gmap-infobox-label">Manhattan Office</h1>
-            </div>
-
-            <div class="gmap-infobox-details">
-                <div role="document" tabindex="0" class="gmap-infobox-details-item">
-                    100 E 12th St, New York, NY 10003
-                    <div>
-                        <a class="get-direction-link"
-                           href="https://maps.google.com?daddr=100+E+12th+St%2C+New+York%2C+NY+10003" target="_blank">Get
-                            directions</a></div>
-                </div>
-
-                <div role="document" tabindex="0" class="gmap-infobox-details-item">
-                    Mon-Fri: 8:00 am - 5:00 pm<br/>
-                    Sat: 8:00 am - 3:00 pm <br/>
-                    Sun: Closed
-                </div>
-
-                <div role="document" tabindex="0" class="gmap-infobox-details-item">
-                    646-846-8996 <sup>Appointments</sup><br/>
-                    212-355-2379 <sup>Fax</sup><br/>
-                    <a href="mailto:contact@mail.com">contact@mail.com</a></div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- "map" section end -->
 <!-- footer start -->
 <section class="footer bg-secondary">
     <div class="container py-19 py-sm-23 py-lg-25">
@@ -496,7 +423,6 @@
         right: 0;
         bottom: 0;
         z-index: 100;
-        display: none;
     }
     #overlay:before {
         content: "";
@@ -524,6 +450,8 @@
     }    
     kbd {
         border-radius: 1rem;
+        padding-right: 0.7rem;
+        padding-left: 0.7rem;
         border: 1px solid white;
     }
     #ui-wrapper {
@@ -591,6 +519,58 @@
     right: 15px;
     z-index: 1060; /* greater than .modal */
 }
+.list-group-item {
+    padding-left: 3rem;
+    position: relative;
+}
+.list-group-item.active span {
+    border-color: green;
+    background: green;
+    color: white;
+}
+.list-group-item span {
+    position: absolute;
+    left: 0.75rem;
+    top: 0.6rem;
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 0.1rem;
+    color: transparent;
+}
+.list-group-item .form-group {
+    margin-bottom: 0;
+}
+.rotate-180 {
+    transform: rotate(180deg);
+}
+.form-control {
+    padding-left: 0;
+    padding-right: 0;
+    border-color: transparent;
+    border-bottom-color: #D3D3D3;
+}
+.form-group label {
+    font-weight: 700;
+}
+.list-group-item .form-control:disabled,
+.list-group-item .form-control[readonly] {
+    background: transparent;
+    color: white;
+    border-color: transparent;
+}
+.was-validated .list-group-item .form-control:valid, 
+.list-group-item .form-control.is-valid {
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+.was-validated .list-group-item .form-control:invalid,
+.list-group-item .form-control.is-invalid {
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
   </style>
 <button tabindex="-1" id="toggle-overlay-button" class="btn btn-dark">Toggle View</button>
   <div id="overlay" aria-hidden="true" tabindex="-1">
@@ -602,23 +582,16 @@
                         <div class="modal-body">
                             <h1 class="h2">Empathy Building Game for Accessibility</h1><p><em>Consider for a moment, that you are blind.</em></p>
                             <div class="row">
-                                <div class="col-12 col-md-6">
+                                <div class="col-12">
                                     <p>You heard your colleagues mention a local arts and music festival to you in the break room. You barely caught the name of it as you rushed off to the next meeting, and you think you have the correct website on the screen in front of you now.</p>
                                     <p>You love people, and you love music; It would be great if you could take your guide dog; You want to get a feel of what kind of event this is so you can plan ahead.</p>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <p><strong></strong>Try completing the tasks below while navigating the website using only the keyboard.</strong></p>
-                                    <ol>
-                                        <li>Check that you are on the correct website.</li>
-                                        <li>Find out the name of the event.</li>
-                                        <li>See if your local favourite, The Empaths, are playing (and if they are, what time)</li>
-                                        <li>Register for the event.</li>
-                                    </ol>
+                                    <div class="alert alert-warning"><em>Blind people don't use computers the same way sighted people do; Often, they use the keyboard to navigate as a sighted user would do with a mouse. The keyboard sends messages to the installed screen reader application, which reads out information about the screen they are looking at to the person, piece by piece.</em></div>
+                                    <p><strong>Keeping this in mind, try navigating this website using only the keyboard to find the information you need.</strong></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="next btn btn-primary">I'll give it a try<i class="material-icons ml-2">trending_flat</i></button>
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="next btn btn-primary">Next<i class="material-icons ml-2">trending_flat</i></button>
                         </div>
                     </div>
                 </div>
@@ -628,76 +601,60 @@
             <div class="modal" tabindex="-1" role="dialog">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content p-12">
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <p tabindex="-1">Navigate the website using <kbd>Tab</kbd> and <kbd>Arrow Up</kbd> <kbd>Arrow Down</kbd> <kbd>Arrow Left</kbd> <kbd>Arrow Right</kbd> <kbd>Enter</kbd> <kbd>Space</kbd></p>
-    
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <p>Try completing the tasks below while navigating the website using only the keyboard.</p>
-                                    <ol>
-                                        <li>Check that you are on the correct website.</li>
-                                        <li>Find out the location of the event.</li>
-                                        <li>See if your local favourite, The Empaths, are playing (and if they are, what time)</li>
-                                        <li>Register for the event.</li>
-                                    </ol>
+                        <form id="quiz-form" class="needs-validation" novalidate>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p class="h3">Try completing the tasks below while navigating the website using only the keyboard.</p>
+                                        <ul class="list-group">
+                                            <li class="list-group-item p-0">
+                                                <div class="alert alert-light" role="alert">
+                                                    <p tabindex="-1">Use the following keys to navigate:<br />
+                                                    <kbd>Tab</kbd><kbd>&uparrow</kbd><kbd>Arrow Down</kbd><kbd>Arrow Left</kbd><kbd>Arrow Right</kbd><kbd>Enter</kbd></p>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="material-icons">done</span>
+                                                <div class="form-group" tabindex="-1">
+                                                    <label data-speech for="task1">Check that you are on the correct website</label>
+                                                    <input data-speech type="text" class="form-control" id="task1" tabindex="-1" placeholder="What is the name of the website?" required answer="IAF">
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="material-icons">done</span>
+                                                <div class="form-group" tabindex="-1">
+                                                    <label data-speech for="task2">Find out the location of the event</label>
+                                                    <input data-speech type="text" class="form-control" id="task2" tabindex="-1" placeholder="Where is the event held?" required answer="Inclusiville Showgrounds">
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="material-icons">done</span>
+                                                <div class="form-group" tabindex="-1">
+                                                    <label data-speech for="task3">What time is your local favourite, The Empaths, playing?</label>
+                                                    <input data-speech type="text" class="form-control" id="task3" tabindex="-1" placeholder="Check the event schedule" required answer="2pm">
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item"><span id="registered" class="material-icons">done</span><strong>Register for the event</strong></li>
+                                        </ul>
+                                        
+                                    </div>
                                 </div>
                             </div>
-                            
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="next btn btn-primary">OK, got it<i class="material-icons ml-2">trending_flat</i></button>
-                        </div>
+                            <div class="modal-footer justify-content-between">
+                                <button type="button" class="prev btn btn-light"><i class="material-icons mr-2 rotate-180">trending_flat</i>Back</button>
+                                <button type="submit" class="next btn btn-primary">Next<i class="material-icons ml-2">trending_flat</i></button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
         <div class="step-3">
             <div class="modal" tabindex="-1" role="dialog">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content p-12">
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <p tabindex="-1">Navigate the website using <kbd>Tab</kbd> and <kbd>Arrow Up</kbd> <kbd>Arrow Down</kbd> <kbd>Arrow Left</kbd> <kbd>Arrow Right</kbd> <kbd>Enter</kbd> <kbd>Space</kbd></p>
-                                    <!-- <div id="caption">Temporary positioning. Try using the <kbd>Tab</kbd> key to see what screen readers see.</div> -->
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <p>Find the answers to the following using only the keyboard to navigate the website.</p>
-                                    <div class="form-group" tabindex="-1">
-                                        <label data-speech for="task1">Check that you are on the correct website</label>
-                                        <input data-speech type="text" class="form-control" id="task1" tabindex="-1" placeholder="What is the name of the website?">
-                                    </div>
-                                    <div class="form-group" tabindex="-1">
-                                        <label data-speech for="task2">Find out the location of the event</label>
-                                        <input data-speech type="text" class="form-control" id="task2" tabindex="-1" placeholder="Where is the event held?">
-                                    </div>
-                                    <div class="form-group" tabindex="-1">
-                                        <label data-speech for="task3">See if your local favourite, The Empaths, are playing (and if they are, what time)</label>
-                                        <input data-speech type="text" class="form-control" id="task3" tabindex="-1" placeholder="Check the event schedule">
-                                    </div>
-                                    <div class="form-group" tabindex="-1">
-                                        <label data-speech for="task4">Register for the event</label>
-                                        TBC
-                                        <!-- <input data-speech type="text" class="form-control" id="task1" tabindex="-1" placeholder="Where is the event held?"> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="next btn btn-primary">Done</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="step-4">
-            <div class="modal" tabindex="-1" role="dialog">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content p-12">
                         <div class="modal-body">
-                            <p class="h2" tabindex="-1">Call to action heading</p><p tabindex="-1">You can make a difference today by:</p>
+                            <p class="h3" tabindex="-1">Call to action heading</p><p tabindex="-1">You can make a difference today by:</p>
                             <div class="row">
                                 <div class="col-12 col-md-6">
                                     <div class="card">
@@ -720,10 +677,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="reset btn btn-outline-primary">Start again  <i class="material-icons">refresh</i></button>
-                            <button type="button" class="share btn btn-primary">Share <i class="material-icons">share</i>
-                            </button>
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="prev btn btn-light"><i class="material-icons mr-2 rotate-180">trending_flat</i>Back</button>
+                            <button type="button" class="reset btn btn-primary">Start again  <i class="material-icons">refresh</i></button>
+                            <!-- <button type="button" class="share btn btn-primary">Share <i class="material-icons">share</i></button> -->
                         </div>
                     </div>
                 </div>
