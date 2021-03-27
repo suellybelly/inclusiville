@@ -52,10 +52,12 @@ $spacers: (
 
 // Colors
 $emphasized-link-hover-darken-percentage: 0;
-$primary: #3DB36B;
+//$primary: #3DB36B;
+$primary: #128840;
 $info: #4184F3;
 $secondary: #f9f9f9;
-$text-muted: #9B9B9B;
+// $text-muted: #9B9B9B;
+$text-muted: #737373;
 $light: #EFEFEF;
 $yellow: #FDB813;
 $paragraph-color: #4A4A4A;
@@ -73,7 +75,7 @@ $brand-colors: (
 $colors: (
         black: #000
 );
-
+$gray-500-sub: #899199;
 // Navbar
 $navbar-padding-y: 2.25rem;
 $short-navbar-padding-y: 1rem;
