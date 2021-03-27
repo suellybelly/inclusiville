@@ -51,15 +51,27 @@
 <div id="sr-description"></div>
 
 <script>
-var axeTree = axe.utils.getFlattenedTree(document.body);
+axe._tree = axe.utils.getFlattenedTree(document.body);
 document.querySelectorAll("#content *").forEach( e => {
+    // Every element in the content needs to be focusable.
+    if (e.getAttribute("tabindex") == undefined) {
+        e.setAttribute( "tabindex", -1 );
+    }
+
+    // Display accessibility info when an element receives focus.
     e.addEventListener( 'focus', event => {
-        var activeElement = document.activeElement;
-        var text = axe.commons.aria.getRole(activeElement, axeTree)
-            + ": "
-            + axe.commons.text.accessibleText(activeElement, axeTree);
-        var description = document.getElementById("sr-description");
-        description.textContent = text;
+        var activeElement = document.activeElement,
+           description = document.getElementById("sr-description"),
+            role = axe.commons.aria.getRole(activeElement, axe._tree),
+            accessibleText = axe.commons.text.accessibleText(activeElement, axe._tree),
+            data = [];
+        if (role) {
+            data.push(role);
+        }
+        if (accessibleText) {
+            data.push(accessibleText);
+        }
+        description.textContent = data.join(", ");
     })
 });
 </script>
