@@ -3,6 +3,7 @@
 //
 
 ;(function ($) {
+    // test
     window.WPHJS = {
         /**
          * Replace this with your own API key. To create one please go to
