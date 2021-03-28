@@ -1,15 +1,20 @@
+"use strict";
+
 // Find the next element in an in-order traversal of a tree of nodes.
-function getNextElement(element) {
+export function getNextElement(element) {
+    if (!element) {
+        return null;
+    }
 
     // The next element is either this one's first child...
-    var nextelement = null;
-    if (element.firstChild) {
-        nextElement = element.firstChild;
+    var nextElement = null;
+    if (element.firstElementChild) {
+        nextElement = element.firstElementChild;
     }
 
     // ...or the next sibling...
-    else if (element.nextSibling) {
-        nextElement = element.nextSibling;
+    else if (element.nextElementSibling) {
+        nextElement = element.nextElementSibling;
     }
 
     // ...or the next sibling for the first ancestor that has one.
@@ -18,8 +23,8 @@ function getNextElement(element) {
         while (true) {
             if (current.parentElement) {
                 var parentElement = current.parentElement;
-                if (parentElement.nextSibling) {
-                    nextElement = parentElement.nextSibling;
+                if (parentElement.nextElementSibling) {
+                    nextElement = parentElement.nextElementSibling;
                     break;
                 }
                 else {
@@ -36,17 +41,21 @@ function getNextElement(element) {
 }
 
 // Find the previous element in an in-order traversal of a tree of nodes.
-function getPreviousElement( element ) {
+export function getPreviousElement(element) {
+
+    if (!element) {
+        return null;
+    }
 
     // The previous element is either this one's previous sibling
-    var previouselement = null;
-    if (element.previousSibling) {
-        previousElement = element.previousSibling;
+    var previousElement = null;
+    if (element.previousElementSibling) {
+        previousElement = element.previousElementSibling;
     }
 
     // ...or its parent
     else {
-        previousElement = element.parentElement;;
+        previousElement = element.parentElement;
     }
 
     return previousElement;
