@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = function pi() {
-  //  discuss at: http://locutus.io/php/pi/
+  //  discuss at: https://locutus.io/php/pi/
   // original by: Onno Marsman (https://twitter.com/onnomarsman)
   // improved by: dude
   //   example 1: pi(8723321.4)

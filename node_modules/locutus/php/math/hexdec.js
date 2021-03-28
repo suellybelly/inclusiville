@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function hexdec(hexString) {
-  //  discuss at: http://locutus.io/php/hexdec/
+  //  discuss at: https://locutus.io/php/hexdec/
   // original by: Philippe Baumann
   //   example 1: hexdec('that')
   //   returns 1: 10

@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function strcasecmp(fString1, fString2) {
-  //  discuss at: http://locutus.io/php/strcasecmp/
+  //  discuss at: https://locutus.io/php/strcasecmp/
   // original by: Martijn Wieringa
   // bugfixed by: Onno Marsman (https://twitter.com/onnomarsman)
   //   example 1: strcasecmp('Hello', 'hello')

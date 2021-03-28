@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function rand(min, max) {
-  //  discuss at: http://locutus.io/php/rand/
+  //  discuss at: https://locutus.io/php/rand/
   // original by: Leslie Hoare
   // bugfixed by: Onno Marsman (https://twitter.com/onnomarsman)
   //      note 1: See the commented out code below for a version which

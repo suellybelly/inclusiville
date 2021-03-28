@@ -3,8 +3,8 @@
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 module.exports = function explode(delimiter, string, limit) {
-  //  discuss at: http://locutus.io/php/explode/
-  // original by: Kevin van Zonneveld (http://kvz.io)
+  //  discuss at: https://locutus.io/php/explode/
+  // original by: Kevin van Zonneveld (https://kvz.io)
   //   example 1: explode(' ', 'Kevin van Zonneveld')
   //   returns 1: [ 'Kevin', 'van', 'Zonneveld' ]
 

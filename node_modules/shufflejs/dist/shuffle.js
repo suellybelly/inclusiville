@@ -1,8 +1,8 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global = global || self, global.Shuffle = factory());
-}(this, function () { 'use strict';
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Shuffle = factory());
+}(this, (function () { 'use strict';
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -57,6 +57,19 @@
     return _setPrototypeOf(o, p);
   }
 
+  function _isNativeReflectConstruct() {
+    if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+    if (Reflect.construct.sham) return false;
+    if (typeof Proxy === "function") return true;
+
+    try {
+      Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
   function _assertThisInitialized(self) {
     if (self === void 0) {
       throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
@@ -71,6 +84,25 @@
     }
 
     return _assertThisInitialized(self);
+  }
+
+  function _createSuper(Derived) {
+    var hasNativeReflectConstruct = _isNativeReflectConstruct();
+
+    return function _createSuperInternal() {
+      var Super = _getPrototypeOf(Derived),
+          result;
+
+      if (hasNativeReflectConstruct) {
+        var NewTarget = _getPrototypeOf(this).constructor;
+
+        result = Reflect.construct(Super, arguments, NewTarget);
+      } else {
+        result = Super.apply(this, arguments);
+      }
+
+      return _possibleConstructorReturn(this, result);
+    };
   }
 
   function E () {
@@ -253,9 +285,7 @@
     return parseFloat(value) || 0;
   }
 
-  var Point =
-  /*#__PURE__*/
-  function () {
+  var Point = /*#__PURE__*/function () {
     /**
      * Represents a coordinate pair.
      * @param {number} [x=0] X.
@@ -285,9 +315,7 @@
     return Point;
   }();
 
-  var Rect =
-  /*#__PURE__*/
-  function () {
+  var Rect = /*#__PURE__*/function () {
     /**
      * Class for representing rectangular regions.
      * https://github.com/google/closure-library/blob/master/closure/goog/math/rect.js
@@ -340,17 +368,20 @@
     HIDDEN: 'shuffle-item--hidden'
   };
 
-  var id = 0;
+  var id$1 = 0;
 
-  var ShuffleItem =
-  /*#__PURE__*/
-  function () {
-    function ShuffleItem(element) {
+  var ShuffleItem = /*#__PURE__*/function () {
+    function ShuffleItem(element, isRTL) {
       _classCallCheck(this, ShuffleItem);
 
-      id += 1;
-      this.id = id;
+      id$1 += 1;
+      this.id = id$1;
       this.element = element;
+      /**
+       * Set correct direction of item
+       */
+
+      this.isRTL = isRTL;
       /**
        * Used to separate items for layout and shrink.
        */
@@ -387,6 +418,7 @@
       value: function init() {
         this.addClasses([Classes.SHUFFLE_ITEM, Classes.VISIBLE]);
         this.applyCss(ShuffleItem.Css.INITIAL);
+        this.applyCss(this.isRTL ? ShuffleItem.Css.DIRECTION.rtl : ShuffleItem.Css.DIRECTION.ltr);
         this.scale = ShuffleItem.Scale.VISIBLE;
         this.point = new Point();
       }
@@ -433,9 +465,16 @@
     INITIAL: {
       position: 'absolute',
       top: 0,
-      left: 0,
       visibility: 'visible',
       willChange: 'transform'
+    },
+    DIRECTION: {
+      ltr: {
+        left: 0
+      },
+      rtl: {
+        right: 0
+      }
     },
     VISIBLE: {
       before: {
@@ -542,6 +581,7 @@
    */
 
   function sorter(arr, options) {
+    // eslint-disable-next-line prefer-object-spread
     var opts = Object.assign({}, defaults, options);
     var original = Array.from(arr);
     var revert = false;
@@ -873,12 +913,12 @@
   } // Used for unique instance variables
 
 
-  var id$1 = 0;
+  var id = 0;
 
-  var Shuffle =
-  /*#__PURE__*/
-  function (_TinyEmitter) {
+  var Shuffle = /*#__PURE__*/function (_TinyEmitter) {
     _inherits(Shuffle, _TinyEmitter);
+
+    var _super = _createSuper(Shuffle);
 
     /**
      * Categorize, sort, and filter a responsive grid of items.
@@ -894,7 +934,8 @@
 
       _classCallCheck(this, Shuffle);
 
-      _this = _possibleConstructorReturn(this, _getPrototypeOf(Shuffle).call(this));
+      _this = _super.call(this); // eslint-disable-next-line prefer-object-spread
+
       _this.options = Object.assign({}, Shuffle.options, options); // Allow misspelling of delimiter since that's how it used to be.
       // Remove in v6.
 
@@ -919,8 +960,8 @@
       }
 
       _this.element = el;
-      _this.id = 'shuffle_' + id$1;
-      id$1 += 1;
+      _this.id = 'shuffle_' + id;
+      id += 1;
 
       _this._init();
 
@@ -1220,7 +1261,7 @@
         return Array.from(this.element.children).filter(function (el) {
           return matchesSelector(el, _this3.options.itemSelector);
         }).map(function (el) {
-          return new ShuffleItem(el);
+          return new ShuffleItem(el, _this3.options.isRTL);
         });
       }
       /**
@@ -1581,14 +1622,21 @@
       key: "getStylesForTransition",
       value: function getStylesForTransition(item, styleObject) {
         // Clone the object to avoid mutating the original.
+        // eslint-disable-next-line prefer-object-spread
         var styles = Object.assign({}, styleObject);
 
         if (this.options.useTransforms) {
+          var sign = this.options.isRTL ? '-' : '';
           var x = this.options.roundTransforms ? Math.round(item.point.x) : item.point.x;
           var y = this.options.roundTransforms ? Math.round(item.point.y) : item.point.y;
-          styles.transform = "translate(".concat(x, "px, ").concat(y, "px) scale(").concat(item.scale, ")");
+          styles.transform = "translate(".concat(sign).concat(x, "px, ").concat(y, "px) scale(").concat(item.scale, ")");
         } else {
-          styles.left = item.point.x + 'px';
+          if (this.options.isRTL) {
+            styles.right = item.point.x + 'px';
+          } else {
+            styles.left = item.point.x + 'px';
+          }
+
           styles.top = item.point.y + 'px';
         }
 
@@ -1822,7 +1870,7 @@
         var _this9 = this;
 
         var items = arrayUnique(newItems).map(function (el) {
-          return new ShuffleItem(el);
+          return new ShuffleItem(el, _this9.options.isRTL);
         }); // Add classes and set initial positions.
 
         this._initItems(items); // Determine which items will go with the current filter.
@@ -2171,6 +2219,8 @@
     filterMode: Shuffle.FilterMode.ANY,
     // Attempt to center grid items in each row.
     isCentered: false,
+    // Attempt to align grid items to right.
+    isRTL: false,
     // Whether to round pixel values used in translate(x, y). This usually avoids
     // blurriness.
     roundTransforms: true
@@ -2186,5 +2236,5 @@
 
   return Shuffle;
 
-}));
+})));
 //# sourceMappingURL=shuffle.js.map
