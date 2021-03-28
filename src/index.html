@@ -75,7 +75,7 @@
                 <div class="card" tabindex="0">
                     <img class="card-img-top" src="assets/images/image-61.jpg" alt="A person dancing">
                     <div class="card-body">
-                      <h5 class="card-title">The Digital Navigator: an interpretive dance <span class="text-muted">&mdash; 12pm</span></h5>
+                      <h5 tabindex="0" class="card-title">The Digital Navigator: an interpretive dance <span class="text-muted">&mdash; 12pm</span></h5>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                 <div class="card" tabindex="0">
                     <img class="card-img-top" src="assets/images/image-59.jpg" alt="Headbanging Keyboards the band">
                     <div class="card-body">
-                      <h5 class="card-title">Headbanging Keyboards <span class="text-muted">&ndash; 1pm</span></h5>
+                      <h5 tabindex="0" class="card-title">Headbanging Keyboards <span class="text-muted">&ndash; 1pm</span></h5>
                     </div>
                 </div>
             </div>
@@ -91,7 +91,7 @@
                 <div class="card" tabindex="0">
                     <img class="card-img-top" src="assets/images/instagram-2.jpg" alt="The Empaths the band">
                     <div class="card-body">
-                      <h5 class="card-title">The Empaths <span class="text-muted">&ndash; 2pm</span></h5>
+                      <h5 tabindex="0" class="card-title">The Empaths <span class="text-muted">&ndash; 2pm</span></h5>
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@
                 <div class="card" tabindex="0">
                     <img class="card-img-top" src="assets/images/image-30.jpg" alt="Wucag Tang Clang the band">
                     <div class="card-body">
-                      <h5 class="card-title">Wucag Tang Clan <span class="text-muted">&mdash; 3pm</span></h5>
+                      <h5 tabindex="0" class="card-title">Wucag Tang Clan <span class="text-muted">&mdash; 3pm</span></h5>
                     </div>
                 </div>
             </div>
@@ -107,7 +107,7 @@
                 <div class="card" tabindex="0">
                     <img class="card-img-top" src="assets/images/pexels-rakicevic-nenad-769525.jpg" alt="Multiple fireworks in the sky with a man holding a sparkler on top of a hill at twilight">
                     <div class="card-body">
-                      <h5 class="card-title">Closing event: Fireworks on the hills <span class="text-muted">&mdash; 6pm</span></h5>
+                      <h5 tabindex="0" class="card-title">Closing event: Fireworks on the hills <span class="text-muted">&mdash; 6pm</span></h5>
                     </div>
                 </div>
             </div>
@@ -288,9 +288,9 @@
         axe._tree = axe.utils.getFlattenedTree(document.body);
         
         document.querySelectorAll("#content *").forEach( e => {
-            if (e.getAttribute("tabindex") == undefined) {
-                e.setAttribute( "tabindex", 0 );
-            }
+            // if (e.getAttribute("tabindex") == undefined) {
+            //     e.setAttribute( "tabindex", 0 );
+            // }
             e.addEventListener('focus', event => {
                 var activeElement = document.activeElement;
                 var text = axe.commons.aria.getRole(activeElement,  axe._tree)
@@ -369,41 +369,42 @@
         });
         toggleBtn.on("click", function () {
             overlay.stop().fadeOut("fast").delay(3000).fadeIn("fast");
+            //overlay.fadeToggle("fast");
         });
     });
 
-    const keyCode = {
-        'TAB': 9,
-        'RETURN': 13,
-        'ESC': 27,
-        'SPACE': 32,
-        'PAGEUP': 33,
-        'PAGEDOWN': 34,
-        'END': 35,
-        'HOME': 36,
-        'LEFT': 37,
-        'UP': 38,
-        'RIGHT': 39,
-        'DOWN': 40
-    }
+    // const keyCode = {
+    //     'TAB': 9,
+    //     'RETURN': 13,
+    //     'ESC': 27,
+    //     'SPACE': 32,
+    //     'PAGEUP': 33,
+    //     'PAGEDOWN': 34,
+    //     'END': 35,
+    //     'HOME': 36,
+    //     'LEFT': 37,
+    //     'UP': 38,
+    //     'RIGHT': 39,
+    //     'DOWN': 40
+    // }
 
-    window.addEventListener("keydown", (e) => {
-        var currentFocus = document.activeElement;
-        switch (e.keyCode) {
-            case keyCode.TAB:
-                break;
-            case keyCode.LEFT:
-            case keyCode.UP:
-                focusPreviousElement(currentFocus);
-                break;
-            case keyCode.RIGHT:
-            case keyCode.DOWN:
-                focusNextElement(currentFocus);
-                break;
-            default:
-                break;
-        }
-    });
+    // window.addEventListener("keydown", (e) => {
+    //     var currentFocus = document.activeElement;
+    //     switch (e.keyCode) {
+    //         case keyCode.TAB:
+    //             break;
+    //         case keyCode.LEFT:
+    //         case keyCode.UP:
+    //             focusPreviousElement(currentFocus);
+    //             break;
+    //         case keyCode.RIGHT:
+    //         case keyCode.DOWN:
+    //             focusNextElement(currentFocus);
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    // });
     </script>
 </body>
 </html>
