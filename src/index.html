@@ -23,10 +23,10 @@
     <div class="hero-foreground d-flex flex-column justify-content-center">
         <div class="d-flex align-items-center justify-content-center py-14 py-md-23 py-lg-25">
             <div class="card border-0 text-center mx-15 mx-lg-0 bg-white-90" style="max-width: 770px">
-                <div role="document"  class="card-body text-body p-10 p-lg-22">
+                <div class="card-body text-body p-10 p-lg-22">
                     <h2 tabindex="0" class="text-black fs-6 fs-md-9 fs-lg-11 lh-lg-12 mb-10">Inclusiville Arts Festival 2021</h2>
                     <p tabindex="0" class="fs-4 fs-md-5 mb-10 mx-auto" style="max-width: 530px">
-                        A festival to celebrate the local talent.
+                        A festival to celebrate the local creative talent held at Inclusiville Showgrounds this year.
                     </p>
                     <a href="#schedule" class="btn btn-lg btn-primary">View schedule</a>
                 </div>
@@ -37,7 +37,7 @@
 <!-- main hero end -->
 <!-- "about" section start -->
 <section class="section" id="about">
-    <div role="document" class="section-content container text-center">
+    <div class="section-content container text-center">
         <h1 tabindex="0" class="mb-0">Welcome to IAF 2021</h1>
         <div class="row no-gutters mt-6 mt-md-10 mt-lg-17">
             <div class="col-12 col-lg-10 offset-0 offset-lg-1">
@@ -54,7 +54,7 @@
 <section class="section bg-secondary" id="schedule">
     <div class="section-content text-center container">
         <div class="d-flex justify-content-center justify-content-md-between align-items-end">
-            <div role="document" class="text-center text-md-left">
+            <div class="text-center text-md-left">
                 <small tabindex="0" class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
                     Celebrating local talent
                 </small>
@@ -119,7 +119,7 @@
 <section class="section" id="faq">
     <div class="section-content container">
         <h1 tabindex="0" class="mb-17 text-center">FAQ</h1>
-        <article role="document" class="faq faq-open">
+        <article class="faq faq-open">
             <button class="faq-header" data-toggle="collapse" data-target="#faq-item-1" aria-expanded="true">
                 <h1 class="faq-title">What is Swedish massage?</h1>
                 <div class="faq-toggle">
@@ -133,7 +133,7 @@
                     vestibulum diam nec tellus felis tristique pretium.</p>
             </div>
         </article>
-        <article role="document" class="faq">
+        <article class="faq">
             <button class="faq-header" data-toggle="collapse" data-target="#faq-item-2" aria-expanded="false">
                 <h1 class="faq-title">What types of services does Blys offer?</h1>
                 <div class="faq-toggle">
@@ -147,7 +147,7 @@
                     purus.</p>
             </div>
         </article>
-        <article role="document" class="faq">
+        <article class="faq">
             <button class="faq-header" data-toggle="collapse" data-target="#faq-item-3" aria-expanded="false">
                 <h1 class="faq-title">Can I pick my therapist?</h1>
                 <div class="faq-toggle">
@@ -160,7 +160,7 @@
                     gravida, commodo tortor facilisi diam posuere class.</p>
             </div>
         </article>
-        <article role="document" class="faq">
+        <article class="faq">
             <button class="faq-header" data-toggle="collapse" data-target="#faq-item-4" aria-expanded="false">
                 <h1 class="faq-title">Can I re-book with the same therapists?</h1>
                 <div class="faq-toggle">
@@ -179,7 +179,7 @@
 <section class="section" id="register">
     <div class="section-content container">
         <div class="row">
-            <div role="document" class="col-12 col-lg-8 mb-14 mb-lg-0">
+            <div class="col-12 col-lg-8 mb-14 mb-lg-0">
                 <small tabindex="0" class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
                     We answer within 24 hours
                 </small>
@@ -200,24 +200,27 @@
                     <div class="col-12 col-sm-6">
                         <div class="form-group">
                             <label for="phone" class="form-label">Phone</label>
-                            <input type="text" class="form-control" id="phone"/>
+                            <input type="tel" class="form-control" id="phone" required/>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6">
                         <div class="form-group">
                             <label for="email" class="form-label">Email</label>
-                            <input type="text" class="form-control" id="email" required />
+                            <input type="email" class="form-control" id="email" required />
                         </div>
                     </div>
                     <div class="col-12 col-sm-6">
                         <div class="form-group mb-0">
-                            <button class="btn btn-primary btn-lg">Send message</button>
+                            <button id="register" class="btn btn-primary btn-lg">Register</button>
                         </div>
                     </div>
-                    
-                </form>
+
+                </form>                    
+                <div id="status" class="alert alert-success mt-4">
+                    Thank you, your registration was successful.
+                </div>
             </div>
-            <div role="document" class="col-12 col-lg-4">
+            <div class="col-12 col-lg-4">
                 <div class="card border-0 bg-secondary mb-4 ml-lg-9">
                     <div class="card-body py-17 px-10 text-center">
                         <div class="card-icon mb-6"><i class="material-icons">map</i></div>
@@ -239,10 +242,10 @@
                 <div class="card border-0 bg-secondary ml-lg-9">
                     <div class="card-body py-17 px-10 text-center">
                         <div class="card-icon mb-6"><i class="material-icons">access_time</i></div>
-                        <div role="document" tabindex="0" class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                        <div tabindex="0" class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
                             Working Hours
                         </div>
-                        <p role="document" tabindex="0" class="mb-0 text-body">11:00 AM - 9:00 PM</p>
+                        <p tabindex="0" class="mb-0 text-body">11:00 AM - 9:00 PM</p>
                     </div>
                 </div>
             </div>
@@ -254,6 +257,8 @@
 {% include 'includes/footer.html' %}
 <!-- footer end -->
 </div>
+<style>
+</style>
 {% include 'includes/overlay.html' %}
 
 <script src="assets/js/vendor.js"></script>
@@ -262,8 +267,9 @@
 <script src="assets/js/app.js"></script>
 <script>
     $(document).ready(function(){
-        var correctAnswers = false;
-
+        const step1 = $(".step-1");
+        const step2 = $(".step-2");
+        const step3 = $(".step-3");
         const step1NextBtn = $(".step-1 .next");
         const step2NextBtn = $(".step-2 .next");
         const step2PrevBtn = $(".step-2 .prev");
@@ -271,90 +277,101 @@
         const resetBtn = $(".reset");
         const toggleBtn = $("#toggle-overlay-button");
         const overlay = $("#overlay");
+        var correctAnswers = false;
        
-    var axeTree = axe.utils.getFlattenedTree(document.body);
-    document.querySelectorAll("#content *").forEach( e => {
-        e.addEventListener( 'focus', event => {
-            var activeElement = document.activeElement;
-            var text = axe.commons.aria.getRole(activeElement, axeTree)
-                + ": "
-                + axe.commons.text.accessibleText(activeElement, axeTree);
-            var caption = document.getElementById("caption");
-            caption.textContent = text;
-        })
-    });
-        //var keyboardNavRoot = new Menubar(document.getElementById('content'));
-        //keyboardNavRoot.init();
+        document.querySelectorAll("#overlay *").forEach( e => {
+            if (e.getAttribute("tabindex") == undefined) {
+                e.setAttribute( "tabindex", -1 );
+            }
+        });
+
+        axe._tree = axe.utils.getFlattenedTree(document.body);
         
-            var quizForm = document.getElementById('quiz-form');
-            var inputs = quizForm.getElementsByClassName('form-control');
+        document.querySelectorAll("#content *").forEach( e => {
+            if (e.getAttribute("tabindex") == undefined) {
+                e.setAttribute( "tabindex", 0 );
+            }
+            e.addEventListener('focus', event => {
+                var activeElement = document.activeElement;
+                var text = axe.commons.aria.getRole(activeElement,  axe._tree)
+                    + ": "
+                    + axe.commons.text.accessibleText(activeElement,  axe._tree);
+                var caption = document.getElementById("caption");
+                caption.textContent = text;
+            })
+        });
 
-            var quizValidation = Array.prototype.filter.call(quizForm, function(form) {
-                quizForm.addEventListener('submit', function(event) {
-                    quizForm.classList.add('was-validated');
-                Array.from(inputs).forEach((input) => {
-                    var value = input.value?.toLowerCase();
-                    var answer = input.getAttribute("answer")?.toLowerCase();
-                    event.stopPropagation();
-                    event.preventDefault();
-                    if (value != answer) {
+        // quiz form
+        var quizForm = document.getElementById('quiz-form');
+        var inputs = quizForm.getElementsByClassName('form-control');
+        var quizValidation = Array.prototype.filter.call(quizForm, function(form) {
+            quizForm.addEventListener('submit', function(event) {
+                quizForm.classList.add('was-validated');
+            Array.from(inputs).forEach((input) => {
+                var value = input.value?.toLowerCase();
+                var answer = input.getAttribute("answer")?.toLowerCase();
+                event.stopPropagation();
+                event.preventDefault();
+                if (value != answer) {
+                    correctAnswers = false;
+                    return false;
+                }
+                correctAnswers = true;
+                input.parentNode.parentNode.classList.add("active");
+                input.disabled = true;
 
-                        correctAnswers = false;
-                        return false;
-                    }
-                    correctAnswers = true;
-                    input.parentNode.parentNode.classList.add("active");
-                    input.disabled = true;
+            })
+            }, false);
+        });
 
-                })
-              }, false);
-            });
-            var registrationCheck = document.getElementById('registered');
-
-            var regForm = document.getElementById('registration-form');
-            // Loop over them and prevent submission
-            var regValidation = Array.prototype.filter.call(regForm, function(form) {
-                regForm.addEventListener('submit', function(event) {
-                    event.preventDefault();
+        // event registration form
+        var registrationCheck = document.getElementById('registered');
+        var regForm = document.getElementById('registration-form');
+        var status = document.getElementById('status');
+        var regValidation = Array.prototype.filter.call(regForm, function(form) {
+            regForm.addEventListener('submit', function(event) {
+                event.preventDefault();
                 event.stopPropagation();
                 if (regForm.checkValidity() === false) {
-
+                    // do nothing
                 } else {
                     registrationCheck.parentNode.classList.add('active');
-                    registrationCheck.setAttribute("answer");
+                    regForm.style.display = "none";
+                    status.style.display = "block";
                 }
                 regForm.classList.add('was-validated');
             }, false);
-            });
-            step1NextBtn.on("click", function () {
+        });
+
+        step1NextBtn.on("click", function () {
             $("[class^=step-]").stop().fadeOut("fast");
-            $(".step-2").fadeIn("fast");
+            step2.fadeIn("fast");
         });
         step2NextBtn.on("click", function () {
-            console.log(correctAnswers);
             if (correctAnswers) {
                 $("[class^=step-]").stop().fadeOut("fast");
-                $(".step-3").fadeIn("fast");
+                step3.fadeIn("fast");
             }
         });
         step2PrevBtn.on("click", function () {
             $("[class^=step-]").fadeOut("fast");
-            $(".step-1").fadeIn("fast");
+            step1.fadeIn("fast");
         });
         step3PrevBtn.on("click", function () {
             $("[class^=step-]").stop().fadeOut("fast");
-            $(".step-2").fadeIn("fast");
+            step2.fadeIn("fast");
+            overlay.addClass("finished");
         });
         resetBtn.on("click", function () {
             $("[class^=step-]").stop().fadeOut("fast");
-            $(".step-1").fadeIn("fast");
+            step1.fadeIn("fast");
+            overlay.removeClass("finished");
         });
         toggleBtn.on("click", function () {
-            overlay.stop().fadeToggle("fast");
+            overlay.stop().fadeOut("fast").delay(3000).fadeIn("fast");
         });
     });
-        
-        </script>
+    </script>
 </body>
 </html>
 

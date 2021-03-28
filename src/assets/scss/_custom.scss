@@ -36,6 +36,9 @@
     background: black;
     border-radius: 20px;
     text-align: center;
+    * {
+        color: white;
+    }
 }    
 kbd {
     border-radius: 1rem;
@@ -85,9 +88,10 @@ kbd {
 }
 .step-3 {
     display: none;
-}
-.step-4 {
-    display: none;
+    .modal-dialog {
+        flex-direction: column;
+        justify-content: flex-end;
+    }
 }
 .modal {
     display: block;
