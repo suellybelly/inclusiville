@@ -371,6 +371,39 @@
             overlay.stop().fadeOut("fast").delay(3000).fadeIn("fast");
         });
     });
+
+    const keyCode = {
+        'TAB': 9,
+        'RETURN': 13,
+        'ESC': 27,
+        'SPACE': 32,
+        'PAGEUP': 33,
+        'PAGEDOWN': 34,
+        'END': 35,
+        'HOME': 36,
+        'LEFT': 37,
+        'UP': 38,
+        'RIGHT': 39,
+        'DOWN': 40
+    }
+
+    window.addEventListener("keydown", (e) => {
+        var currentFocus = document.activeElement;
+        switch (e.keyCode) {
+            case keyCode.TAB:
+                break;
+            case keyCode.LEFT:
+            case keyCode.UP:
+                focusPreviousElement(currentFocus);
+                break;
+            case keyCode.RIGHT:
+            case keyCode.DOWN:
+                focusNextElement(currentFocus);
+                break;
+            default:
+                break;
+        }
+    });
     </script>
 </body>
 </html>
