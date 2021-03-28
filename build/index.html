@@ -262,7 +262,7 @@
                     </div>
                     <div class="col-12 col-sm-6">
                         <div class="form-group mb-0">
-                            <button class="btn btn-primary btn-lg">Send message</button>
+                            <button id="register" class="btn btn-primary btn-lg">Register</button>
                         </div>
                     </div>
                     
@@ -504,11 +504,10 @@ button.faq-header {
     overflow-x: visible;
 }
 </style>
-<button tabindex="-1" id="toggle-overlay-button" class="btn btn-dark">Toggle View</button>
-  <div id="overlay" aria-hidden="true" tabindex="-1">
+<div id="overlay" aria-hidden="true">
     <div class="ui-wrapper">
         <div class="step-1">
-            <div class="modal" tabindex="-1" role="dialog">
+            <div class="modal"  role="dialog">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content p-12">
                         <div class="modal-body">
@@ -523,17 +522,17 @@ button.faq-header {
                             </div>
                         </div>
                         <div class="modal-footer justify-content-end">
-                            <button type="button" class="next btn btn-primary" tabindex="-1">Next<i class="material-icons ml-2">trending_flat</i></button>
+                            <button type="button" class="next btn btn-primary">Next<i class="material-icons ml-2">trending_flat</i></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="step-2">
-            <div class="modal" tabindex="-1" role="dialog">
+            <div class="modal"  role="dialog">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content p-12">
-                        <form id="quiz-form" class="needs-validation" novalidate tabindex="-1">
+                        <form id="quiz-form" class="needs-validation" novalidate>
                             <div class="modal-body">
                                 <div class="row">
                                     <div class="col-12">
@@ -548,22 +547,22 @@ button.faq-header {
                                             <li class="list-group-item">
                                                 <span class="material-icons">done</span>
                                                 <div class="form-group">
-                                                    <label data-speech for="task1" tabindex="-1">Check that you are on the correct website</label>
-                                                    <input data-speech type="text" class="form-control" id="task1" tabindex="-1" placeholder="What is the name of the website?" required answer="IAF">
+                                                    <label data-speech for="task1">Check that you are on the correct website</label>
+                                                    <input data-speech type="text" class="form-control" id="task1"  placeholder="What is the name of the website?" required answer="IAF">
                                                 </div>
                                             </li>
                                             <li class="list-group-item">
                                                 <span class="material-icons">done</span>
                                                 <div class="form-group">
-                                                    <label data-speech for="task2" tabindex="-1">Find out the location of the event</label>
-                                                    <input data-speech type="text" class="form-control" id="task2" tabindex="-1" placeholder="Where is the event held?" required answer="Inclusiville Showgrounds">
+                                                    <label data-speech for="task2">Find out the location of the event</label>
+                                                    <input data-speech type="text" class="form-control" id="task2"  placeholder="Where is the event held?" required answer="Inclusiville Showgrounds">
                                                 </div>
                                             </li>
                                             <li class="list-group-item">
                                                 <span class="material-icons">done</span>
                                                 <div class="form-group">
-                                                    <label data-speech for="task3" tabindex="-1">What time is your local favourite, The Empaths, playing?</label>
-                                                    <input data-speech type="text" class="form-control" id="task3" tabindex="-1" placeholder="Check the event schedule" required answer="2pm">
+                                                    <label data-speech for="task3">What time is your local favourite, The Empaths, playing?</label>
+                                                    <input data-speech type="text" class="form-control" id="task3"  placeholder="Check the event schedule" required answer="2pm">
                                                 </div>
                                             </li>
                                             <li class="list-group-item"><span id="registered" class="material-icons">done</span><strong>Register for the event</strong></li>
@@ -573,8 +572,8 @@ button.faq-header {
                                 </div>
                             </div>
                             <div class="modal-footer justify-content-between">
-                                <button type="button" class="prev btn btn-light" tabindex="-1"><i class="material-icons mr-2 rotate-180">trending_flat</i>Back</button>
-                                <button type="submit" class="next btn btn-primary" tabindex="-1">Next<i class="material-icons ml-2">trending_flat</i></button>
+                                <button type="button" class="prev btn btn-light"><i class="material-icons mr-2 rotate-180">trending_flat</i>Back</button>
+                                <button type="submit" class="next btn btn-primary">Next<i class="material-icons ml-2">trending_flat</i></button>
                             </div>
                         </form>
                     </div>
@@ -582,11 +581,11 @@ button.faq-header {
             </div>
         </div>
         <div class="step-3">
-            <div class="modal" tabindex="-1" role="dialog">
+            <div class="modal"  role="dialog">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content p-12">
                         <div class="modal-body">
-                            <p class="h3" tabindex="-1">Call to action heading</p><p tabindex="-1">You can make a difference today by:</p>
+                            <p class="h3">Call to action heading</p><p >You can make a difference today by:</p>
                             <div class="row">
                                 <div class="col-12 col-md-6">
                                     <div class="card">
@@ -610,8 +609,8 @@ button.faq-header {
                             </div>
                         </div>
                         <div class="modal-footer justify-content-between">
-                            <button type="button" class="prev btn btn-light" tabindex="-1"><i class="material-icons mr-2 rotate-180">trending_flat</i>Back</button>
-                            <button type="button" class="reset btn btn-primary" tabindex="-1">Start again  <i class="material-icons">refresh</i></button>
+                            <button type="button" class="prev btn btn-light"><i class="material-icons mr-2 rotate-180">trending_flat</i>Back</button>
+                            <button type="button" class="reset btn btn-primary">Start again  <i class="material-icons">refresh</i></button>
                             <!-- <button type="button" class="share btn btn-primary">Share <i class="material-icons">share</i></button> -->
                         </div>
                     </div>
@@ -621,6 +620,7 @@ button.faq-header {
     </div>
   <div id="caption" class="col-12 col-md-4 col-lg-3 m-3 p-8">Try using the <kbd>Tab</kbd> key to see what screen readers see.</div>
   </div>
+<button tabindex="-1" id="toggle-overlay-button" class="btn btn-dark">Toggle View</button>
 
 <script src="assets/js/vendor.js"></script>
 <script src="assets/js/polyfills.js"></script>
@@ -640,13 +640,23 @@ button.faq-header {
         const toggleBtn = $("#toggle-overlay-button");
         const overlay = $("#overlay");
        
-    var axeTree = axe.utils.getFlattenedTree(document.body);
+    axe._tree = axe.utils.getFlattenedTree(document.body);
+    
+    document.querySelectorAll("#overlay *").forEach( e => {
+        if (e.getAttribute("tabindex") == undefined) {
+            e.setAttribute( "tabindex", -1 );
+        }
+    });
+
     document.querySelectorAll("#content *").forEach( e => {
+        if (e.getAttribute("tabindex") == undefined) {
+            e.setAttribute( "tabindex", 0 );
+        }
         e.addEventListener( 'focus', event => {
             var activeElement = document.activeElement;
-            var text = axe.commons.aria.getRole(activeElement, axeTree)
+            var text = axe.commons.aria.getRole(activeElement,  axe._tree)
                 + ": "
-                + axe.commons.text.accessibleText(activeElement, axeTree);
+                + axe.commons.text.accessibleText(activeElement,  axe._tree);
             var caption = document.getElementById("caption");
             caption.textContent = text;
         })
@@ -689,7 +699,6 @@ button.faq-header {
 
                 } else {
                     registrationCheck.parentNode.classList.add('active');
-                    registrationCheck.setAttribute("answer");
                 }
                 regForm.classList.add('was-validated');
             }, false);
@@ -721,7 +730,6 @@ button.faq-header {
             overlay.stop().fadeToggle("fast");
         });
     });
-        
         </script>
 </body>
 </html>
