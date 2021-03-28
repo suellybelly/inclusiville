@@ -172,7 +172,8 @@ gulp.task('serve', gulp.series('clear_build_dir', 'assets', 'styles', 'scripts',
         server: {
             baseDir: destDir,
             routes: {
-                '/documentation': './documentation'
+                '/documentation/profi': './documentation/profi',
+                '/documentation/quick-keys': './documentation/quick-keys',
             }
         },
         open: false,

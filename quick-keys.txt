@@ -1,8 +1,0 @@
-Element (Quick key): CSS Selectors
-      
-Headings (h): h1, h2, h3, h4, h5, h6, [role="heading"] 
-Links (k): a 
-Regions (r): header, nav, main, footer, [role="region"], [role="banner"], [role="navigation"], [role="main"], [role="contentinfo"], [role="search"] 
-Form controls (f): input, [role="form"], [role="textbox"], [role="checkbox"], [role="button"]
-Buttons (b): button, input[type="button"], [role="button"]
-Lists  (l): ul, [role="list"]
