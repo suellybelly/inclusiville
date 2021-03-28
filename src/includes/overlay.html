@@ -1,0 +1,120 @@
+<div id="overlay" aria-hidden="true">
+    <div class="ui-wrapper">
+        <div class="step-1">
+            <div class="modal"  role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="col-12 m-3 p-8 caption">                            
+                        <h1 class="h2">Empathy Building Game for Accessibility</h1>
+                    </div>
+                    <div class="modal-content p-12">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="h3">Consider for a moment, that you are blind.</p>
+                                    <p>You heard your colleagues mention a local arts and music festival to you in the break room. You barely caught the name of it as you rushed off to the next meeting, and you think you have the correct website on the screen in front of you now.</p>
+                                    <p>You love people, and you love music; It would be great if you could take your guide dog; You want to get a feel of what kind of event this is so you can plan ahead.</p>
+                                    <div class="alert alert-warning"><em>Blind people don't use computers the same way sighted people do; Often, they use the keyboard to navigate as a sighted user would do with a mouse. The keyboard sends messages to the installed screen reader application, which reads out information about the screen they are looking at to the person, piece by piece.</em></div>
+                                    <p><strong>Keeping this in mind, try navigating this website using only the keyboard to find the information you need.</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-end">
+                            <button type="button" class="next btn btn-primary">Next<i class="material-icons ml-2">trending_flat</i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="step-2">
+            <div class="modal"  role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div id="caption" class="col-12 m-3 p-8 caption">Press <kbd>Tab</kbd> to start navigating. What screen readers see will show as text here.</div>
+                    <div class="modal-content p-12">
+                        <form id="quiz-form" class="needs-validation" novalidate>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p class="h3">Try completing the tasks below while navigating the website using only the keyboard.</p>
+                                        <ul class="list-group">
+                                            <li class="list-group-item p-0">
+                                                <div class="alert alert-light" role="alert">
+                                                    <p>Use the following keys to navigate: 
+                                                    <kbd>Tab</kbd><kbd>&uparrow;</kbd><kbd>&rightarrow;</kbd><kbd>&downarrow;</kbd><kbd>&leftarrow;</kbd><kbd>&crarr;</kbd></p>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="material-icons">done</span>
+                                                <div class="form-group">
+                                                    <label data-speech for="task1">Check that you are on the correct website</label>
+                                                    <input autocomplete="off" pattern="(?:^|\W)IAF(?:$|\W)" data-speech type="text" class="form-control" id="task1"  placeholder="What is the name of the website?" required answer="IAF">
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="material-icons">done</span>
+                                                <div class="form-group">
+                                                    <label data-speech for="task2">Find out the location of the event</label>
+                                                    <input autocomplete="off" pattern="(?:^|\W)Inclusiville Showgrounds(?:$|\W)" data-speech type="text" class="form-control" id="task2"  placeholder="Where is the event held?" required answer="Inclusiville Showgrounds">
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="material-icons">done</span>
+                                                <div class="form-group">
+                                                    <label data-speech for="task3">What time is your local favourite, The Empaths, playing?</label>
+                                                    <input autocomplete="off" pattern="(?:^|\W)2pm(?:$|\W)" data-speech type="text" class="form-control" id="task3"  placeholder="Check the event schedule" required answer="2pm">
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item"><span id="registered" class="material-icons">done</span><strong>Register for the event</strong></li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer justify-content-between">
+                                <button type="button" class="prev btn btn-light"><i class="material-icons mr-2 rotate-180">trending_flat</i>Back</button>
+                                <button type="submit" class="next btn btn-primary">Next<i class="material-icons ml-2">trending_flat</i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <button tabindex="-1" id="toggle-overlay-button" class="btn btn-dark">Stuck?</button>
+        </div>
+        <div class="step-3">
+            <div class="modal"  role="dialog">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content p-12">
+                        <div class="modal-body">
+                            <p class="h3">Call to action heading</p><p >You can make a difference today by:</p>
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h3 class="card-title">Go to your favourite website and perform an accessibility audit.</h3>
+                                        <ul><li><a href="">Link to axe-core extension</a></li>
+                                        <li><a href="">Link to accessibilityinsights.io</a></li></ul>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h3 class="card-title">Become an advocate - educate yourself, and your colleagues so you can champion the change.</h3>
+                                        <ul>
+                                        <li><a href="">Link to deque university</a></li>
+                                        <li><a href="">Link to WCAG documentation</a></li></ul>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="prev btn btn-light"><i class="material-icons mr-2 rotate-180">trending_flat</i>Back</button>
+                            <button type="button" class="reset btn btn-primary">Start again  <i class="material-icons">refresh</i></button>
+                            <!-- <button type="button" class="share btn btn-primary">Share <i class="material-icons">share</i></button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

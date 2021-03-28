@@ -1,0 +1,192 @@
+
+#content {
+    *:focus-visible {
+        outline: 3px dotted red !important;
+    }
+} 
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    &.finished {
+        &:before {
+            opacity: 0.4;
+        }
+    }
+}
+#overlay:before {
+    content: "";
+    background: rgba(0,0,0,1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 1s ease-in;
+}
+.caption{
+    padding: 20px;
+    min-height: 100px;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    background: black;
+    border-radius: 20px;
+    text-align: center;
+}    
+kbd {
+    border-radius: 1rem;
+    padding-right: 0.7rem;
+    padding-left: 0.7rem;
+    border: 1px solid white;
+}
+#ui-wrapper {
+    position: absolute;
+    height: auto;
+    max-height: calc(100% - 0.5rem);
+    left: 0;
+    bottom: 0;
+    background: white;
+    border-radius: 20px 20px 0 0;
+}
+.scroll-wrapper {
+    position: relative;
+    height: 100%;
+    overflow: auto;
+    padding-bottom: 100px;
+}
+
+.cta-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+}
+.btn {
+    border-radius: 30px;
+}
+.step-1 {
+    /* display: none; */
+    .modal-dialog {
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+.step-2 {
+    display: none;
+    .modal-dialog {
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+.step-3 {
+    display: none;
+}
+.step-4 {
+    display: none;
+}
+.modal {
+    display: block;
+}
+.modal-dialog {
+    max-width: 768px;
+}
+.modal-content {
+    border-radius: 20px;
+    max-height: calc(100vh - 40px);
+}
+.modal-body {
+    height: 100%;
+    overflow: auto;
+}
+.modal-footer {
+    border-top: none;
+    justify-content: center;
+}
+.card {
+    border-radius: 20px;
+}
+.shuffle-grid-item .card {
+    overflow: hidden;
+}
+#toggle-overlay-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1060; /* greater than .modal */
+}
+.list-group-item {
+    padding-left: 3rem;
+    position: relative;
+}
+.list-group-item.active span {
+    border-color: green;
+    background: green;
+    color: white;
+}
+.list-group-item span {
+    position: absolute;
+    left: 0.75rem;
+    top: 0.6rem;
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 0.1rem;
+    color: transparent;
+}
+.list-group-item .form-group {
+    margin-bottom: 0;
+}
+.rotate-180 {
+    transform: rotate(180deg);
+}
+.form-control {
+    padding-left: 0;
+    padding-right: 0;
+    border-color: transparent;
+    border-bottom-color: #D3D3D3;
+    &:focus {
+        border-color: transparent;
+        border-bottom-color: #35e479;
+    }
+}
+.form-group label {
+    font-weight: 700;
+}
+.list-group-item .form-control:disabled,
+.list-group-item .form-control[readonly] {
+    background: transparent;
+    color: white;
+    border-color: transparent;
+}
+
+.was-validated .form-control:valid, 
+.form-control.is-valid {
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus,
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+button.faq-header {
+    width: 100%;
+    background: transparent;
+    border-color: transparent;
+    padding: 0;
+}
+.radio-buttons-group{
+    overflow-x: visible;
+}
+
+#status {
+    display: none;
+}
