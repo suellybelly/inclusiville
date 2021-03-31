@@ -92,6 +92,12 @@ kbd {
         justify-content: flex-end;
     }
 }
+.alert-warning {
+    color: $alert-warning-color;
+}
+.alert-light {
+    color: $alert-light-color;
+}
 .modal {
     display: block;
 }

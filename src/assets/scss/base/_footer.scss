@@ -7,7 +7,7 @@
 }
 
 a.footer-icon {
-  color: $gray-500-sub2;
+  color: $text-muted;
   line-height: 1;
   text-decoration: none;
   transition: $transition-base;
@@ -17,7 +17,7 @@ a.footer-icon {
   }
 
   &:hover {
-    color: darken($gray-500-sub2, 15%);
+    color: darken($text-muted, 15%);
   }
 }
 
