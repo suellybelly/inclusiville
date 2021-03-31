@@ -12,13 +12,12 @@
     bottom: 0;
     z-index: 100;
     &.finished {
-        &:before {
+        .mask {
             opacity: 0.4;
         }
     }
 }
-#overlay:before {
-    content: "";
+.mask {
     background: rgba(0,0,0,1);
     position: absolute;
     top: 0;
