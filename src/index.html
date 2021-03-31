@@ -12,13 +12,14 @@
 </head>
 <body>
 <div id="page-start-anchor"></div>
+<main>
 <div id="content" role="application">
 <!-- header start -->
 {% include 'includes/header.html' with {ctaButton: {text: 'Register', href: '#register'}} %}
 <!-- header end -->
 <section class="hero hero-fullscreen jarallax" data-speed="0.2" style="min-height: calc(100vh - 140px)">
-    <div tabindex="0" class="hero-background">
-        <img src="assets/images/pexels-thanos-ayers-3835453.jpg" alt="Cobblestone alley with colourful umbrellas hanging overhead" class="jarallax-img"/>
+    <div class="hero-background">
+        <img tabindex="0" src="assets/images/pexels-thanos-ayers-3835453.jpg" alt="Cobblestone alley with colourful umbrellas hanging overhead" class="jarallax-img"/>
     </div>
     <div class="hero-foreground d-flex flex-column justify-content-center">
         <div class="d-flex align-items-center justify-content-center py-14 py-md-23 py-lg-25">
@@ -75,7 +76,7 @@
                 <div class="card" tabindex="0">
                     <img class="card-img-top" src="assets/images/image-61.jpg" alt="A person dancing">
                     <div class="card-body">
-                      <h5 tabindex="0" class="card-title">The Digital Navigator: an interpretive dance <span class="text-muted">&mdash; 12pm</span></h5>
+                      <p tabindex="0" class="h5 card-title">The Digital Navigator: an interpretive dance <span class="text-muted">&mdash; 12pm</span></h5>
                     </div>
                 </div>
             </div>
@@ -83,7 +84,7 @@
                 <div class="card" tabindex="0">
                     <img class="card-img-top" src="assets/images/image-59.jpg" alt="Headbanging Keyboards the band">
                     <div class="card-body">
-                      <h5 tabindex="0" class="card-title">Headbanging Keyboards <span class="text-muted">&ndash; 1pm</span></h5>
+                      <p tabindex="0" class="h5 card-title">Headbanging Keyboards <span class="text-muted">&ndash; 1pm</span></h5>
                     </div>
                 </div>
             </div>
@@ -91,7 +92,7 @@
                 <div class="card" tabindex="0">
                     <img class="card-img-top" src="assets/images/instagram-2.jpg" alt="The Empaths the band">
                     <div class="card-body">
-                      <h5 tabindex="0" class="card-title">The Empaths <span class="text-muted">&ndash; 2pm</span></h5>
+                      <p tabindex="0" class="h5 card-title">The Empaths <span class="text-muted">&ndash; 2pm</span></h5>
                     </div>
                 </div>
             </div>
@@ -99,7 +100,7 @@
                 <div class="card" tabindex="0">
                     <img class="card-img-top" src="assets/images/image-30.jpg" alt="Wucag Tang Clang the band">
                     <div class="card-body">
-                      <h5 tabindex="0" class="card-title">Wucag Tang Clan <span class="text-muted">&mdash; 3pm</span></h5>
+                      <p tabindex="0" class="h5 card-title">Wucag Tang Clan <span class="text-muted">&mdash; 3pm</span></h5>
                     </div>
                 </div>
             </div>
@@ -107,7 +108,7 @@
                 <div class="card" tabindex="0">
                     <img class="card-img-top" src="assets/images/pexels-rakicevic-nenad-769525.jpg" alt="Multiple fireworks in the sky with a man holding a sparkler on top of a hill at twilight">
                     <div class="card-body">
-                      <h5 tabindex="0" class="card-title">Closing event: Fireworks on the hills <span class="text-muted">&mdash; 6pm</span></h5>
+                      <p tabindex="0" class="h5 card-title">Closing event: Fireworks on the hills <span class="text-muted">&mdash; 6pm</span></h5>
                     </div>
                 </div>
             </div>
@@ -123,8 +124,8 @@
             <button class="faq-header" data-toggle="collapse" data-target="#faq-item-1" aria-expanded="true">
                 <h1 class="faq-title">What is Swedish massage?</h1>
                 <div class="faq-toggle">
-                    <i class="material-icons faq-toggle-closed">add</i>
-                    <i class="material-icons faq-toggle-open">remove</i>
+                    <i class="material-icons faq-toggle-closed" aria-hidden="true">add</i>
+                    <i class="material-icons faq-toggle-open" aria-hidden="true">remove</i>
                 </div>
             </button>
             <div class="faq-body collapse show" id="faq-item-1">
@@ -137,8 +138,8 @@
             <button class="faq-header" data-toggle="collapse" data-target="#faq-item-2" aria-expanded="false">
                 <h1 class="faq-title">What types of services does Blys offer?</h1>
                 <div class="faq-toggle">
-                    <i class="material-icons faq-toggle-closed">add</i>
-                    <i class="material-icons faq-toggle-open">remove</i>
+                    <i class="material-icons faq-toggle-closed" aria-hidden="true">add</i>
+                    <i class="material-icons faq-toggle-open" aria-hidden="true">remove</i>
                 </div>
             </button>
             <div class="faq-body collapse" id="faq-item-2">
@@ -151,8 +152,8 @@
             <button class="faq-header" data-toggle="collapse" data-target="#faq-item-3" aria-expanded="false">
                 <h1 class="faq-title">Can I pick my therapist?</h1>
                 <div class="faq-toggle">
-                    <i class="material-icons faq-toggle-closed">add</i>
-                    <i class="material-icons faq-toggle-open">remove</i>
+                    <i class="material-icons faq-toggle-closed" aria-hidden="true">add</i>
+                    <i class="material-icons faq-toggle-open" aria-hidden="true">remove</i>
                 </div>
             </button>
             <div class="faq-body collapse" id="faq-item-3">
@@ -164,8 +165,8 @@
             <button class="faq-header" data-toggle="collapse" data-target="#faq-item-4" aria-expanded="false">
                 <h1 class="faq-title">Can I re-book with the same therapists?</h1>
                 <div class="faq-toggle">
-                    <i class="material-icons faq-toggle-closed">add</i>
-                    <i class="material-icons faq-toggle-open">remove</i>
+                    <i class="material-icons faq-toggle-closed" aria-hidden="true">add</i>
+                    <i class="material-icons faq-toggle-open" aria-hidden="true">remove</i>
                 </div>
             </button>
             <div class="faq-body collapse" id="faq-item-4">
@@ -211,7 +212,7 @@
                     </div>
                     <div class="col-12 col-sm-6">
                         <div class="form-group mb-0">
-                            <button id="register" class="btn btn-primary btn-lg">Register</button>
+                            <button class="btn btn-primary btn-lg">Register</button>
                         </div>
                     </div>
 
@@ -223,7 +224,7 @@
             <div class="col-12 col-lg-4">
                 <div class="card border-0 bg-secondary mb-4 ml-lg-9">
                     <div class="card-body py-17 px-10 text-center">
-                        <div class="card-icon mb-6"><i class="material-icons">map</i></div>
+                        <div class="card-icon mb-6"><i class="material-icons" aria-hidden="true">map</i></div>
                         <div tabindex="0"class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
                             Our address
                         </div>
@@ -232,7 +233,7 @@
                 </div>
                 <div class="card border-0 bg-secondary mb-4 ml-lg-9">
                     <div class="card-body py-17 px-10 text-center">
-                        <div class="card-icon mb-6"><i class="material-icons">phone</i></div>
+                        <div class="card-icon mb-6"><i class="material-icons" aria-hidden="true">phone</i></div>
                         <div tabindex="0" class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
                             Mobile Phone
                         </div>
@@ -241,7 +242,7 @@
                 </div>
                 <div class="card border-0 bg-secondary ml-lg-9">
                     <div class="card-body py-17 px-10 text-center">
-                        <div class="card-icon mb-6"><i class="material-icons">access_time</i></div>
+                        <div class="card-icon mb-6"><i class="material-icons" aria-hidden="true">access_time</i></div>
                         <div tabindex="0" class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
                             Working Hours
                         </div>
@@ -256,7 +257,10 @@
 <!-- footer start -->
 {% include 'includes/footer.html' %}
 <!-- footer end -->
+
 </div>
+</main>
+
 <style>
 </style>
 {% include 'includes/overlay.html' %}
@@ -368,43 +372,43 @@
             overlay.removeClass("finished");
         });
         toggleBtn.on("click", function () {
-            overlay.stop().fadeOut("fast").delay(3000).fadeIn("fast");
-            //overlay.fadeToggle("fast");
+            //overlay.stop().fadeOut("fast").delay(3000).fadeIn("fast");
+            overlay.fadeToggle("fast");
         });
     });
 
-    // const keyCode = {
-    //     'TAB': 9,
-    //     'RETURN': 13,
-    //     'ESC': 27,
-    //     'SPACE': 32,
-    //     'PAGEUP': 33,
-    //     'PAGEDOWN': 34,
-    //     'END': 35,
-    //     'HOME': 36,
-    //     'LEFT': 37,
-    //     'UP': 38,
-    //     'RIGHT': 39,
-    //     'DOWN': 40
-    // }
+    const keyCode = {
+        'TAB': 9,
+        'RETURN': 13,
+        'ESC': 27,
+        'SPACE': 32,
+        'PAGEUP': 33,
+        'PAGEDOWN': 34,
+        'END': 35,
+        'HOME': 36,
+        'LEFT': 37,
+        'UP': 38,
+        'RIGHT': 39,
+        'DOWN': 40
+    }
 
-    // window.addEventListener("keydown", (e) => {
-    //     var currentFocus = document.activeElement;
-    //     switch (e.keyCode) {
-    //         case keyCode.TAB:
-    //             break;
-    //         case keyCode.LEFT:
-    //         case keyCode.UP:
-    //             focusPreviousElement(currentFocus);
-    //             break;
-    //         case keyCode.RIGHT:
-    //         case keyCode.DOWN:
-    //             focusNextElement(currentFocus);
-    //             break;
-    //         default:
-    //             break;
-    //     }
-    // });
+    window.addEventListener("keydown", (e) => {
+        var currentFocus = document.activeElement;
+        switch (e.keyCode) {
+            case keyCode.TAB:
+                break;
+            case keyCode.LEFT:
+            case keyCode.UP:
+                focusPreviousElement(currentFocus);
+                break;
+            case keyCode.RIGHT:
+            case keyCode.DOWN:
+                focusNextElement(currentFocus);
+                break;
+            default:
+                break;
+        }
+    });
     </script>
 </body>
 </html>
