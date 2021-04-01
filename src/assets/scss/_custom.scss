@@ -32,7 +32,6 @@
     font-size: 26px;
     font-weight: bold;
     color: white;
-    background: black;
     border-radius: 20px;
     text-align: center;
     * {
@@ -92,6 +91,12 @@ kbd {
         justify-content: flex-end;
     }
 }
+.alert {
+    a {
+        color: currentColor;
+        text-decoration: underline;
+    }
+}
 .alert-warning {
     color: $alert-warning-color;
 }
@@ -131,20 +136,25 @@ kbd {
 .list-group-item {
     padding-left: 3rem;
     position: relative;
-}
-.list-group-item.active span {
-    border-color: green;
-    background: green;
-    color: white;
-}
-.list-group-item span {
-    position: absolute;
-    left: 0.75rem;
-    top: 0.6rem;
-    border-radius: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    padding: 0.1rem;
-    color: transparent;
+    &.active {
+        &:not(:last-child){
+            padding-bottom: 0;
+        }
+        span {
+            border-color: green;
+            background: green;
+            color: white;
+        }
+    }
+    span {
+        position: absolute;
+        left: 0.75rem;
+        top: 0.6rem;
+        border-radius: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        padding: 0.1rem;
+        color: transparent;
+    }
 }
 .list-group-item .form-group {
     margin-bottom: 0;
@@ -155,6 +165,8 @@ kbd {
 .form-control {
     padding-left: 0;
     padding-right: 0;
+    padding-top: 0;
+    height: auto;
     border-color: transparent;
     border-bottom-color: #D3D3D3;
     &:focus {
@@ -171,7 +183,8 @@ kbd {
     color: white;
     border-color: transparent;
 }
-
+.was-validated .form-control:valid:focus,
+.form-control.is-valid:focus,
 .was-validated .form-control:valid, 
 .form-control.is-valid {
     border-top-color: transparent;
