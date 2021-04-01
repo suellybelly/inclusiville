@@ -13,7 +13,7 @@
                                 <div class="col-12">
                                     <p class="h3">Consider for a moment, that you are blind.</p>
                                     <p>You heard your colleagues mention a local arts and music festival to you in the break room. You barely caught the name of it as you rushed off to the next meeting, and you think you have the correct website on the screen in front of you now.</p>
-                                    <p>You love people, and you love music; It would be great if you could take your guide dog; You want to get a feel of what kind of event this is so you can plan ahead.</p>
+                                    <p>You love people, and you love music; It would be great if you could take your guide dog. You want to get a feel of what kind of event this is so you can plan ahead.</p>
                                     <div class="alert alert-warning"><em>Blind people don't use computers the same way sighted people do; Often, they use the keyboard to navigate as a sighted user would do with a mouse. The keyboard sends messages to the installed screen reader application, which reads out information about the screen they are looking at to the person, piece by piece.</em></div>
                                     <p><strong>Keeping this in mind, try navigating this website using only the keyboard to find the information you need.</strong></p>
                                 </div>
@@ -40,8 +40,7 @@
                                             <li class="list-group-item p-0">
                                                 <div class="alert alert-light" role="alert">
                                                     <p>Use the following keys to navigate: 
-                                                    <!-- <kbd title="Tab key">Tab</kbd><kbd title="Up arrow key">&uparrow;</kbd><kbd title="Right arrow key">&rightarrow;</kbd><kbd title="Down arrow key">&downarrow;</kbd><kbd title="Left arrow key">&leftarrow;</kbd><kbd title="Enter key">&crarr;</kbd></p> -->
-                                                    <kbd title="Tab key">Tab</kbd><kbd title="Enter key">&crarr;</kbd></p>
+                                                    <kbd title="Tab key">Tab</kbd><kbd title="Up arrow key">&uparrow;</kbd><kbd title="Right arrow key">&rightarrow;</kbd><kbd title="Down arrow key">&downarrow;</kbd><kbd title="Left arrow key">&leftarrow;</kbd><kbd title="Enter key">&crarr;</kbd></p>
                                                 </div>
                                             </li>
                                             <li class="list-group-item">
@@ -65,9 +64,12 @@
                                                     <input autocomplete="off" pattern="(?:^|\W)2pm(?:$|\W)" data-speech type="text" class="form-control" id="task3"  placeholder="Check the event schedule" required answer="2pm">
                                                 </div>
                                             </li>
-                                            <li class="list-group-item"><span id="registered" class="material-icons">done</span><strong>Register for the event</strong></li>
+                                            <li class="list-group-item">
+                                                <div id="registered" class="form-group" value="" answer="registered">
+                                                    <span class="material-icons">done</span><strong>Register for the event</strong>
+                                                </div>
+                                            </li>
                                         </ul>
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -79,7 +81,7 @@
                     </div>
                 </div>
             </div>
-            <button tabindex="-1" id="toggle-overlay-button" class="btn btn-dark">Stuck?</button>
+            <button tabindex="-1" id="toggle-overlay-button" class="btn btn-info"><i class="material-icons mr-2" aria-hidden="true">help_outline</i>Stuck?</button>
         </div>
         <div class="step-3">
             <div class="modal"  role="dialog">
@@ -92,7 +94,9 @@
                                 <li>Memorising the steps when you weren't able to get to the button you wanted to with the keyboard ... not so successfully</li>
                                 <li>Needing to go back constantly to remind yourself what the screen reader "said".</li>
                             </ul>
-                            <p>The digital landscape can be a hostile, lonely place when you're not a sighted person. Accessible applications can be an ally by ensuring that screen readers can talk to it.</p>
+                            <div class="alert alert-warning" role="alert">
+                                <p><em>The digital landscape can be a hostile, lonely place when you're not a sighted person. Accessible web applications can be an ally by ensuring that screen readers can talk to it.</em></p>
+                            </div>
                             <p>You can make a difference today by:</p>
                             <div class="row">
                                 <div class="col-12">
@@ -102,15 +106,14 @@
                                                 <h4>Go to your favourite website and do an accessibility check.</h4>
                                                 <ul>
                                                     <li>Get <a href="https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd" target="_blank">axe-core browser extension</a> by deque</li>
-                                                    <li><a href="https://accessibilityinsights.io/" target="_blank">Get accessibilityinsights.io by Microsoft</a></li>
-                                                    <li>Is it not up to scratch? Send their administrator a friendly message.</li>
+                                                    <li>Get <a href="https://accessibilityinsights.io/" target="_blank">accessibilityinsights.io</a> by Microsoft</li>
+                                                    <li>Is the accessibility of the website not up to scratch? Send their administrator a friendly message.</li>
                                                 </ul>
-                                                
                                             </div>
                                         </li>
                                         <li class="list-group-item p-0">
                                             <div class="alert alert-light" role="alert">
-                                                <h4>Become an advocate - educate yourself and your colleagues so you can champion the change.</h4>
+                                                <h4>Become an advocate - educate yourself, your friends and colleagues so you can champion the change.</h4>
                                                 <ul>
                                                     <li><a href="https://dequeuniversity.com/" target="_blank">deque university</a> offers individual and corporate packages</li>
                                                     <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank">WCAG documentation</a> defines the global standard for accessible applications.</li>
