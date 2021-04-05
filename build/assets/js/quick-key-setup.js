@@ -18,7 +18,7 @@ let keyData = {
     'l': 'ul, ol, dl, [role="list"]'
 };
 
-let qkm = new QuickKeyManager(keyData, document.body);
+let qkm = new QuickKeyManager(keyData, document.getElementById('content'));
 
 // Check if the pressed key is a quick key.
 document.addEventListener( 'keydown', function (e) {
