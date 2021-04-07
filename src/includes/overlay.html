@@ -1,4 +1,4 @@
-<div id="overlay" aria-hidden="true" tabindex="-1">
+<div id="overlay" class="overlay" tabindex="-1">
     <div class="mask"></div>
     <div class="ui-wrapper">
         <div class="step-1">
@@ -20,7 +20,7 @@
                             </div>
                         </div>
                         <div class="modal-footer justify-content-end">
-                            <button type="button" class="next btn btn-primary">Next<i class="material-icons ml-2">trending_flat</i></button>
+                            <button type="button" class="next btn btn-primary">Next<i class="material-icons ml-2" aria-hidden="true">trending_flat</i></button>
                         </div>
                     </div>
                 </div>
@@ -44,21 +44,21 @@
                                                 </div>
                                             </li>
                                             <li class="list-group-item">
-                                                <span class="material-icons">done</span>
+                                                <span class="material-icons" aria-hidden="true">done</span>
                                                 <div class="form-group">
                                                     <label data-speech for="task1">Check that you are on the correct website</label>
                                                     <input autocomplete="off" pattern="(?:^|\W)Inclusiville Arts Festival(?:$|\W)" data-speech type="text" class="form-control" id="task1"  placeholder="What is the name of the festival?" required answer="Inclusiville Arts Festival">
                                                 </div>
                                             </li>
                                             <li class="list-group-item">
-                                                <span class="material-icons">done</span>
+                                                <span class="material-icons" aria-hidden="true">done</span>
                                                 <div class="form-group">
                                                     <label data-speech for="task2">Find out the location of the event</label>
                                                     <input autocomplete="off" pattern="(?:^|\W)Inclusiville Showgrounds(?:$|\W)" data-speech type="text" class="form-control" id="task2"  placeholder="Where is the event held?" required answer="Inclusiville Showgrounds">
                                                 </div>
                                             </li>
                                             <li class="list-group-item">
-                                                <span class="material-icons">done</span>
+                                                <span class="material-icons" aria-hidden="true">done</span>
                                                 <div class="form-group">
                                                     <label data-speech for="task3">What time is your local favourite, The Empaths, playing?</label>
                                                     <input autocomplete="off" pattern="(?:^|\W)2pm(?:$|\W)" data-speech type="text" class="form-control" id="task3"  placeholder="Check the event schedule" required answer="2pm">
@@ -66,7 +66,7 @@
                                             </li>
                                             <li class="list-group-item">
                                                 <div id="registered" class="form-group" value="" answer="registered">
-                                                    <span class="material-icons">done</span><strong>Register for the event</strong>
+                                                    <span class="material-icons" aria-hidden="true">done</span><strong>Register for the event</strong>
                                                 </div>
                                             </li>
                                         </ul>
@@ -74,8 +74,8 @@
                                 </div>
                             </div>
                             <div class="modal-footer justify-content-between">
-                                <button type="button" class="prev btn btn-light"><i class="material-icons mr-2 rotate-180">trending_flat</i>Back</button>
-                                <button type="submit" class="next btn btn-primary">Next<i class="material-icons ml-2">trending_flat</i></button>
+                                <button type="button" class="prev btn btn-light"><i class="material-icons mr-2 rotate-180" aria-hidden="true">trending_flat</i>Back</button>
+                                <button type="submit" class="next btn btn-primary">Next<i class="material-icons ml-2" aria-hidden="true">trending_flat</i></button>
                             </div>
                         </form>
                     </div>
@@ -125,8 +125,8 @@
                             </div>
                         </div>
                         <div class="modal-footer justify-content-between">
-                            <button type="button" class="prev btn btn-light"><i class="material-icons mr-2 rotate-180">trending_flat</i>Back</button>
-                            <button type="button" class="reset btn btn-primary">Start again  <i class="material-icons">refresh</i></button>
+                            <button type="button" class="prev btn btn-light"><i class="material-icons mr-2 rotate-180" aria-hidden="true">trending_flat</i>Back</button>
+                            <button type="button" class="reset btn btn-primary">Start again  <i class="material-icons" aria-hidden="true">refresh</i></button>
                             <!-- <button type="button" class="share btn btn-primary">Share <i class="material-icons">share</i></button> -->
                         </div>
                     </div>
