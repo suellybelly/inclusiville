@@ -153,7 +153,7 @@ gulp.task('assets', function () {
 gulp.task('html', function () {
     return gulp.src('src/*.html')
         .pipe(twig())
-        .pipe(gulpIf(!isDev, htmlmin({collapseWhitespace: true, removeComments: true, removeAttributeQuotes: true})))
+        .pipe(gulpIf(!isDev, htmlmin({collapseWhitespace: false, removeComments: true, removeAttributeQuotes: true})))
         .pipe(gulp.dest(destDir));
 });
 
