@@ -113,7 +113,9 @@ kbd {
     border-radius: 20px;
     max-height: calc(100vh - 40px);
     .close {
+        position: absolute;
         align-self: flex-end;
+        z-index: 1;
     }
 }
 .modal-body {
