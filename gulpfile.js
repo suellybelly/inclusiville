@@ -56,7 +56,7 @@ const jsPaths = [
             src: [
                 'src/assets/js/app.js',
                 'src/assets/js/components/**/*.js',
-                'src/assets/js/keyboard/**/*.js',
+                'src/assets/js/custom/**/*.js',
             ]
         },
         {
